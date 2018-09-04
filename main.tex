@@ -14,6 +14,7 @@
 
 \usepackage[super]{nth} % for 1st 2nd ...
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO:
 % - in figures, use centering istead of center
@@ -55,18 +56,20 @@
 \begin{minipage}{0.4\textwidth}
   \begin{flushright} \large
     \emph{Tuteur :} David \bsc{Collardeau}\\
-    \emph{Chef d'équipe : } M. Chef \textsc{D’Équipe}
+    %\emph{Chef d'équipe : } M. Chef \textsc{D’Équipe}
   \end{flushright}
 \end{minipage}
 
 \vfill
 
 % Bottom of the page
-{\large 1\ier{} Août 2017 — Décembre 2017}
+{\large Août 2017 — Décembre 2017}
 
 \end{center}
 \end{titlepage}
 \makeatother % cf makeatletter
+
+\renewcommand{\contentsname}{Sommaire} % pour remplaceer "Table des matrières" par "sommaire"
 
 \tableofcontents
 
@@ -257,9 +260,15 @@ Dans les 2 version, un potentiomètre permet de faire varier lumineuse. Les pann
 Ma mission a porté sur la version DC, j’ai été chargé de programmer le microprocesseur présent dans le circuit, de débugger et de tester les prototypes. La version AC est purement hardware, elle est composée  de filtres analogiques et de bascules pour gérer le changement de mode de couleur. A contrario, la version DC comporte un processeur pour pouvoir gérer le pack batterie (charge, état du niveau de batterie, protection en courant et température) et nécessite donc un développement logiciel. Le processeur est un ... 
 %TODO: name of the proc
 Il se programme en langage C.
-David m’a donc transmis le schéma électrique qu’il avait conçu qui correspond au PCB du modèle DC pour que je me l’approprie pour ensuite implémenter un software dans le microprocesseur.
+David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schema}) qu’il avait conçu qui correspond au PCB du modèle DC pour que je me l’approprie pour ensuite implémenter un software dans le microprocesseur.
 
-% figure
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.55]{figures/screenshots/version_A3_worklamp.png}
+\end{center}
+\caption{Schéma électrique de la worklamp} % TODO link to the manual
+\label{fig:worklamp_schema}
+\end{figure}
 
 La première étape fut d’écrire une spécification pour définir les tâches à remplir par le processeur pour ensuite aboutir à un ensemble d’algorithme accomplissant ces missions.
 Les tâches que doit effectuer le processeur sont :
@@ -274,24 +283,54 @@ Les tâches que doit effectuer le processeur sont :
 \end{itemize}
 
 
-Il a ensuite fallu de définir la configuration des pins du microprocesseur en accord avec le schéma grâce la datasheet du EFM8BB1 []. 
+Il a ensuite fallu de définir la configuration des pins du microprocesseur en accord avec le schéma grâce la datasheet du EFM8BB1 (figure~\ref{fig:pins_definition}). 
 % TODO: ref to spec of the spec
 Il s’agit de définir des fonctions et noms variables aux différents pins (input, output, PWM, ADC, UART, SMB, …).
 
-% figure
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.55]{figures/screenshots/pins_definition_EFM8BB.png}
+\end{center}
+\caption{Définition de pins sur le processeur EFM8BB1x-QSOP24} % TODO link to the manual
+\label{fig:pins_definition}
+\end{figure}
 
-Cette étape est cruciale pour la suite du développement et demande quelques notions d’électronique. Par exemple il faut définir si le pin est défini en « open drain », c’est-à-dire que l’état haut correspond à une forte impédance et l’état bas à une faible impédance, ou en « push-pull », si l’on veut que l’état haut soit le 3,3 V du CPU, et état bas du CPU.
+Cette étape est cruciale pour la suite du développement et demande quelques notions d’électronique. Par exemple il faut définir si le pin est défini en « open drain », c’est-à-dire que l’état haut correspond à une forte impédance et l’état bas à une faible impédance, ou en « push-pull », si l’on veut que l’état haut soit le 3,3 V du CPU, et état bas du CPU (figure~\ref{fig:opendrain_pushpull}). 
 
-% figure
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.55]{figures/screenshots/opendrain_pushpull.png}
+\end{center}
+\caption{Illustration sortie « Open drain » et « Push-pull »} % TODO link to the manual
+\label{fig:opendrain_pushpull}
+\end{figure}
 
 Le pack batterie est composé de 2 batteries lithium-ion 4S (tension nominal 4*3,7=14,8V) en parallèle pour une capacité totale de 10,4 A.h (153,92 W.h). En fonction de l’avancement du projet, on a changé de contrôleur gérant la charge de la batterie, on est passé du BQ2000 au BQ25703A qui est plus performant et qui nous permet qui directement lire la tension de la batterie pour estimer son état de charge et de surveiller le courant de charge/décharge via la protocole I2C.
 Un contrôleur pour charger la batterie lithium-ion permet de gérer les 3 phases de la charge. La dernière phase est la \emph{trickle charge}, elle est optionnelle et permet d’optimiser la durée de vie de la batterie si celle-ci a un très bas niveau, tous les contrôles n’intègre pas cette phase. Durant la \emph{trickle charge}, un faible courant est transmis à la batterie afin d’atteindre une certaine tension. La 2nd phase est le « constant current » : un courant élevé est envoyé dans le pack batterie jusqu’à atteindre la tension de charge. Dans mon cas, le courant est de 2*2,6 = 5,2 A (2 packs en parallèle) et la tension de charge de 4*4,2 = 16,8V (chaque pack à 4 cellules en série). La dernière phase est le « constant voltage » : on fixe une certaine tension (16,8V dans mon cas) aux bornes du pack batterie jusqu’à atteindre un certain courant, puis on garde cette tension pendant 30-60min pour finaliser la charge.
-% TODO: schéma de la charge
 
-J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit gérer. Cette étape m'a permis d'avancer dans le développement logiciel en gardant un certain recul avec les consignes auxquelles je m'étais fixer.
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.8]{figures/screenshots/Li-ion_charge_algortihm.png}
+\end{center}
+\caption{Algorithme de charge d’une batterie lithium-ion} % TODO link to the manual
+\label{fig:li-ion_charge}
+\end{figure}
+
+J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit gérer (figure~\ref{fig:flow_chart}). Cette étape m'a permis d'avancer dans le développement logiciel en gardant un certain recul avec les consignes auxquelles je m'étais fixer.
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.8]{figures/screenshots/flow_chart.png}
+\end{center}
+\caption{Quelques algorigrammes du software de la worklamp} % TODO link to the manual
+\label{fig:flow_chart}
+\end{figure}
+
 
 \chapter{Analyse des résultats obtenus}
 
-\chapter{Apports }
+\chapter{Apports}
+
+\listoffigures
 
 \end{document}
