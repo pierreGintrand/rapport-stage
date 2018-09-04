@@ -1,0 +1,10 @@
+\babel@toc {french}{}
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {chapter}{\numberline {2}Objectifs et contexte}{5}
+\contentsline {chapter}{\numberline {3}D\IeC {\'e}marches et travaux r\IeC {\'e}alis\IeC {\'e}s}{7}
+\contentsline {section}{\numberline {3.1}Looping / EasyFeed}{7}
+\contentsline {section}{\numberline {3.2}Site web}{10}
+\contentsline {section}{\numberline {3.3}Seveur}{11}
+\contentsline {section}{\numberline {3.4}Worklamp}{12}
+\contentsline {chapter}{\numberline {4}Analyse des r\IeC {\'e}sultats obtenus}{16}
+\contentsline {chapter}{\numberline {5}Apports }{17}
