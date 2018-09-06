@@ -1,5 +1,22 @@
 \begin{thebibliography}{1}
 
+\bibitem{EFM8BB1_datasheet}
+Silicon Labs.
+\newblock {\em EFM8 Busy Bee Family EFM8BB1 Data Sheet}, mar 2017.
+\newblock
+  \url{https://www.silabs.com/documents/public/data-sheets/efm8bb1-datasheet.pdf}.
+
+\bibitem{BQ2000_datasheet}
+Texas Instruments.
+\newblock {\em Programmable MultiChemistry Fast-Charge Management IC datasheet
+  (Rev. D)}, dec 2009.
+\newblock \url{http://www.tij.co.jp/jp/lit/ds/symlink/bq2000.pdf}.
+
+\bibitem{BQ40Z60_tech_manual}
+Texas Instruments.
+\newblock {\em BQ40Z60 Technical Reference Manual (Rev. D)}, mar 2017.
+\newblock \url{http://www.ti.com/lit/ug/sluua04d/sluua04d.pdf}.
+
 \bibitem{usb_pd_nego}
 Gayathri Vasudevan.
 \newblock Usb type-c and power delivery 101 – power delivery protocol, may
