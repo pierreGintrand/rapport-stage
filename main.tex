@@ -16,8 +16,11 @@
 
 \usepackage[super]{nth} % for 1st 2nd ...
 
-\usepackage[squaren, Gray, cdot]{SIunits} % for units, 
-%TODO: use unitx instead
+%\usepackage[squaren, Gray, cdot]{SIunits} % for units, 
+\usepackage[load-configurations = abbreviations]{siunitx}
+%\usepackage[inter-unit-product = \ensuremath{{}\cdot{}}]{siunitx}
+\sisetup{locale = FR, detect-all}
+% WIP: use unitx instead
 
 \usepackage[nottoc, notlot]{tocbibind} % Table des des figures et biblio dans le sommaire
 
@@ -312,9 +315,9 @@ Cette étape est cruciale pour la suite du développement et demande quelques no
 \end{figure}
 
 \subsection{Charge}
-Le pack batterie est composé de 2 batteries lithium-ion 4S (tension nominal $4\times3,7=14,8\volt$) en parallèle pour une capacité totale de \unit{10,4}{\ampere\hour} (\unit{153,92}{\watt\hour}). En fonction de l’avancement du projet, on a changé de contrôleur gérant la charge de la batterie, on est passé du BQ2000 au BQ25703A qui est plus performant et qui nous permet qui directement lire la tension de la batterie pour estimer son état de charge et de surveiller le courant de charge/décharge via la protocole I2C.
+Le pack batterie est composé de 2 batteries lithium-ion 4S (tension nominal $4\times3,7=\SI{14.8}{\volt}$) en parallèle pour une capacité totale de \SI{10.4}{\ampere\hour} (\SI{153.92}{\watt\hour}). En fonction de l’avancement du projet, on a changé de contrôleur gérant la charge de la batterie, on est passé du BQ2000 au BQ25703A qui est plus performant et qui nous permet qui directement lire la tension de la batterie pour estimer son état de charge et de surveiller le courant de charge/décharge via la protocole I2C.
 
-Un contrôleur pour charger la batterie lithium-ion permet de gérer les 3 phases de la charge. La dernière phase est la \emph{trickle charge}, elle est optionnelle et permet d’optimiser la durée de vie de la batterie si celle-ci a un très bas niveau, tous les contrôles n’intègre pas cette phase. Durant la \emph{trickle charge}, un faible courant est transmis à la batterie afin d’atteindre une certaine tension. La 2nd phase est le « constant current » : un courant élevé est envoyé dans le pack batterie jusqu’à atteindre la tension de charge. Dans mon cas, le courant est de $2\times2,6 = 5,2 \ampere$ (2 packs en parallèle) et la tension de charge de $4\times4,2 = 16,8 \volt$ (chaque pack à 4 cellules en série). La dernière phase est le « constant voltage » : on fixe une certaine tension (\unit{16,8}{\volt} dans mon cas) aux bornes du pack batterie jusqu’à atteindre un certain courant, puis on garde cette tension pendant 30-60min pour finaliser la charge.
+Un contrôleur pour charger la batterie lithium-ion permet de gérer les 3 phases de la charge. La dernière phase est la \emph{trickle charge}, elle est optionnelle et permet d’optimiser la durée de vie de la batterie si celle-ci a un très bas niveau, tous les contrôles n’intègre pas cette phase. Durant la \emph{trickle charge}, un faible courant est transmis à la batterie afin d’atteindre une certaine tension. La 2nd phase est le « constant current » : un courant élevé est envoyé dans le pack batterie jusqu’à atteindre la tension de charge. Dans mon cas, le courant est de $2\times2,6 = \SI{5.2}{\ampere}$ (2 packs en parallèle) et la tension de charge de $4\times4,2 = \SI{16.8}{\volt}$ (chaque pack à 4 cellules en série). La dernière phase est le « constant voltage » : on fixe une certaine tension (\SI{16.8}{\volt} dans mon cas) aux bornes du pack batterie jusqu’à atteindre un certain courant, puis on garde cette tension pendant 30-60min pour finaliser la charge.
 
 Bien que cet algorithme est implémenter dans les contrôleurs gérant la charge de batterie, sa compréhension était indispensable car j'ai dû vérifier que les différents circuits le respecter bien. Pour ce faire, après avoir vidé une batterie suite à une série de test, j'activais le circuit de charge et je vérifiais que les différentes étapes étaient respectées. Si le contrôleur était mal utilisé, la tension de charge pouvait trop haute ou trop basse, ce qui présente un danger pour la batterie et sa durée de vie.
 
@@ -342,8 +345,8 @@ J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit g
 \subsection{Tests}
 A chaque étape du développement du la Worklamp, le prototype a dû  être tester pour pouvoir évaluer la pertinance des solutions adoptées. Plusieurs mesures ont été effectuées sur un certain intervalle de temps pour vérifier si la lampe validait les critères imposés par le client dans le cahier des charges.
 \begin{itemize} % TODO: bullets instead of hyphen
-\item La température à l'extérieur du produit (au point le plus chaud, au niveau du radiateur passif) devait être inférieur à \unit{50}{\celsius} pour que l'utilisateur ne se brûle pas en utilisant la lampe (norme de sécurité européenne),
-\item La température à l'intérieur du produit au niveau du PCB et du panneau de LEDs devait rester inférieure à certaines valeures données dans les datasheets des composants pour assurer le bon fonctionnement de ces derniers (généralement 70-80\celsius),
+\item La température à l'extérieur du produit (au point le plus chaud, au niveau du radiateur passif) devait être inférieur à \SI{50}{\celsius} pour que l'utilisateur ne se brûle pas en utilisant la lampe (norme de sécurité européenne),
+\item La température à l'intérieur du produit au niveau du PCB et du panneau de LEDs devait rester inférieure à certaines valeures données dans les datasheets des composants pour assurer le bon fonctionnement de ces derniers (généralement \SIrange{70}{80}{\celsius}),
 \item La tension et le courant au niveau du pack batterie et du panneau de LED étaient mesurés afin d'estimer le rendement du PCB (90\% minimum),
 \end{itemize}
 La mesure de la puissance électrique envoyée au panneau de LEDs multipliée par le rendement des LEDs données par le constructeur permet d'obtenir une bonne estimation de la puissance lumineuse émise. Le rendement global du produit ainsi que le temps d'utilisation du produit (5h minimum) pouvait donc être calculé.
@@ -354,13 +357,13 @@ La plupart des tests ont été réaliser dans les bureaux de Neohm. Des lunettes
 \begin{center}
 \includegraphics[scale=0.09]{figures/photos/tests_worklamp/lamp_with_glasses.jpg}
 \end{center}
-\caption{Panneau de LEDs en mode \unit{5700}{\kelvin} et \unit{4200}{\kelvin} à travers les lunettes de sécurité}
+\caption{Panneau de LEDs en mode \SI{5700}{\kelvin} et \SI{4200}{\kelvin} à travers les lunettes de sécurité}
 \label{fig:lamp_with_glasses}
 \end{figure}
 
 Pour mesurer plus précisément la puissance lumineuse émise (la lentille semi-transparente était ignoré dans le modèle ci-dessus) et pour obtenir la tempéture (en Kelvin) émise, mon collègue Green et moi-même avons été dans un laboratoire spécialisé dans les lampes à LEDs équipé d'une \emph{sphère intégrante}. Cette appareil est un spere blanche de 1m de diamètre dans laquelle on place la lampe à tester. Les capteurs sont reliés à une grande armoire électrique elle-même connectée à un ordinateur.
 
-Ces tests étaient particulièrent pertinents pour la température de la lumière créé. En effet, dans le mode intermédiaire (\unit{5700}{\kelvin}). J'avais programmé le processeur pour envoyer 50\% de la puissance électrique dans les LEDs à \unit{6700}{\kelvin} et 50\% dans les LED à \unit{2700}{\kelvin}. Cependant, avec cette configuration, la température était à \unit{5200}{\kelvin} au lieu de \unit{5700}{\kelvin}. J'ai donc ajuster le rapport cyclique des transistors alimentants les LEDs pour obtenir un résultat proche de \unit{5700}{\kelvin}. Des photos de ces tests en laboratoire sont visibles en annexe~\ref{cha:labo_pictures}).
+Ces tests étaient particulièrent pertinents pour la température de la lumière créé. En effet, dans le mode intermédiaire (\SI{5700}{\kelvin}). J'avais programmé le processeur pour envoyer 50\% de la puissance électrique dans les LEDs à \SI{6700}{\kelvin} et 50\% dans les LED à \SI{2700}{\kelvin}. Cependant, avec cette configuration, la température était à \SI{5200}{\kelvin} au lieu de \SI{5700}{\kelvin}. J'ai donc ajuster le rapport cyclique des transistors alimentants les LEDs pour obtenir un résultat proche de \SI{5700}{\kelvin}. Des photos de ces tests en laboratoire sont visibles en annexe~\ref{cha:labo_pictures}).
 
 Un opérateur du laboratoire gérait le logiciel en chinois. Après les tests, nous avons dû essayer de traduire les rapports générés en anglais pour tenir informer les clients de l'avancement du développement du produit.  
 
