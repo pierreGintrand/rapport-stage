@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.4)  4 SEP 2018 21:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.8.21)  5 SEP 2018 14:54
 entering extended mode
 **./main.tex
 (main.tex
 LaTeX2e <2018-04-01> patch level 5
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\base\report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\base\size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -21,28 +21,28 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\babel\babel.sty
 Package: babel 2018/06/05 3.22 The Babel package
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\babel\switch.def
 File: switch.def 2018/06/05 3.22 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel-french\french.ldf"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\babel-french\french.ldf
 Language: french 2018/07/17 v3.5b French support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\babel\babel.def
 File: babel.def 2018/06/05 3.22 Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\babel\txtbabel.def)
 \bbl@dirlevel=\count90
 )
 \l@acadian = a dialect from \language\l@french 
@@ -68,123 +68,226 @@ Package babel Info: Making ? an active character on input line 418.
 \parindentFFN=\dimen110
 \FBfnindent=\dimen111
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\carlisle\scalefnt.sty")
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\carlisle\scalefnt.sty)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\base\inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
-Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip43
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
-Package: nth 2002/02/27
-) (main.aux)
-\openout1 = `main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Info: Redefining \degres on input line 30.
-LaTeX Info: Redefining \dots on input line 30.
-LaTeX Info: Redefining \up on input line 30.
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
-Package french.ldf Warning: OT1 encoding should not be used for French.
-(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(french.ldf)                of your document; reported on input line 30.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count99
-\scratchdimen=\dimen114
-\scratchbox=\box26
-\nofMPsegments=\count100
-\nofMParguments=\count101
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count102
-\MPscratchDim=\dimen115
-\MPnumerator=\count103
-\makeMPintoPDFobject=\count104
-\everyMPtoPDFconversion=\toks19
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)))
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+) (C:\Users\Polyconseil\Documents\LaTeX\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\oberdiek\auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen112
+\Hy@linkcounter=\count99
+\Hy@pagecounter=\count100
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count101
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count102
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\url\url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen113
+\Fld@menulength=\count103
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count104
+\c@Item=\count105
+\c@Hfootnote=\count106
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count107
+\c@bookmark@seq@number=\count108
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\preprint\fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip44
+)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\genmisc\nth.sty
+Package: nth 2002/02/27
+)
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\tocbibind\tocbibind.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has chapter divisions on input line 50.
+
+
+Package tocbibind Note: Using chapter style headings, unless overridden.
+
+) (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Info: Redefining \degres on input line 34.
+LaTeX Info: Redefining \dots on input line 34.
+LaTeX Info: Redefining \up on input line 34.
+
+
+Package french.ldf Warning: OT1 encoding should not be used for French.
+(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
+(french.ldf)                of your document; reported on input line 34.
+
+\AtBeginShipoutBox=\box26
+Package hyperref Info: Link coloring OFF on input line 34.
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\hyperref\nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\generic\oberdiek\gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count109
+)
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
+(main.out) (main.out)
+\@outlinefile=\write3
+\openout3 = `main.out'.
+
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count110
+\scratchdimen=\dimen118
+\scratchbox=\box27
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen119
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks19
+) (C:\Users\Polyconseil\Documents\LaTeX\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(C:\Users\Polyconseil\Documents\LaTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
@@ -193,68 +296,75 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-<figures/logos/centralesupelec_logo.png, id=1, 289.08pt x 174.1707pt>
+<figures/logos/centralesupelec_logo.png, id=71, 289.08pt x 174.1707pt>
 File: figures/logos/centralesupelec_logo.png Graphic file (type png)
 <use figures/logos/centralesupelec_logo.png>
 Package pdftex.def Info: figures/logos/centralesupelec_logo.png  used on input 
-line 38.
+line 43.
 (pdftex.def)             Requested size: 226.48395pt x 136.45587pt.
-<figures/logos/neohm_logo.png, id=3, 845.40843pt x 423.83344pt>
+<figures/logos/neohm_logo.png, id=73, 845.40843pt x 423.83344pt>
 File: figures/logos/neohm_logo.png Graphic file (type png)
 <use figures/logos/neohm_logo.png>
-Package pdftex.def Info: figures/logos/neohm_logo.png  used on input line 47.
+Package pdftex.def Info: figures/logos/neohm_logo.png  used on input line 52.
 (pdftex.def)             Requested size: 253.62448pt x 127.151pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 55.
+(Font)              <10.95> on input line 60.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 55.
+(Font)              <8> on input line 60.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 55.
+(Font)              <6> on input line 60.
  [1
 
-{C:/Users/Pierre/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/
-logos/centralesupelec_logo.png> <./figures/logos/neohm_logo.png>] (main.toc)
-\tf@toc=\write3
-\openout3 = `main.toc'.
+{C:/Users/Polyconseil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./fig
+ures/logos/centralesupelec_logo.png> <./figures/logos/neohm_logo.png>] (main.to
+c)
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
- [1
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.81 \chapter
+             *{Remerciements} [1
 
 ] [2
 
 ]
 Chapitre 1.
-<figures/photos/photo_building.jpg, id=22, 1186.4325pt x 1581.91pt>
+<figures/photos/photo_building.jpg, id=112, 1186.4325pt x 1581.91pt>
 File: figures/photos/photo_building.jpg Graphic file (type jpg)
 <use figures/photos/photo_building.jpg>
 Package pdftex.def Info: figures/photos/photo_building.jpg  used on input line 
-92.
+97.
 (pdftex.def)             Requested size: 177.9572pt x 237.27626pt.
 [3
 
 ] [4 <./figures/photos/photo_building.jpg>]
 Chapitre 2.
-<figures/screenshots/3D_drawing_looping.png, id=29, 448.67625pt x 239.39438pt>
+<figures/screenshots/3D_drawing_looping.png, id=122, 448.67625pt x 239.39438pt>
+
 File: figures/screenshots/3D_drawing_looping.png Graphic file (type png)
 <use figures/screenshots/3D_drawing_looping.png>
 Package pdftex.def Info: figures/screenshots/3D_drawing_looping.png  used on in
-put line 106.
+put line 111.
 (pdftex.def)             Requested size: 336.50636pt x 179.54533pt.
 [5
 
  <./figures/screenshots/3D_drawing_looping.png>] [6]
 Chapitre 3.
-<figures/screenshots/different_usb_types.png, id=39, 341.02406pt x 197.23688pt>
-
+<figures/screenshots/different_usb_types.png, id=135, 341.02406pt x 197.23688pt
+>
 File: figures/screenshots/different_usb_types.png Graphic file (type png)
 <use figures/screenshots/different_usb_types.png>
 Package pdftex.def Info: figures/screenshots/different_usb_types.png  used on i
-nput line 124.
+nput line 129.
 (pdftex.def)             Requested size: 255.76741pt x 147.92728pt.
-<figures/screenshots/usb_pd_nego.png, id=40, 794.97pt x 518.6878pt>
+<figures/screenshots/usb_pd_nego.png, id=137, 794.97pt x 518.6878pt>
 File: figures/screenshots/usb_pd_nego.png Graphic file (type png)
 <use figures/screenshots/usb_pd_nego.png>
 Package pdftex.def Info: figures/screenshots/usb_pd_nego.png  used on input lin
-e 136.
+e 141.
 (pdftex.def)             Requested size: 278.24367pt x 181.54344pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -262,163 +372,162 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [7
 
  <./figures/screenshots/different_usb_types.png>]
-<figures/photos/looping_pcb.jpg, id=44, 350.81062pt x 157.33781pt>
+<figures/photos/looping_pcb.jpg, id=147, 350.81062pt x 157.33781pt>
 File: figures/photos/looping_pcb.jpg Graphic file (type jpg)
 <use figures/photos/looping_pcb.jpg>
-Package pdftex.def Info: figures/photos/looping_pcb.jpg  used on input line 147
+Package pdftex.def Info: figures/photos/looping_pcb.jpg  used on input line 154
 .
 (pdftex.def)             Requested size: 350.80975pt x 157.33742pt.
-<figures/screenshots/battery_charger.png, id=45, 687.69421pt x 474.64828pt>
+<figures/screenshots/battery_charger.png, id=149, 687.69421pt x 474.64828pt>
 File: figures/screenshots/battery_charger.png Graphic file (type png)
 <use figures/screenshots/battery_charger.png>
 Package pdftex.def Info: figures/screenshots/battery_charger.png  used on input
- line 157.
+ line 164.
 (pdftex.def)             Requested size: 412.6197pt x 284.79117pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./figures/screenshots/usb_pd_nego.png> <./figures/photos/looping_pcb.jpg>]
-<figures/screenshots/SMBus_oscilloscope.png, id=49, 520.19344pt x 344.78813pt>
+<figures/screenshots/SMBus_oscilloscope.png, id=158, 520.19344pt x 344.78813pt>
+
 File: figures/screenshots/SMBus_oscilloscope.png Graphic file (type png)
 <use figures/screenshots/SMBus_oscilloscope.png>
 Package pdftex.def Info: figures/screenshots/SMBus_oscilloscope.png  used on in
-put line 177.
+put line 184.
 (pdftex.def)             Requested size: 312.11845pt x 206.87447pt.
-<figures/screenshots/SMBus_logic_analyser.png, id=50, 426.84468pt x 77.53969pt>
-
+<figures/screenshots/SMBus_logic_analyser.png, id=159, 426.84468pt x 77.53969pt
+>
 File: figures/screenshots/SMBus_logic_analyser.png Graphic file (type png)
 <use figures/screenshots/SMBus_logic_analyser.png>
 Package pdftex.def Info: figures/screenshots/SMBus_logic_analyser.png  used on 
-input line 185.
+input line 192.
 (pdftex.def)             Requested size: 452.9679pt x 82.29103pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (6.47646pt too wide) in paragraph at lines 191--194
+Overfull \hbox (6.47646pt too wide) in paragraph at lines 198--201
 \OT1/cmr/m/n/10.95 reperer des problemes ana-lo-giques (si-gnaux bruites, ca
 -pa-ci-tifs) par exemple. Le prin-ci-pal probleme
  []
 
 [9 <./figures/screenshots/battery_charger.png> <./figures/screenshots/SMBus_osc
 illoscope.png>]
-<figures/screenshots/BQ40Z60_manual_excerpt.png, id=54, 514.17094pt x 104.64093
-pt>
+<figures/screenshots/BQ40Z60_manual_excerpt.png, id=167, 514.17094pt x 104.6409
+3pt>
 File: figures/screenshots/BQ40Z60_manual_excerpt.png Graphic file (type png)
 <use figures/screenshots/BQ40Z60_manual_excerpt.png>
 Package pdftex.def Info: figures/screenshots/BQ40Z60_manual_excerpt.png  used o
-n input line 197.
+n input line 204.
 (pdftex.def)             Requested size: 452.9679pt x 92.18646pt.
-<figures/screenshots/BQ40Z60_registers.png, id=55, 966.61125pt x 683.55376pt>
+<figures/screenshots/BQ40Z60_registers.png, id=169, 966.61125pt x 683.55376pt>
 File: figures/screenshots/BQ40Z60_registers.png Graphic file (type png)
 <use figures/screenshots/BQ40Z60_registers.png>
 Package pdftex.def Info: figures/screenshots/BQ40Z60_registers.png  used on inp
-ut line 208.
+ut line 215.
 (pdftex.def)             Requested size: 386.63765pt x 273.41666pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `website' on page 10 undefined on input line 216.
-
-<figures/screenshots/website.png, id=56, 1312.905pt x 2101.8525pt>
+[10 <./figures/screenshots/SMBus_logic_analyser.png> <./figures/screenshots/BQ4
+0Z60_manual_excerpt.png>]
+<figures/screenshots/website.png, id=177, 1312.905pt x 2101.8525pt>
 File: figures/screenshots/website.png Graphic file (type png)
 <use figures/screenshots/website.png>
 Package pdftex.def Info: figures/screenshots/website.png  used on input line 22
-0.
+7.
 (pdftex.def)             Requested size: 328.22545pt x 525.46184pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./figures/screenshots/SMBus_logic_analyser.png> <./figures/screenshots/BQ4
-0Z60_manual_excerpt.png>]
-<figures/photos/wifi_router.jpg, id=60, 2108.87875pt x 1581.91pt>
+
+LaTeX Warning: Reference `wifi_router' on page 11 undefined on input line 237.
+
+[11 <./figures/screenshots/BQ40Z60_registers.png>]
+<figures/photos/wifi_router.jpg, id=184, 2108.87875pt x 1581.91pt>
 File: figures/photos/wifi_router.jpg Graphic file (type jpg)
 <use figures/photos/wifi_router.jpg>
-Package pdftex.def Info: figures/photos/wifi_router.jpg  used on input line 234
+Package pdftex.def Info: figures/photos/wifi_router.jpg  used on input line 241
 .
 (pdftex.def)             Requested size: 253.05453pt x 189.82101pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11 <./figures/screenshots/BQ40Z60_registers.png>] [12 <./figures/screenshots/w
-ebsite.png>]
-<figures/screenshots/captioned_worklamp.png, id=70, 910.15031pt x 411.78844pt>
+[12 <./figures/screenshots/website.png>]
+<figures/screenshots/captioned_worklamp.png, id=193, 910.15031pt x 411.78844pt>
+
 File: figures/screenshots/captioned_worklamp.png Graphic file (type png)
 <use figures/screenshots/captioned_worklamp.png>
 Package pdftex.def Info: figures/screenshots/captioned_worklamp.png  used on in
-put line 246.
-(pdftex.def)             Requested size: 455.07405pt x 205.8937pt.
+put line 254.
+(pdftex.def)             Requested size: 409.56386pt x 185.30307pt.
 
-Overfull \hbox (2.10616pt too wide) in paragraph at lines 246--247
- [] 
- []
 
-<figures/photos/worklamp_PCBs.jpg, id=71, 950.80219pt x 398.23781pt>
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/photos/worklamp_PCBs.jpg, id=194, 950.80219pt x 398.23781pt>
 File: figures/photos/worklamp_PCBs.jpg Graphic file (type jpg)
 <use figures/photos/worklamp_PCBs.jpg>
 Package pdftex.def Info: figures/photos/worklamp_PCBs.jpg  used on input line 2
-54.
-(pdftex.def)             Requested size: 475.39993pt x 199.11841pt.
-
-Overfull \hbox (22.43204pt too wide) in paragraph at lines 254--255
- [] 
- []
-
+62.
+(pdftex.def)             Requested size: 427.85703pt x 179.20535pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <./figures/photos/wifi_router.jpg> <./figures/screenshots/captioned_worklam
-p.png>]
-<figures/screenshots/version_A3_worklamp.png, id=75, 822.44766pt x 473.89546pt>
-
+<figures/screenshots/version_A3_worklamp.png, id=196, 822.44766pt x 473.89546pt
+>
 File: figures/screenshots/version_A3_worklamp.png Graphic file (type png)
 <use figures/screenshots/version_A3_worklamp.png>
 Package pdftex.def Info: figures/screenshots/version_A3_worklamp.png  used on i
-nput line 267.
+nput line 275.
 (pdftex.def)             Requested size: 452.34761pt x 260.64331pt.
- [14 <./figures/photos/worklamp_PCBs.jpg> <./figures/screenshots/version_A3_wor
-klamp.png>]
-<figures/screenshots/pins_definition_EFM8BB.png, id=79, 375.27704pt x 426.46828
-pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./figures/photos/wifi_router.jpg>]
+<figures/screenshots/pins_definition_EFM8BB.png, id=206, 375.27704pt x 426.4682
+8pt>
 File: figures/screenshots/pins_definition_EFM8BB.png Graphic file (type png)
 <use figures/screenshots/pins_definition_EFM8BB.png>
 Package pdftex.def Info: figures/screenshots/pins_definition_EFM8BB.png  used o
-n input line 292.
-(pdftex.def)             Requested size: 206.403pt x 234.55827pt.
-<figures/screenshots/opendrain_pushpull.png, id=80, 417.47458pt x 202.97107pt>
-File: figures/screenshots/opendrain_pushpull.png Graphic file (type png)
-<use figures/screenshots/opendrain_pushpull.png>
-Package pdftex.def Info: figures/screenshots/opendrain_pushpull.png  used on in
-put line 302.
-(pdftex.def)             Requested size: 229.61171pt x 111.63443pt.
+n input line 300.
+(pdftex.def)             Requested size: 150.10815pt x 170.58429pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15 <./figures/screenshots/pins_definition_EFM8BB.png>]
-<figures/screenshots/Li-ion_charge_algortihm.png, id=85, 621.44672pt x 315.8048
-4pt>
+<figures/screenshots/opendrain_pushpull.png, id=208, 417.47458pt x 202.97107pt>
+
+File: figures/screenshots/opendrain_pushpull.png Graphic file (type png)
+<use figures/screenshots/opendrain_pushpull.png>
+Package pdftex.def Info: figures/screenshots/opendrain_pushpull.png  used on in
+put line 310.
+(pdftex.def)             Requested size: 229.61171pt x 111.63443pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14 <./figures/screenshots/captioned_worklamp.png> <./figures/photos/worklamp_P
+CBs.jpg>] [15 <./figures/screenshots/version_A3_worklamp.png> <./figures/screen
+shots/pins_definition_EFM8BB.png>]
+<figures/screenshots/Li-ion_charge_algortihm.png, id=220, 621.44672pt x 315.804
+84pt>
 File: figures/screenshots/Li-ion_charge_algortihm.png Graphic file (type png)
 <use figures/screenshots/Li-ion_charge_algortihm.png>
 Package pdftex.def Info: figures/screenshots/Li-ion_charge_algortihm.png  used 
-on input line 313.
-(pdftex.def)             Requested size: 497.15804pt x 252.64421pt.
-
-Overfull \hbox (44.19014pt too wide) in paragraph at lines 313--314
- [] 
- []
-
-<figures/screenshots/flow_chart.png, id=86, 545.03625pt x 232.99547pt>
+on input line 322.
+(pdftex.def)             Requested size: 435.00974pt x 221.06187pt.
+<figures/screenshots/flow_chart.png, id=222, 545.03625pt x 232.99547pt>
 File: figures/screenshots/flow_chart.png Graphic file (type png)
 <use figures/screenshots/flow_chart.png>
 Package pdftex.def Info: figures/screenshots/flow_chart.png  used on input line
- 323.
+ 333.
 (pdftex.def)             Requested size: 436.0296pt x 186.3966pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -432,35 +541,55 @@ Chapitre 5.
 [19
 
 ] (main.lof)
-\tf@lof=\write4
-\openout4 = `main.lof'.
+\tf@lof=\write5
+\openout5 = `main.lof'.
 
- [20
+ (main.bbl [20
 
-] (main.aux)
+]
+Underfull \hbox (badness 1590) in paragraph at lines 4--9
+[]\OT1/cmr/m/n/10.95 Gayathri Va-su-de-van.  Usb type-c and po-wer de-li-very 1
+01 { po-wer de-li-very pro-
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
+ [21
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
+ (main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 02E058D3005C6C8DEC6D7109534DB989;1006.
+
 
 LaTeX Warning: There were undefined references.
 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
  ) 
 Here is how much of TeX's memory you used:
- 2920 strings out of 492973
- 44770 string characters out of 3135930
- 116687 words of memory out of 3000000
- 6733 multiletter control sequences out of 15000+200000
- 10097 words of font info for 35 fonts, out of 3000000 for 9000
+ 6593 strings out of 492973
+ 100393 string characters out of 3131982
+ 195709 words of memory out of 3000000
+ 10319 multiletter control sequences out of 15000+200000
+ 10572 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,31p,1042b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmti12.pfb>
-Output written on main.pdf (21 pages, 4318123 bytes).
+ 28i,6n,32p,1052b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmbx12.
+pfb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmcsc1
+0.pfb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmti
+10.pfb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cmt
+i12.pfb><C:/Users/Polyconseil/Documents/LaTeX/fonts/type1/public/amsfonts/cm/cm
+tt10.pfb>
+Output written on main.pdf (22 pages, 4360592 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 242 words of extra memory for PDF output out of 10000 (max. 10000000)
 

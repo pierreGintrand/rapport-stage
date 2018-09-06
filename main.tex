@@ -4,6 +4,8 @@
 \usepackage[utf8]{inputenc} % encoding
 %\usepackage{graphicx} % figures
 
+\usepackage{hyperref}
+
 \usepackage[pdftex]{graphicx} % includegraphics in the title page
 
 %\usepackage[top=2cm, bottom=2cm, left=3.5cm, right=3.5cm]{geometry} % margins
@@ -13,6 +15,8 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \usepackage[super]{nth} % for 1st 2nd ...
+
+\usepackage[nottoc, notlot]{tocbibind} % Table des des figures et biblio dans le sommaire
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -29,12 +33,13 @@
 
 \begin{document}
 
+\addcontentsline{toc}{chapter}{Remerciements} % ajouter Remerciement au Sommaire
+
 \makeatletter % to use @
 \begin{titlepage}
 \begin{center}
 
 % Upper part of the page. The '~' is needed because only works if a paragraph has started.
-
 \includegraphics[width=0.5\textwidth]{figures/logos/centralesupelec_logo.png}~\\[3cm]
 
 % Title
@@ -56,7 +61,7 @@
 \begin{minipage}{0.4\textwidth}
   \begin{flushright} \large
     \emph{Tuteur :} David \bsc{Collardeau}\\
-    %\emph{Chef d'équipe : } M. Chef \textsc{D’Équipe}
+    \emph{Enseignant référant :} Guillaume \textsc{Piolle}
   \end{flushright}
 \end{minipage}
 
@@ -135,12 +140,14 @@ Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fou
 \begin{center}
 \includegraphics[scale=0.35]{figures/screenshots/usb_pd_nego.png}
 \end{center}
-\caption{Exemple d’une négociation USB PD (simplifiée)}
+\caption{Exemple d’une négociation USB PD (simplifiée) \cite{usb_pd_nego}}
 \label{fig:usb_pd_negociation}
 \end{figure}
+% TODO: def of EMCA
+% TODO: biblio
 
 Cette négociation nécessite un contrôleur spécifique. Les recherches que j’ai effectuées m’ont mené à des contrôleurs assez onéreux, environ 5\$/unité. De plus un adaptateur secteur / USB-C supportant 80W coûtent relativement cher car il s'agit d'une technolgie nouvelle (notamment utliliser dans les derniers ordinateurs portables et téléphones)
-Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’il avait conçu pour la gestion de l’alimentation du projet Looping car le pack batterie d'\emph{EasyFeed} allait être identique et les besoins d'alimentation semblables.
+Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’il avait conçu (figure~\ref{fig:looping_pcb}) pour la gestion de l’alimentation du projet Looping car le pack batterie d'\emph{EasyFeed} allait être identique et les besoins d'alimentation semblables.
 
 \begin{figure}[!h]
 \begin{center}
@@ -150,7 +157,7 @@ Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’i
 \label{fig:looping_pcb}
 \end{figure}
 
-Le circuit était conçu autour d'un contrôleur Texas Instrument BQ40Z60 gérant les phases de charges et de décharges du pack batterie et d'un microprocesseur Silabs 8 bits EFM8LB1 (pas présent sur le schéma) pour communiquer avec le controlleur et de piloter globalement l'appareil (on/off, affichage du niveau de la batterie, boucle de contrôle de la température, ...).
+Le circuit (figure~\ref{fig:looping_charger}) était conçu autour d'un contrôleur Texas Instrument BQ40Z60 gérant les phases de charges et de décharges du pack batterie et d'un microprocesseur Silabs 8 bits EFM8LB1 (pas présent sur le schéma) pour communiquer avec le controlleur et de piloter globalement l'appareil (on/off, affichage du niveau de la batterie, boucle de contrôle de la température, ...).
 
 \begin{figure}[!h]
 \begin{center}
@@ -163,7 +170,7 @@ Le circuit était conçu autour d'un contrôleur Texas Instrument BQ40Z60 géran
 Mon travail fut donc de programmer le microprocesseur pour communiquer avec le controleur de batterie. J’ai dans un premier temps consulté attentivement les documentations et les manuels de ces 2 composants afin de comprendre leur fonctionnement. J’ai dû également m’intéressé au SMBus 
 % TODO: ref to SMBus documentation
 qui permet aux 2 puces de communiquer via les fils SMBD et SMBC.
-Le composant BQ40Z60 gère à la fois la charge de la batterie, la décharge, l’équilibre des cellules, les protections en température et en courant, l’estimation du niveau de batterie. Le SMBus permet de configurer la puce et surveiller son état pendant son fonctionnement.
+Le composant BQ40Z60 gère à la fois la charge de la batterie, la décharge, l’équilibre des cellules, les protections en température et en courant, l’estimation du niveau de batterie. SMBus permet de configurer la puce et surveiller son état pendant son fonctionnement.
 SMBus utilise donc 2 lignes pour comminiquer :
 \begin{itemize} % TODO: bullets instead of hyphen
 \item SMBD est une ligne de données bidirectionnnelle,
@@ -190,36 +197,36 @@ Pour visualiser le protocole SMBus, j’avais à disposition un oscilloscope pou
 
 L’analyseur logique permet d’être plus rapide car il convertit les données directement en hexadécimal tandis que l’oscilloscope donne un représentation plus réaliste des signaux pour repérer des problèmes analogiques (signaux bruités, capacitifs) par exemple.
 Le principal problème que j’ai rencontré est que le BQ40Z60 ne semblait pas piloter les 2 transistors FET qui gèrent la charge et la décharge de la batterie (les 2 transistors en série sur le schéma électrique).
-J’ai donc essayer de contrôler ces transistors manuellement avec des commandes expliqué dans le manuel du composant.
+J’ai donc essayer de contrôler ces transistors manuellement avec des commandes expliqué dans le manuel du composant (figure~\ref{fig:BQ40Z60_manual_excerpt}).
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[width=\textwidth]{figures/screenshots/BQ40Z60_manual_excerpt.png}
 \end{center}
-\caption{Extrait du \emph{BQ40Z60 Technical Reference Manual}} % TODO link to the manual
+\caption{Extrait du \emph{BQ40Z60 Technical Reference Manual}} 
 \label{fig:BQ40Z60_manual_excerpt}
 \end{figure}
 
 Le contrôleur ne semblait pas apprécier ces commandes car après avoir reçu celles-ci, il ne fonctionnait pas, il renvoyait un NACK au lieu d’un ACK puis plus aucune fonction ne répondait (comme la lecture du numéro de série du composant pas exemple).
-J’ai fait part de mes difficultés à contrôler le composant à David, il a décidé de commander un debugger spécifique pour les contrôleur batterie de Texas instrument, le EV2300. Cette appareil propose une interface permettant de visualiser tous les registres du BQ40Z60 et le configurer plus aisément. Ce projet a été mis en pause en attendant de recevoir ce debugger.
+J’ai fait part de mes difficultés à contrôler le composant à David, il a décidé de commander un debugger spécifique pour les contrôleur batterie de Texas instrument, le EV2300. Cette appareil fonctionne avec le logiciel BQStudio (figure~\ref{fig:BQ40Z60_registers}) qui propose une interface permettant de visualiser tous les registres du BQ40Z60 et le configurer plus aisément. Ce projet a été mis en pause en attendant de recevoir ce debugger.
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.4]{figures/screenshots/BQ40Z60_registers.png}
 \end{center}
-\caption{Registres du BQ40Z60 dans le logiciel BQ studio} % TODO link to the manual
+\caption{Registres du BQ40Z60 dans le logiciel BQ studio}
 \label{fig:BQ40Z60_registers}
 \end{figure}
 
 \section{Site web}
 En parallèle de ce projet, Guillaume, le directeur marketing de la start-up, m’a demandé d’adapter le site internet neohm.net fraichement créer par David pour qu’il soit correctement visible sur mobile.
-Le site internet avait conçu à partir d’un template du framework Bootstrap. Il était donc à 90\% adapter pour mobile mais il fallait corriger quelques défauts. J’ai donc modifier dans le feuille de style la taille de certains éléments en utilisant une technologie \emph{responsive} qui s’adapte à la taille de l’écran, modifier la position de conteneurs d’absolue à relatif et ajuster certaines marges qui faisait apparaître une barre de défilement horizontale sous mobile. J’ai également modifier le code JavaScript d’une fonction qu’avait rajouté David, qui permet d’afficher périodiques des mots sur une image de fond pour que cela fonctionne également sur smartphone. Après ces modifications, le site était parfaitement lisible depuis tout appareil (figure~\ref{website} et ...).
+Le site internet avait conçu à partir d’un template du framework Bootstrap. Il était donc à 90\% adapter pour mobile mais il fallait corriger quelques défauts. J’ai donc modifier dans le feuille de style la taille de certains éléments en utilisant une technologie \emph{responsive} qui s’adapte à la taille de l’écran, modifier la position de conteneurs d’absolue à relatif et ajuster certaines marges qui faisait apparaître une barre de défilement horizontale sous mobile. J’ai également modifier le code JavaScript d’une fonction qu’avait rajouté David, qui permet d’afficher périodiques des mots sur une image de fond pour que cela fonctionne également sur smartphone. Après ces modifications, le site était parfaitement lisible depuis tout appareil (figure~\ref{fig:website}).
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.25]{figures/screenshots/website.png}
 \end{center}
-\caption{Avant/après du site vu d’un smartphone} % TODO link to the manual
+\caption{Avant/après du site vu d’un smartphone}
 \label{fig:website}
 \end{figure}
 
@@ -227,46 +234,47 @@ Le site internet avait conçu à partir d’un template du framework Bootstrap. 
 \section{Seveur}
 David a décidé de mettre en place un serveur au bureau afin de centraliser les projets, les ressources, l’impression. Sy, l’ingénieur chinois, s’est chargé de monter le serveur, d’y installer Linux Ubuntu et de mettre en place le logiciel Samba pour partager des dossiers et l’imprimante en réseau local. Ma mission fût de créer un accès distant au serveur via le protocole FTP. J’ai installé le paquet VsFTPd afin de créer un serveur sécurisé. Le problème est que l’adresse IP de la connexion internet attribuer par notre fournisseur d’accès n’est pas fixe, et demander un IP fixe coûte cher en Chine. Pour parer ce problème, David m’a demandé d’installer le logiciel TeamViewer qui permet de prendre le contrôle d’un PC à distance via une connexion internet. Ainsi, pour se connecter au serveur FTP à distance, il faut dans un premier temps utiliser TeamViewer afin de déterminer l’adresse IP actuel du serveur, puis utiliser un client FTP pour se connecter aux serveurs.
 David m’a également chargé de mettre en place un gestionnaire centralisé de gestion version. J’ai donc installé Apache Subversion sur le serveur. Travailler avec un tel gestionnaire permet d’être plus efficace en équipe et assure une traçabilité des modifications effectuées sur les projets.
-A la demande de l’équipe, je me suis occupé de trouver un moyen pour contourner le pare-feu chinois qui nous empêche l’accès à de nombreux sites utiles dans notre travail : Google, Gmail, WhatsApp, YouTube, etc. 2 solutions s’offraient à moi : mettre en place un VPN sur un router wifi ou utiliser le réseau 4G hongkongais que l’on capte dans les locaux (proche de la frontière avec Hong-Kong) pour fournir l’accès internet. Je suis allé à Hong-Kong afin de me renseigner et d’acheter un router wifi compatible. Sur les conseils d’un vendeur, j’ai choisi un router à la fois compatible avec les VPN et avec une clé USB 4G.
+A la demande de l’équipe, je me suis occupé de trouver un moyen pour contourner le pare-feu chinois qui nous empêche l’accès à de nombreux sites utiles dans notre travail : Google, Gmail, WhatsApp, YouTube, etc. 2 solutions s’offraient à moi : mettre en place un VPN sur un router wifi ou utiliser le réseau 4G hongkongais que l’on capte dans les locaux (proche de la frontière avec Hong-Kong) pour fournir l’accès internet. Je suis allé à Hong-Kong afin de me renseigner et d’acheter un router wifi compatible. Sur les conseils d’un vendeur, j’ai choisi un router à la fois compatible avec les VPN et avec une clé USB 4G (figure~\ref{wifi_router}).
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.12]{figures/photos/wifi_router.jpg}
 \end{center}
-\caption{Router wifi compatible VPN avec une clé USB LTE} % TODO link to the manual
+\caption{Router wifi compatible VPN avec une clé USB LTE}
 \label{fig:wifi_router}
 \end{figure}
 
 \section{Worklamp}
-David m’a présenté un autre projet en cours sur lequel j'allai travailler : une lampe à LED portable pour peintre. Cette lampe existe sous 2 versions : une version « AC » 80W alimentée par le secteur et une version « DC » 50W alimentée par batterie. Pour simplifier l'industrialisation du produit, le boitier est identique pour les 2 versions, tous les ports ne sont utilisés dans les 2 verisons. Le PCB et le panneau sont quand à eux spécifique à chaque version du produit. Il y a plus de LEDs dans la versions 80W et les PCBs n'ont pas le même rôle (redressement et lissage de la tension pour la version AC, gestion de la batterie pour la version DC).
+\subsection{Présentation}
+David m’a présenté un autre projet en cours sur lequel j'allai travailler : une lampe à LED portable pour peintre. Cette lampe existe sous 2 versions : une version \emph{AC} 80W alimentée par le secteur et une version \emph{DC} 50W alimentée par batterie. Pour simplifier l'industrialisation du produit, le boitier est identique pour les 2 versions mais tous les ports ne sont utilisés dans chaque version (figure~\ref{fig:captioned_worklamp}). Le PCB et le panneau de LEDs sont quand à eux spécifiques à chaque version du produit (figure~\ref{fig:worklamp_PCBs}). Il y a plus de LEDs dans la versions 80W et les PCBs n'ont pas le même rôle (redressement et lissage de la tension pour la version AC, gestion de la batterie pour la version DC).
 Dans les 2 version, un potentiomètre permet de faire varier lumineuse. Les panneaux de LEDs sont composés de 2 types de LEDs (3700K et 4200K) afin de disposer de 3 modes d'éclaraige différents. Un bouton permet de changer la température de la couleur émise : 3700K, 5700K et 4200K (les 2 types de LED sont allumés à mi-puissance). 
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.5]{figures/screenshots/captioned_worklamp.png}
+\includegraphics[scale=0.45]{figures/screenshots/captioned_worklamp.png}
 \end{center}
-\caption{Dessin 3D et photo de la worklamp} % TODO link to the manual
+\caption{Dessin 3D et photo de la worklamp}
 \label{fig:captioned_worklamp}
 \end{figure}
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.5]{figures/photos/worklamp_PCBs.jpg}
+\includegraphics[scale=0.45]{figures/photos/worklamp_PCBs.jpg}
 \end{center}
-\caption{PCBs des versions AC et DC de la worklamp} % TODO link to the manual
+\caption{PCBs des versions AC et DC de la worklamp}
 \label{fig:worklamp_PCBs}
 \end{figure}
 
-Ma mission a porté sur la version DC, j’ai été chargé de programmer le microprocesseur présent dans le circuit, de débugger et de tester les prototypes. La version AC est purement hardware, elle est composée  de filtres analogiques et de bascules pour gérer le changement de mode de couleur. A contrario, la version DC comporte un processeur pour pouvoir gérer le pack batterie (charge, état du niveau de batterie, protection en courant et température) et nécessite donc un développement logiciel. Le processeur est un ... 
-%TODO: name of the proc
-Il se programme en langage C.
+Ma mission a porté sur la version DC, j’ai été en chage de la programmation du microprocesseur présent dans le circuit, du débuggage et des tests les prototypes. La version AC est purement hardware, elle est composée de filtres analogiques et de bascules pour gérer le changement de mode de couleur. A contrario, la version DC comporte un processeur pour pouvoir gérer le pack batterie (charge, état du niveau de batterie, protection en courant et température) et nécessite donc un développement logiciel. Le langage de programmation utiliser était le C.
+
+\subsection{Schéma électrique}
 David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schema}) qu’il avait conçu qui correspond au PCB du modèle DC pour que je me l’approprie pour ensuite implémenter un software dans le microprocesseur.
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.55]{figures/screenshots/version_A3_worklamp.png}
 \end{center}
-\caption{Schéma électrique de la worklamp} % TODO link to the manual
+\caption{Schéma électrique de la worklamp}
 \label{fig:worklamp_schema}
 \end{figure}
 
@@ -289,9 +297,9 @@ Il s’agit de définir des fonctions et noms variables aux différents pins (in
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.55]{figures/screenshots/pins_definition_EFM8BB.png}
+\includegraphics[scale=0.4]{figures/screenshots/pins_definition_EFM8BB.png}
 \end{center}
-\caption{Définition de pins sur le processeur EFM8BB1x-QSOP24} % TODO link to the manual
+\caption{Définition de pins sur le processeur EFM8BB1x-QSOP24} 
 \label{fig:pins_definition}
 \end{figure}
 
@@ -301,30 +309,34 @@ Cette étape est cruciale pour la suite du développement et demande quelques no
 \begin{center}
 \includegraphics[scale=0.55]{figures/screenshots/opendrain_pushpull.png}
 \end{center}
-\caption{Illustration sortie « Open drain » et « Push-pull »} % TODO link to the manual
+\caption{Illustration sortie « Open drain » et « Push-pull »} 
 \label{fig:opendrain_pushpull}
 \end{figure}
 
+\subsection{Charge}
 Le pack batterie est composé de 2 batteries lithium-ion 4S (tension nominal 4*3,7=14,8V) en parallèle pour une capacité totale de 10,4 A.h (153,92 W.h). En fonction de l’avancement du projet, on a changé de contrôleur gérant la charge de la batterie, on est passé du BQ2000 au BQ25703A qui est plus performant et qui nous permet qui directement lire la tension de la batterie pour estimer son état de charge et de surveiller le courant de charge/décharge via la protocole I2C.
 Un contrôleur pour charger la batterie lithium-ion permet de gérer les 3 phases de la charge. La dernière phase est la \emph{trickle charge}, elle est optionnelle et permet d’optimiser la durée de vie de la batterie si celle-ci a un très bas niveau, tous les contrôles n’intègre pas cette phase. Durant la \emph{trickle charge}, un faible courant est transmis à la batterie afin d’atteindre une certaine tension. La 2nd phase est le « constant current » : un courant élevé est envoyé dans le pack batterie jusqu’à atteindre la tension de charge. Dans mon cas, le courant est de 2*2,6 = 5,2 A (2 packs en parallèle) et la tension de charge de 4*4,2 = 16,8V (chaque pack à 4 cellules en série). La dernière phase est le « constant voltage » : on fixe une certaine tension (16,8V dans mon cas) aux bornes du pack batterie jusqu’à atteindre un certain courant, puis on garde cette tension pendant 30-60min pour finaliser la charge.
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[scale=0.8]{figures/screenshots/Li-ion_charge_algortihm.png}
+\includegraphics[scale=0.7]{figures/screenshots/Li-ion_charge_algortihm.png}
 \end{center}
-\caption{Algorithme de charge d’une batterie lithium-ion} % TODO link to the manual
+\caption{Algorithme de charge d’une batterie lithium-ion} 
 \label{fig:li-ion_charge}
 \end{figure}
 
-J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit gérer (figure~\ref{fig:flow_chart}). Cette étape m'a permis d'avancer dans le développement logiciel en gardant un certain recul avec les consignes auxquelles je m'étais fixer.
+\subsection{Software}
+J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit gérer (figure~\ref{fig:flow_chart}). Cette étape m'a permis d'avancer dans le développement logiciel en gardant un certain recul avec les consignes auxquelles je m'étais fixé.
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.8]{figures/screenshots/flow_chart.png}
 \end{center}
-\caption{Quelques algorigrammes du software de la worklamp} % TODO link to the manual
+\caption{Quelques algorigrammes du software de la worklamp} 
 \label{fig:flow_chart}
 \end{figure}
+
+\subsection{Tests}
 
 
 \chapter{Analyse des résultats obtenus}
@@ -332,5 +344,8 @@ J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit g
 \chapter{Apports}
 
 \listoffigures
+
+\bibliographystyle{plain}
+\bibliography{bibli}
 
 \end{document}
