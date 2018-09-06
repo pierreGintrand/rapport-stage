@@ -14,13 +14,9 @@
 %title page
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
-\usepackage[super]{nth} % for 1st 2nd ...
+% units
+\usepackage[load-configurations = abbreviations, locale = FR, detect-all]{siunitx}
 
-%\usepackage[squaren, Gray, cdot]{SIunits} % for units, 
-\usepackage[load-configurations = abbreviations]{siunitx}
-%\usepackage[inter-unit-product = \ensuremath{{}\cdot{}}]{siunitx}
-\sisetup{locale = FR, detect-all}
-% WIP: use unitx instead
 
 \usepackage[nottoc, notlot]{tocbibind} % Table des des figures et biblio dans le sommaire
 
@@ -304,20 +300,20 @@ Il a ensuite fallu de définir la configuration des pins du microprocesseur en a
 \label{fig:pins_definition}
 \end{figure}
 
-Cette étape est cruciale pour la suite du développement et demande quelques notions d’électronique. Par exemple il faut définir si le pin est défini en « open drain », c’est-à-dire que l’état haut correspond à une forte impédance et l’état bas à une faible impédance, ou en « push-pull », si l’on veut que l’état haut soit le 3,3 V du CPU, et état bas du CPU (figure~\ref{fig:opendrain_pushpull}). 
+Cette étape est cruciale pour la suite du développement et demande quelques notions d’électronique. Par exemple il faut définir si le pin est défini en \emph{open drain}, c’est-à-dire que l’état haut correspond à une forte impédance et l’état bas à une faible impédance, ou en \emph{push-pull}, si l’on veut que l’état haut soit le 3,3 V du CPU, et état bas du CPU (figure~\ref{fig:opendrain_pushpull}). 
 
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.55]{figures/screenshots/opendrain_pushpull.png}
 \end{center}
-\caption{Illustration sortie « Open drain » et « Push-pull »} 
+\caption{Illustration sortie \emph{Open drain} et \emph{Push-pull}} 
 \label{fig:opendrain_pushpull}
 \end{figure}
 
 \subsection{Charge}
 Le pack batterie est composé de 2 batteries lithium-ion 4S (tension nominal $4\times3,7=\SI{14.8}{\volt}$) en parallèle pour une capacité totale de \SI{10.4}{\ampere\hour} (\SI{153.92}{\watt\hour}). En fonction de l’avancement du projet, on a changé de contrôleur gérant la charge de la batterie, on est passé du BQ2000 au BQ25703A qui est plus performant et qui nous permet qui directement lire la tension de la batterie pour estimer son état de charge et de surveiller le courant de charge/décharge via la protocole I2C.
 
-Un contrôleur pour charger la batterie lithium-ion permet de gérer les 3 phases de la charge. La dernière phase est la \emph{trickle charge}, elle est optionnelle et permet d’optimiser la durée de vie de la batterie si celle-ci a un très bas niveau, tous les contrôles n’intègre pas cette phase. Durant la \emph{trickle charge}, un faible courant est transmis à la batterie afin d’atteindre une certaine tension. La 2nd phase est le « constant current » : un courant élevé est envoyé dans le pack batterie jusqu’à atteindre la tension de charge. Dans mon cas, le courant est de $2\times2,6 = \SI{5.2}{\ampere}$ (2 packs en parallèle) et la tension de charge de $4\times4,2 = \SI{16.8}{\volt}$ (chaque pack à 4 cellules en série). La dernière phase est le « constant voltage » : on fixe une certaine tension (\SI{16.8}{\volt} dans mon cas) aux bornes du pack batterie jusqu’à atteindre un certain courant, puis on garde cette tension pendant 30-60min pour finaliser la charge.
+Un contrôleur pour charger la batterie lithium-ion permet de gérer les 3 phases de la charge. La dernière phase est la \emph{trickle charge}, elle est optionnelle et permet d’optimiser la durée de vie de la batterie si celle-ci a un très bas niveau, tous les contrôles n’intègre pas cette phase. Durant la \emph{trickle charge}, un faible courant est transmis à la batterie afin d’atteindre une certaine tension. La 2\ieme{} phase est le \emph{constant current} : un courant élevé est envoyé dans le pack batterie jusqu’à atteindre la tension de charge. Dans mon cas, le courant est de $2\times2,6 = \SI{5.2}{\ampere}$ (2 packs en parallèle) et la tension de charge de $4\times4,2 = \SI{16.8}{\volt}$ (chaque pack à 4 cellules en série). La dernière phase est le \emph{constant voltage} : on fixe une certaine tension (\SI{16.8}{\volt} dans mon cas) aux bornes du pack batterie jusqu’à atteindre un certain courant, puis on garde cette tension pendant 30-60min pour finaliser la charge.
 
 Bien que cet algorithme est implémenter dans les contrôleurs gérant la charge de batterie, sa compréhension était indispensable car j'ai dû vérifier que les différents circuits le respecter bien. Pour ce faire, après avoir vidé une batterie suite à une série de test, j'activais le circuit de charge et je vérifiais que les différentes étapes étaient respectées. Si le contrôleur était mal utilisé, la tension de charge pouvait trop haute ou trop basse, ce qui présente un danger pour la batterie et sa durée de vie.
 
