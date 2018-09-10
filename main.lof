@@ -8,21 +8,21 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Exemple d\IeC {\textquoteright }une n\IeC {\'e}gociation USB PD (simplifi\IeC {\'e}e) \cite {usb_pd_nego}}}{8}{figure.3.2}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces PCB du projet Looping}}{8}{figure.3.3}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Sch\IeC {\'e}ma \IeC {\'e}lectrique de la gestion de batterie de Looping}}{9}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Byte SMBus visualis\IeC {\'e} avec un oscilloscope}}{9}{figure.3.5}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Byte SMBus visualis\IeC {\'e} avec un oscilloscope}}{10}{figure.3.5}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces 3 bytes SMBus visualis\IeC {\'e}s avec un analyseur logique}}{10}{figure.3.6}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Extrait du \emph {BQ40Z60 Technical Reference Manual}\cite {BQ40Z60_tech_manual}}}{10}{figure.3.7}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Registres du BQ40Z60 dans le logiciel BQ studio}}{11}{figure.3.8}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Avant/apr\IeC {\`e}s du site vu d\IeC {\textquoteright }un smartphone}}{12}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Router wifi compatible VPN avec une cl\IeC {\'e} USB LTE}}{13}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Dessin 3D et photo de la worklamp}}{13}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces PCBs des versions AC et DC de la worklamp}}{14}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Sch\IeC {\'e}ma \IeC {\'e}lectrique de la worklamp}}{14}{figure.3.13}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces D\IeC {\'e}finition de pins sur le processeur EFM8BB1x-QSOP24\cite {EFM8BB1_datasheet}}}{15}{figure.3.14}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Illustration sortie \emph {Open drain} et \emph {Push-pull}}}{15}{figure.3.15}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Algorithme de charge d\IeC {\textquoteright }une batterie lithium-ion \cite {BQ2000_datasheet}}}{16}{figure.3.16}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Quelques algorigrammes du software de la worklamp}}{17}{figure.3.17}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Panneau de LEDs en mode \SI {5700}{\kelvin } et \SI {4200}{\kelvin } \IeC {\`a} travers les lunettes de s\IeC {\'e}curit\IeC {\'e}}}{18}{figure.3.18}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Router wi-fi compatible VPN avec une cl\IeC {\'e} USB LTE}}{13}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Dessin 3D et photo de la worklamp}}{14}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces PCBs des versions AC et DC de la worklamp}}{15}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Sch\IeC {\'e}ma \IeC {\'e}lectrique de la Worklamp}}{15}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces D\IeC {\'e}finition de pins sur le processeur EFM8BB1x-QSOP24\cite {EFM8BB1_datasheet}}}{16}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Illustration sortie \emph {Open drain} et \emph {Push-pull}}}{16}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Algorithme de charge d\IeC {\textquoteright }une batterie lithium-ion \cite {BQ2000_datasheet}}}{18}{figure.3.16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Quelques algorigrammes du software de la worklamp}}{18}{figure.3.17}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Panneau de LEDs en mode \SI {5700}{\kelvin } et \SI {4200}{\kelvin } \IeC {\`a} travers les lunettes de s\IeC {\'e}curit\IeC {\'e}}}{19}{figure.3.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Sph\IeC {\`e}re avec la lampe allum\IeC {\'e}e}}{21}{figure.A.1}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Sph\IeC {\`e}re avec la lampe allum\IeC {\'e}e}}{23}{figure.A.1}

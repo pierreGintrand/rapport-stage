@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.4)  10 SEP 2018 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.4)  10 SEP 2018 19:27
 entering extended mode
 **./main.tex
 (main.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
-File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -20,6 +20,56 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\ae.sty"
+Package: ae 2001/02/12 1.3 Almost European Computer Modern
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2018/06/05 3.22 The Babel package
@@ -78,6 +128,13 @@ Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
@@ -213,139 +270,154 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
-Package: fullpage 1999/02/23 1.1 (PWD)
-\FP@margin=\skip44
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+\Gm@cnth=\count109
+\Gm@cntv=\count110
+\c@Gm@tempcnt=\count111
+\Gm@bindingoffset=\dimen118
+\Gm@wd@mp=\dimen119
+\Gm@odd@mp=\dimen120
+\Gm@even@mp=\dimen121
+\Gm@layoutwidth=\dimen122
+\Gm@layoutheight=\dimen123
+\Gm@layouthoffset=\dimen124
+\Gm@layoutvoffset=\dimen125
+\Gm@dimlist=\toks18
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
 Package: expl3 2018-08-23 L3 programming layer (loader) 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex"
 Package: expl3 2018-08-23 L3 programming layer (code)
-\c_max_int=\count109
-\l_tmpa_int=\count110
-\l_tmpb_int=\count111
-\g_tmpa_int=\count112
-\g_tmpb_int=\count113
-\g__kernel_prg_map_int=\count114
-\c_log_iow=\count115
-\l_iow_line_count_int=\count116
-\l__iow_line_target_int=\count117
-\l__iow_one_indent_int=\count118
-\l__iow_indent_int=\count119
-\c_zero_dim=\dimen118
-\c_max_dim=\dimen119
-\l_tmpa_dim=\dimen120
-\l_tmpb_dim=\dimen121
-\g_tmpa_dim=\dimen122
-\g_tmpb_dim=\dimen123
-\c_zero_skip=\skip45
-\c_max_skip=\skip46
-\l_tmpa_skip=\skip47
-\l_tmpb_skip=\skip48
-\g_tmpa_skip=\skip49
-\g_tmpb_skip=\skip50
+\c_max_int=\count112
+\l_tmpa_int=\count113
+\l_tmpb_int=\count114
+\g_tmpa_int=\count115
+\g_tmpb_int=\count116
+\g__kernel_prg_map_int=\count117
+\c_log_iow=\count118
+\l_iow_line_count_int=\count119
+\l__iow_line_target_int=\count120
+\l__iow_one_indent_int=\count121
+\l__iow_indent_int=\count122
+\c_zero_dim=\dimen126
+\c_max_dim=\dimen127
+\l_tmpa_dim=\dimen128
+\l_tmpb_dim=\dimen129
+\g_tmpa_dim=\dimen130
+\g_tmpb_dim=\dimen131
+\c_zero_skip=\skip44
+\c_max_skip=\skip45
+\l_tmpa_skip=\skip46
+\l_tmpb_skip=\skip47
+\g_tmpa_skip=\skip48
+\g_tmpb_skip=\skip49
 \c_zero_muskip=\muskip11
 \c_max_muskip=\muskip12
 \l_tmpa_muskip=\muskip13
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count120
-\l__intarray_loop_int=\count121
-\c__intarray_sp_dim=\dimen124
-\g__intarray_font_int=\count122
-\c__fp_leading_shift_int=\count123
-\c__fp_middle_shift_int=\count124
-\c__fp_trailing_shift_int=\count125
-\c__fp_big_leading_shift_int=\count126
-\c__fp_big_middle_shift_int=\count127
-\c__fp_big_trailing_shift_int=\count128
-\c__fp_Bigg_leading_shift_int=\count129
-\c__fp_Bigg_middle_shift_int=\count130
-\c__fp_Bigg_trailing_shift_int=\count131
-\c__kernel_randint_max_int=\count132
-\g__fp_array_int=\count133
-\l__fp_array_loop_int=\count134
-\l__sort_length_int=\count135
-\l__sort_min_int=\count136
-\l__sort_top_int=\count137
-\l__sort_max_int=\count138
-\l__sort_true_max_int=\count139
-\l__sort_block_int=\count140
-\l__sort_begin_int=\count141
-\l__sort_end_int=\count142
-\l__sort_A_int=\count143
-\l__sort_B_int=\count144
-\l__sort_C_int=\count145
-\l__tl_analysis_normal_int=\count146
-\l__tl_analysis_index_int=\count147
-\l__tl_analysis_nesting_int=\count148
-\l__tl_analysis_type_int=\count149
-\l__regex_internal_a_int=\count150
-\l__regex_internal_b_int=\count151
-\l__regex_internal_c_int=\count152
-\l__regex_balance_int=\count153
-\l__regex_group_level_int=\count154
-\l__regex_mode_int=\count155
-\c__regex_cs_in_class_mode_int=\count156
-\c__regex_cs_mode_int=\count157
-\l__regex_catcodes_int=\count158
-\l__regex_default_catcodes_int=\count159
-\c__regex_catcode_D_int=\count160
-\c__regex_catcode_S_int=\count161
-\c__regex_catcode_L_int=\count162
-\c__regex_catcode_O_int=\count163
-\c__regex_catcode_A_int=\count164
-\c__regex_all_catcodes_int=\count165
-\l__regex_show_lines_int=\count166
-\l__regex_min_state_int=\count167
-\l__regex_max_state_int=\count168
-\l__regex_left_state_int=\count169
-\l__regex_right_state_int=\count170
-\l__regex_capturing_group_int=\count171
-\l__regex_min_pos_int=\count172
-\l__regex_max_pos_int=\count173
-\l__regex_curr_pos_int=\count174
-\l__regex_start_pos_int=\count175
-\l__regex_success_pos_int=\count176
-\l__regex_curr_char_int=\count177
-\l__regex_curr_catcode_int=\count178
-\l__regex_last_char_int=\count179
-\l__regex_case_changed_char_int=\count180
-\l__regex_curr_state_int=\count181
-\l__regex_step_int=\count182
-\l__regex_min_active_int=\count183
-\l__regex_max_active_int=\count184
-\l__regex_replacement_csnames_int=\count185
-\l__regex_match_count_int=\count186
-\l__regex_min_submatch_int=\count187
-\l__regex_submatch_int=\count188
-\l__regex_zeroth_submatch_int=\count189
-\g__regex_trace_regex_int=\count190
+\l_keys_choice_int=\count123
+\l__intarray_loop_int=\count124
+\c__intarray_sp_dim=\dimen132
+\g__intarray_font_int=\count125
+\c__fp_leading_shift_int=\count126
+\c__fp_middle_shift_int=\count127
+\c__fp_trailing_shift_int=\count128
+\c__fp_big_leading_shift_int=\count129
+\c__fp_big_middle_shift_int=\count130
+\c__fp_big_trailing_shift_int=\count131
+\c__fp_Bigg_leading_shift_int=\count132
+\c__fp_Bigg_middle_shift_int=\count133
+\c__fp_Bigg_trailing_shift_int=\count134
+\c__kernel_randint_max_int=\count135
+\g__fp_array_int=\count136
+\l__fp_array_loop_int=\count137
+\l__sort_length_int=\count138
+\l__sort_min_int=\count139
+\l__sort_top_int=\count140
+\l__sort_max_int=\count141
+\l__sort_true_max_int=\count142
+\l__sort_block_int=\count143
+\l__sort_begin_int=\count144
+\l__sort_end_int=\count145
+\l__sort_A_int=\count146
+\l__sort_B_int=\count147
+\l__sort_C_int=\count148
+\l__tl_analysis_normal_int=\count149
+\l__tl_analysis_index_int=\count150
+\l__tl_analysis_nesting_int=\count151
+\l__tl_analysis_type_int=\count152
+\l__regex_internal_a_int=\count153
+\l__regex_internal_b_int=\count154
+\l__regex_internal_c_int=\count155
+\l__regex_balance_int=\count156
+\l__regex_group_level_int=\count157
+\l__regex_mode_int=\count158
+\c__regex_cs_in_class_mode_int=\count159
+\c__regex_cs_mode_int=\count160
+\l__regex_catcodes_int=\count161
+\l__regex_default_catcodes_int=\count162
+\c__regex_catcode_D_int=\count163
+\c__regex_catcode_S_int=\count164
+\c__regex_catcode_L_int=\count165
+\c__regex_catcode_O_int=\count166
+\c__regex_catcode_A_int=\count167
+\c__regex_all_catcodes_int=\count168
+\l__regex_show_lines_int=\count169
+\l__regex_min_state_int=\count170
+\l__regex_max_state_int=\count171
+\l__regex_left_state_int=\count172
+\l__regex_right_state_int=\count173
+\l__regex_capturing_group_int=\count174
+\l__regex_min_pos_int=\count175
+\l__regex_max_pos_int=\count176
+\l__regex_curr_pos_int=\count177
+\l__regex_start_pos_int=\count178
+\l__regex_success_pos_int=\count179
+\l__regex_curr_char_int=\count180
+\l__regex_curr_catcode_int=\count181
+\l__regex_last_char_int=\count182
+\l__regex_case_changed_char_int=\count183
+\l__regex_curr_state_int=\count184
+\l__regex_step_int=\count185
+\l__regex_min_active_int=\count186
+\l__regex_max_active_int=\count187
+\l__regex_replacement_csnames_int=\count188
+\l__regex_match_count_int=\count189
+\l__regex_min_submatch_int=\count190
+\l__regex_submatch_int=\count191
+\l__regex_zeroth_submatch_int=\count192
+\g__regex_trace_regex_int=\count193
 \c_empty_box=\box26
 \l_tmpa_box=\box27
 \l_tmpb_box=\box28
 \g_tmpa_box=\box29
 \g_tmpb_box=\box30
-\l__box_top_dim=\dimen125
-\l__box_bottom_dim=\dimen126
-\l__box_left_dim=\dimen127
-\l__box_right_dim=\dimen128
-\l__box_top_new_dim=\dimen129
-\l__box_bottom_new_dim=\dimen130
-\l__box_left_new_dim=\dimen131
-\l__box_right_new_dim=\dimen132
+\l__box_top_dim=\dimen133
+\l__box_bottom_dim=\dimen134
+\l__box_left_dim=\dimen135
+\l__box_right_dim=\dimen136
+\l__box_top_new_dim=\dimen137
+\l__box_bottom_new_dim=\dimen138
+\l__box_left_new_dim=\dimen139
+\l__box_right_new_dim=\dimen140
 \l__box_internal_box=\box31
 \l__coffin_internal_box=\box32
-\l__coffin_internal_dim=\dimen133
-\l__coffin_offset_x_dim=\dimen134
-\l__coffin_offset_y_dim=\dimen135
-\l__coffin_x_dim=\dimen136
-\l__coffin_y_dim=\dimen137
-\l__coffin_x_prime_dim=\dimen138
-\l__coffin_y_prime_dim=\dimen139
+\l__coffin_internal_dim=\dimen141
+\l__coffin_offset_x_dim=\dimen142
+\l__coffin_offset_y_dim=\dimen143
+\l__coffin_x_dim=\dimen144
+\l__coffin_y_dim=\dimen145
+\l__coffin_x_prime_dim=\dimen146
+\l__coffin_y_prime_dim=\dimen147
 \c_empty_coffin=\box33
 \l__coffin_aligned_coffin=\box34
 \l__coffin_aligned_internal_coffin=\box35
@@ -354,31 +426,31 @@ Package: expl3 2018-08-23 L3 programming layer (code)
 \l__coffin_display_coffin=\box38
 \l__coffin_display_coord_coffin=\box39
 \l__coffin_display_pole_coffin=\box40
-\l__coffin_display_offset_dim=\dimen140
-\l__coffin_display_x_dim=\dimen141
-\l__coffin_display_y_dim=\dimen142
+\l__coffin_display_offset_dim=\dimen148
+\l__coffin_display_x_dim=\dimen149
+\l__coffin_display_y_dim=\dimen150
 \g__file_internal_ior=\read1
-\l__coffin_bounding_shift_dim=\dimen143
-\l__coffin_left_corner_dim=\dimen144
-\l__coffin_right_corner_dim=\dimen145
-\l__coffin_bottom_corner_dim=\dimen146
-\l__coffin_top_corner_dim=\dimen147
-\l__coffin_scaled_total_height_dim=\dimen148
-\l__coffin_scaled_width_dim=\dimen149
-\l__seq_internal_a_int=\count191
-\l__seq_internal_b_int=\count192
+\l__coffin_bounding_shift_dim=\dimen151
+\l__coffin_left_corner_dim=\dimen152
+\l__coffin_right_corner_dim=\dimen153
+\l__coffin_bottom_corner_dim=\dimen154
+\l__coffin_top_corner_dim=\dimen155
+\l__coffin_scaled_total_height_dim=\dimen156
+\l__coffin_scaled_width_dim=\dimen157
+\l__seq_internal_a_int=\count194
+\l__seq_internal_b_int=\count195
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode.def"
 File: l3pdfmode.def 2018-08-23 v L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count193
+\l__driver_color_stack_int=\count196
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty"
 Package: xparse 2018-08-23 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count194
-\g__xparse_grabber_int=\count195
-\l__xparse_m_args_int=\count196
-\l__xparse_mandatory_args_int=\count197
-\l__xparse_v_nesting_int=\count198
+\l__xparse_current_arg_int=\count197
+\g__xparse_grabber_int=\count198
+\l__xparse_m_args_int=\count199
+\l__xparse_mandatory_args_int=\count266
+\l__xparse_v_nesting_int=\count267
 )
 Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
 
@@ -387,62 +459,62 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen150
+\@emptytoks=\toks19
+\ex@=\dimen158
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
-\col@sep=\dimen151
+\col@sep=\dimen159
 \ar@mcellbox=\box41
-\extrarowheight=\dimen152
-\NC@list=\toks19
-\extratabsurround=\skip51
-\backup@length=\skip52
+\extrarowheight=\dimen160
+\NC@list=\toks20
+\extratabsurround=\skip50
+\backup@length=\skip51
 \ar@cellbox=\box42
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
 Package: l3keys2e 2018-08-23 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box43
-\l__siunitx_tmp_dim=\dimen153
-\l__siunitx_tmp_int=\count199
-\l__siunitx_number_mantissa_length_int=\count266
-\l__siunitx_number_uncert_length_int=\count267
-\l__siunitx_round_int=\count268
-\l__siunitx_process_decimal_int=\count269
-\l__siunitx_process_uncertainty_int=\count270
-\l__siunitx_process_fixed_int=\count271
-\l__siunitx_process_integer_min_int=\count272
-\l__siunitx_process_precision_int=\count273
-\l__siunitx_group_min_int=\count274
+\l__siunitx_tmp_dim=\dimen161
+\l__siunitx_tmp_int=\count268
+\l__siunitx_number_mantissa_length_int=\count269
+\l__siunitx_number_uncert_length_int=\count270
+\l__siunitx_round_int=\count271
+\l__siunitx_process_decimal_int=\count272
+\l__siunitx_process_uncertainty_int=\count273
+\l__siunitx_process_fixed_int=\count274
+\l__siunitx_process_integer_min_int=\count275
+\l__siunitx_process_precision_int=\count276
+\l__siunitx_group_min_int=\count277
 \l__siunitx_angle_marker_box=\box44
 \l__siunitx_angle_unit_box=\box45
-\l__siunitx_angle_marker_dim=\dimen154
-\l__siunitx_angle_unit_dim=\dimen155
-\l__siunitx_unit_int=\count275
-\l__siunitx_unit_denominator_int=\count276
-\l__siunitx_unit_numerator_int=\count277
-\l__siunitx_unit_prefix_int=\count278
-\l__siunitx_unit_prefix_base_int=\count279
-\l__siunitx_unit_prefix_gram_int=\count280
-\l__siunitx_number_product_int=\count281
-\c__siunitx_one_fill_skip=\skip53
-\l__siunitx_table_unit_align_skip=\skip54
-\l__siunitx_table_exponent_dim=\dimen156
-\l__siunitx_table_integer_dim=\dimen157
-\l__siunitx_table_mantissa_dim=\dimen158
-\l__siunitx_table_marker_dim=\dimen159
-\l__siunitx_table_result_dim=\dimen160
-\l__siunitx_table_uncert_dim=\dimen161
-\l__siunitx_table_fill_pre_dim=\dimen162
-\l__siunitx_table_fill_post_dim=\dimen163
-\l__siunitx_table_fill_mid_dim=\dimen164
+\l__siunitx_angle_marker_dim=\dimen162
+\l__siunitx_angle_unit_dim=\dimen163
+\l__siunitx_unit_int=\count278
+\l__siunitx_unit_denominator_int=\count279
+\l__siunitx_unit_numerator_int=\count280
+\l__siunitx_unit_prefix_int=\count281
+\l__siunitx_unit_prefix_base_int=\count282
+\l__siunitx_unit_prefix_gram_int=\count283
+\l__siunitx_number_product_int=\count284
+\c__siunitx_one_fill_skip=\skip52
+\l__siunitx_table_unit_align_skip=\skip53
+\l__siunitx_table_exponent_dim=\dimen164
+\l__siunitx_table_integer_dim=\dimen165
+\l__siunitx_table_mantissa_dim=\dimen166
+\l__siunitx_table_marker_dim=\dimen167
+\l__siunitx_table_result_dim=\dimen168
+\l__siunitx_table_uncert_dim=\dimen169
+\l__siunitx_table_fill_pre_dim=\dimen170
+\l__siunitx_table_fill_post_dim=\dimen171
+\l__siunitx_table_fill_mid_dim=\dimen172
 \l__siunitx_table_pre_box=\box46
 \l__siunitx_table_post_box=\box47
 \l__siunitx_table_mantissa_box=\box48
 \l__siunitx_table_result_box=\box49
-\l__siunitx_table_number_align_skip=\skip55
-\l__siunitx_table_text_align_skip=\skip56
+\l__siunitx_table_number_align_skip=\skip54
+\l__siunitx_table_text_align_skip=\skip55
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -572,42 +644,41 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Info: Redefining \degres on input line 40.
-LaTeX Info: Redefining \dots on input line 40.
-LaTeX Info: Redefining \up on input line 40.
-
-
-Package french.ldf Warning: OT1 encoding should not be used for French.
-(french.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(french.ldf)                of your document; reported on input line 40.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 47.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \degres on input line 47.
+LaTeX Info: Redefining \dots on input line 47.
+LaTeX Info: Redefining \up on input line 47.
 \AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring OFF on input line 40.
+Package hyperref Info: Link coloring OFF on input line 47.
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count282
+\c@section@level=\count285
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
 
 (main.out) (main.out)
 \@outlinefile=\write3
@@ -616,17 +687,17 @@ LaTeX Info: Redefining \nameref on input line 40.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count283
-\scratchdimen=\dimen165
+\scratchcounter=\count286
+\scratchdimen=\dimen173
 \scratchbox=\box51
-\nofMPsegments=\count284
-\nofMParguments=\count285
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count286
-\MPscratchDim=\dimen166
-\MPnumerator=\count287
-\makeMPintoPDFobject=\count288
-\everyMPtoPDFconversion=\toks21
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen174
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks22
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -640,9 +711,42 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
 File: ts1enc.dfu 2018/04/05 v1.2c UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
@@ -723,25 +827,58 @@ Dictionary: translator-basic-dictionary, Language: English
 ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 40.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 40.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 40.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 47.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 47.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 47.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 47.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 47.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 47.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 47.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmss.fd"
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 47.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmtt.fd"
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 <figures/logos/centralesupelec_logo.png, id=75, 289.08pt x 174.1707pt>
 File: figures/logos/centralesupelec_logo.png Graphic file (type png)
 <use figures/logos/centralesupelec_logo.png>
 Package pdftex.def Info: figures/logos/centralesupelec_logo.png  used on input 
-line 49.
-(pdftex.def)             Requested size: 226.48395pt x 136.45587pt.
+line 56.
+(pdftex.def)             Requested size: 213.39568pt x 128.5707pt.
 <figures/logos/neohm_logo.png, id=77, 845.40843pt x 423.83344pt>
 File: figures/logos/neohm_logo.png Graphic file (type png)
 <use figures/logos/neohm_logo.png>
-Package pdftex.def Info: figures/logos/neohm_logo.png  used on input line 58.
+Package pdftex.def Info: figures/logos/neohm_logo.png  used on input line 65.
 (pdftex.def)             Requested size: 253.62448pt x 127.151pt.
-
-[1
+ [1
 
 {C:/Users/Pierre/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/
 logos/centralesupelec_logo.png> <./figures/logos/neohm_logo.png>] (main.toc)
@@ -752,276 +889,285 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.87 \chapter
+l.94 \chapter
              *{Remerciements} [1
 
 ] [2
 
 ]
-Chapitre 1.
-<figures/photos/photo_building.jpg, id=117, 1186.4325pt x 1581.91pt>
+Partie 1.
+<figures/photos/photo_building.jpg, id=115, 1186.4325pt x 1581.91pt>
 File: figures/photos/photo_building.jpg Graphic file (type jpg)
 <use figures/photos/photo_building.jpg>
 Package pdftex.def Info: figures/photos/photo_building.jpg  used on input line 
-103.
+110.
 (pdftex.def)             Requested size: 177.9572pt x 237.27626pt.
 [3
 
 ] [4 <./figures/photos/photo_building.jpg>]
-Chapitre 2.
-<figures/screenshots/3D_drawing_looping.png, id=127, 448.67625pt x 239.39438pt>
+Partie 2.
+<figures/screenshots/3D_drawing_looping.png, id=125, 448.67625pt x 239.39438pt>
 
 File: figures/screenshots/3D_drawing_looping.png Graphic file (type png)
 <use figures/screenshots/3D_drawing_looping.png>
 Package pdftex.def Info: figures/screenshots/3D_drawing_looping.png  used on in
-put line 117.
+put line 123.
 (pdftex.def)             Requested size: 336.50636pt x 179.54533pt.
 [5
 
  <./figures/screenshots/3D_drawing_looping.png>] [6]
-Chapitre 3.
-<figures/screenshots/different_usb_types.png, id=140, 341.02406pt x 197.23688pt
+Partie 3.
+<figures/screenshots/different_usb_types.png, id=136, 341.02406pt x 197.23688pt
 >
 File: figures/screenshots/different_usb_types.png Graphic file (type png)
 <use figures/screenshots/different_usb_types.png>
 Package pdftex.def Info: figures/screenshots/different_usb_types.png  used on i
-nput line 135.
+nput line 140.
 (pdftex.def)             Requested size: 255.76741pt x 147.92728pt.
-<figures/screenshots/usb_pd_nego.png, id=142, 794.97pt x 518.6878pt>
-File: figures/screenshots/usb_pd_nego.png Graphic file (type png)
-<use figures/screenshots/usb_pd_nego.png>
-Package pdftex.def Info: figures/screenshots/usb_pd_nego.png  used on input lin
-e 147.
-(pdftex.def)             Requested size: 278.24367pt x 181.54344pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [7
 
  <./figures/screenshots/different_usb_types.png>]
-<figures/photos/looping_pcb.jpg, id=152, 350.81062pt x 157.33781pt>
+<figures/screenshots/usb_pd_nego.png, id=143, 794.97pt x 518.6878pt>
+File: figures/screenshots/usb_pd_nego.png Graphic file (type png)
+<use figures/screenshots/usb_pd_nego.png>
+Package pdftex.def Info: figures/screenshots/usb_pd_nego.png  used on input lin
+e 151.
+(pdftex.def)             Requested size: 278.24367pt x 181.54344pt.
+<figures/photos/looping_pcb.jpg, id=146, 350.81062pt x 157.33781pt>
 File: figures/photos/looping_pcb.jpg Graphic file (type jpg)
 <use figures/photos/looping_pcb.jpg>
-Package pdftex.def Info: figures/photos/looping_pcb.jpg  used on input line 158
+Package pdftex.def Info: figures/photos/looping_pcb.jpg  used on input line 162
 .
 (pdftex.def)             Requested size: 350.80975pt x 157.33742pt.
-<figures/screenshots/battery_charger.png, id=154, 687.69421pt x 474.64828pt>
+ [8 <./figures/screenshots/usb_pd_nego.png> <./figures/photos/looping_pcb.jpg>]
+<figures/screenshots/battery_charger.png, id=156, 687.69421pt x 474.64828pt>
 File: figures/screenshots/battery_charger.png Graphic file (type png)
 <use figures/screenshots/battery_charger.png>
 Package pdftex.def Info: figures/screenshots/battery_charger.png  used on input
- line 168.
+ line 171.
 (pdftex.def)             Requested size: 412.6197pt x 284.79117pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <./figures/screenshots/usb_pd_nego.png> <./figures/photos/looping_pcb.jpg>]
-<figures/screenshots/SMBus_oscilloscope.png, id=163, 520.19344pt x 344.78813pt>
+<figures/screenshots/SMBus_oscilloscope.png, id=159, 520.19344pt x 344.78813pt>
 
 File: figures/screenshots/SMBus_oscilloscope.png Graphic file (type png)
 <use figures/screenshots/SMBus_oscilloscope.png>
 Package pdftex.def Info: figures/screenshots/SMBus_oscilloscope.png  used on in
-put line 188.
+put line 190.
 (pdftex.def)             Requested size: 312.11845pt x 206.87447pt.
-<figures/screenshots/SMBus_logic_analyser.png, id=164, 426.84468pt x 77.53969pt
->
-File: figures/screenshots/SMBus_logic_analyser.png Graphic file (type png)
-<use figures/screenshots/SMBus_logic_analyser.png>
-Package pdftex.def Info: figures/screenshots/SMBus_logic_analyser.png  used on 
-input line 196.
-(pdftex.def)             Requested size: 384.15666pt x 69.78505pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<figures/screenshots/SMBus_logic_analyser.png, id=160, 426.84468pt x 77.53969pt
+>
+File: figures/screenshots/SMBus_logic_analyser.png Graphic file (type png)
+<use figures/screenshots/SMBus_logic_analyser.png>
+Package pdftex.def Info: figures/screenshots/SMBus_logic_analyser.png  used on 
+input line 197.
+(pdftex.def)             Requested size: 384.15666pt x 69.78505pt.
 
-Overfull \hbox (6.48494pt too wide) in paragraph at lines 202--205
-\OT1/cmr/m/n/10.95 reperer des problemes ana-lo-giques (si-gnaux bruites, ca
--pa-ci-tifs) par exemple. Le prin-ci-pal probleme
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./figures/screenshots/battery_charger.png> <./figures/screenshots/SMBus_osc
-illoscope.png>]
-<figures/screenshots/BQ40Z60_manual_excerpt.png, id=172, 514.17094pt x 104.6409
+[9 <./figures/screenshots/battery_charger.png>]
+<figures/screenshots/BQ40Z60_manual_excerpt.png, id=168, 514.17094pt x 104.6409
 3pt>
 File: figures/screenshots/BQ40Z60_manual_excerpt.png Graphic file (type png)
 <use figures/screenshots/BQ40Z60_manual_excerpt.png>
 Package pdftex.def Info: figures/screenshots/BQ40Z60_manual_excerpt.png  used o
 n input line 208.
-(pdftex.def)             Requested size: 437.04736pt x 88.94519pt.
-<figures/screenshots/BQ40Z60_registers.png, id=175, 966.61125pt x 683.55376pt>
+(pdftex.def)             Requested size: 421.62291pt x 85.80609pt.
+ [10 <./figures/screenshots/SMBus_oscilloscope.png> <./figures/screenshots/SMBu
+s_logic_analyser.png> <./figures/screenshots/BQ40Z60_manual_excerpt.png>]
+<figures/screenshots/BQ40Z60_registers.png, id=177, 966.61125pt x 683.55376pt>
 File: figures/screenshots/BQ40Z60_registers.png Graphic file (type png)
 <use figures/screenshots/BQ40Z60_registers.png>
 Package pdftex.def Info: figures/screenshots/BQ40Z60_registers.png  used on inp
-ut line 219.
+ut line 218.
 (pdftex.def)             Requested size: 386.63765pt x 273.41666pt.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 224.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<figures/screenshots/website.png, id=178, 1312.905pt x 2101.8525pt>
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<figures/screenshots/website.png, id=180, 1312.905pt x 2101.8525pt>
 File: figures/screenshots/website.png Graphic file (type png)
 <use figures/screenshots/website.png>
-Package pdftex.def Info: figures/screenshots/website.png  used on input line 23
-1.
+Package pdftex.def Info: figures/screenshots/website.png  used on input line 22
+9.
 (pdftex.def)             Requested size: 328.22545pt x 525.46184pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10 <./figures/screenshots/SMBus_logic_analyser.png> <./figures/screenshots/BQ4
-0Z60_manual_excerpt.png>]
-<figures/photos/wifi_router.jpg, id=189, 2108.87875pt x 1581.91pt>
+ [11 <./figures/screenshots/BQ40Z60_registers.png>] [12 <./figures/screenshots/
+website.png>]
+<figures/photos/wifi_router.jpg, id=196, 2108.87875pt x 1581.91pt>
 File: figures/photos/wifi_router.jpg Graphic file (type jpg)
 <use figures/photos/wifi_router.jpg>
-Package pdftex.def Info: figures/photos/wifi_router.jpg  used on input line 244
+Package pdftex.def Info: figures/photos/wifi_router.jpg  used on input line 241
 .
 (pdftex.def)             Requested size: 253.05453pt x 189.82101pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11 <./figures/screenshots/BQ40Z60_registers.png>] [12 <./figures/screenshots/w
-ebsite.png>]
+ [13 <./figures/photos/wifi_router.jpg>]
 <figures/screenshots/captioned_worklamp.png, id=204, 910.15031pt x 411.78844pt>
 
 File: figures/screenshots/captioned_worklamp.png Graphic file (type png)
 <use figures/screenshots/captioned_worklamp.png>
 Package pdftex.def Info: figures/screenshots/captioned_worklamp.png  used on in
-put line 257.
+put line 253.
 (pdftex.def)             Requested size: 409.56386pt x 185.30307pt.
 <figures/photos/worklamp_PCBs.jpg, id=205, 950.80219pt x 398.23781pt>
 File: figures/photos/worklamp_PCBs.jpg Graphic file (type jpg)
 <use figures/photos/worklamp_PCBs.jpg>
 Package pdftex.def Info: figures/photos/worklamp_PCBs.jpg  used on input line 2
-65.
-(pdftex.def)             Requested size: 427.85703pt x 179.20535pt.
+60.
+(pdftex.def)             Requested size: 408.83698pt x 171.2389pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <./figures/photos/wifi_router.jpg> <./figures/screenshots/captioned_worklam
-p.png>]
+[14 <./figures/screenshots/captioned_worklamp.png>]
 <figures/screenshots/version_A3_worklamp.png, id=213, 822.44766pt x 473.89546pt
 >
 File: figures/screenshots/version_A3_worklamp.png Graphic file (type png)
 <use figures/screenshots/version_A3_worklamp.png>
 Package pdftex.def Info: figures/screenshots/version_A3_worklamp.png  used on i
-nput line 278.
-(pdftex.def)             Requested size: 452.34761pt x 260.64331pt.
- [14 <./figures/photos/worklamp_PCBs.jpg> <./figures/screenshots/version_A3_wor
+nput line 272.
+(pdftex.def)             Requested size: 419.44276pt x 241.68349pt.
+ [15 <./figures/photos/worklamp_PCBs.jpg> <./figures/screenshots/version_A3_wor
 klamp.png>]
 <figures/screenshots/pins_definition_EFM8BB.png, id=220, 375.27704pt x 426.4682
 8pt>
 File: figures/screenshots/pins_definition_EFM8BB.png Graphic file (type png)
 <use figures/screenshots/pins_definition_EFM8BB.png>
 Package pdftex.def Info: figures/screenshots/pins_definition_EFM8BB.png  used o
-n input line 301.
+n input line 294.
 (pdftex.def)             Requested size: 150.10815pt x 170.58429pt.
 <figures/screenshots/opendrain_pushpull.png, id=223, 417.47458pt x 202.97107pt>
 
 File: figures/screenshots/opendrain_pushpull.png Graphic file (type png)
 <use figures/screenshots/opendrain_pushpull.png>
 Package pdftex.def Info: figures/screenshots/opendrain_pushpull.png  used on in
-put line 311.
+put line 303.
 (pdftex.def)             Requested size: 229.61171pt x 111.63443pt.
- [15 <./figures/screenshots/pins_definition_EFM8BB.png> <./figures/screenshots/
+ [16 <./figures/screenshots/pins_definition_EFM8BB.png> <./figures/screenshots/
 opendrain_pushpull.png>]
 <figures/screenshots/Li-ion_charge_algortihm.png, id=232, 621.44672pt x 315.804
 84pt>
 File: figures/screenshots/Li-ion_charge_algortihm.png Graphic file (type png)
 <use figures/screenshots/Li-ion_charge_algortihm.png>
 Package pdftex.def Info: figures/screenshots/Li-ion_charge_algortihm.png  used 
-on input line 328.
-(pdftex.def)             Requested size: 435.00974pt x 221.06187pt.
+on input line 319.
+(pdftex.def)             Requested size: 403.93558pt x 205.2707pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <figures/screenshots/flow_chart.png, id=235, 545.03625pt x 232.99547pt>
 File: figures/screenshots/flow_chart.png Graphic file (type png)
 <use figures/screenshots/flow_chart.png>
 Package pdftex.def Info: figures/screenshots/flow_chart.png  used on input line
- 339.
-(pdftex.def)             Requested size: 436.0296pt x 186.3966pt.
- [16 <./figures/screenshots/Li-ion_charge_algortihm.png>]
-<figures/photos/tests_worklamp/lamp_with_glasses.jpg, id=247, 4878.225pt x 3131
+ 329.
+(pdftex.def)             Requested size: 381.52278pt x 163.0957pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[17] [18 <./figures/screenshots/Li-ion_charge_algortihm.png> <./figures/screens
+hots/flow_chart.png>]
+<figures/photos/tests_worklamp/lamp_with_glasses.jpg, id=254, 4878.225pt x 3131
 .7pt>
 File: figures/photos/tests_worklamp/lamp_with_glasses.jpg Graphic file (type jp
 g)
 <use figures/photos/tests_worklamp/lamp_with_glasses.jpg>
 Package pdftex.def Info: figures/photos/tests_worklamp/lamp_with_glasses.jpg  u
-sed on input line 358.
-(pdftex.def)             Requested size: 439.02132pt x 281.84084pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[17 <./figures/screenshots/flow_chart.png>] [18 <./figures/photos/tests_worklam
-p/lamp_with_glasses.jpg>]
-Chapitre 4.
-[19
+sed on input line 347.
+(pdftex.def)             Requested size: 390.26598pt x 250.54112pt.
+ [19 <./figures/photos/tests_worklamp/lamp_with_glasses.jpg>] [20]
+Partie 4.
+[21
 
 ]
-Chapitre 5.
-[20
+Partie 5.
+[22
 
 ]
 Annexe A.
-<figures/photos/tests_worklamp/sphere/sphere_allumee.jpg, id=268, 4175.6pt x 31
+<figures/photos/tests_worklamp/sphere/sphere_allumee.jpg, id=273, 4175.6pt x 31
 31.7pt>
 File: figures/photos/tests_worklamp/sphere/sphere_allumee.jpg Graphic file (typ
 e jpg)
 <use figures/photos/tests_worklamp/sphere/sphere_allumee.jpg>
 Package pdftex.def Info: figures/photos/tests_worklamp/sphere/sphere_allumee.jp
-g  used on input line 388.
+g  used on input line 377.
 (pdftex.def)             Requested size: 417.58447pt x 313.18834pt.
-[21
+[23
 
  <./figures/photos/tests_worklamp/sphere/sphere_allumee.jpg>] (main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
 
-(main.bbl [22
+(main.bbl [24
 
 ]
-Underfull \hbox (badness 1590) in paragraph at lines 21--26
-[]\OT1/cmr/m/n/10.95 Gayathri Va-su-de-van.  Usb type-c and po-wer de-li-very 1
-01 { po-wer de-li-very pro-
+Underfull \hbox (badness 3735) in paragraph at lines 4--8
+[]\T1/lmr/m/n/12 Silicon Labs.  \T1/lmr/m/it/12 EFM8 Busy Bee Fa-mily EFM8BB1 D
+ata Sheet\T1/lmr/m/n/12 , mar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+\T1/lmr/m/n/12 2017.  []$\T1/lmtt/m/n/12 https : / / www . silabs . com / docum
+ents / public / data-[]sheets /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--26
+[]\T1/lmr/m/n/12 Gayathri Va-su-de-van.  Usb type-c and po-wer de-li-very
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--26
+\T1/lmr/m/n/12 101  po-wer de-li-very pro-to-col, may 2009.  []$\T1/lmtt/m/n/1
+2 https : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--26
+\T1/lmtt/m/n/12 www . embedded . com / design / power-[]optimization / 4458400 
+/
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 399.
- [23
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 387.
+ [25
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 399.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 387.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 399.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 399.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 387.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 387.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 65F16B08E7EA6021E053CCECAF0D5C01;1090.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 399.
+(rerunfilecheck)             Checksum: AF17DFF38B3CFEAB29303846350F1B9E;1091.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 387.
  ) 
 Here is how much of TeX's memory you used:
- 18121 strings out of 492973
- 346426 string characters out of 3135930
- 399556 words of memory out of 3000000
- 21785 multiletter control sequences out of 15000+200000
- 540979 words of font info for 54 fonts, out of 3000000 for 9000
+ 19022 strings out of 492973
+ 360107 string characters out of 3135930
+ 412103 words of memory out of 3000000
+ 22625 multiletter control sequences out of 15000+200000
+ 608304 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,7n,63p,1082b,1009s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (24 pages, 12157661 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
+es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
+.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt
+12.pfb>
+Output written on main.pdf (26 pages, 12156007 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 68 named destinations out of 1000 (max. 500000)
+ 373 PDF objects out of 1000 (max. 8388607)
+ 70 named destinations out of 1000 (max. 500000)
  260 words of extra memory for PDF output out of 10000 (max. 10000000)
 

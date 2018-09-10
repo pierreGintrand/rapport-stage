@@ -1,15 +1,22 @@
-\documentclass[a4paper, 11pt]{report}
+\documentclass[a4paper, 12pt]{report}
 
+
+\usepackage{ae,lmodern} % vectorial fonts
 \usepackage[french]{babel} % babel
+\def\frenchchaptername{Partie} % 'partie' à la place de 'chapitre'
 \usepackage[utf8]{inputenc} % encoding
+\usepackage[T1]{fontenc}
 %\usepackage{graphicx} % figures
 
-\usepackage{hyperref}
+\usepackage{hyperref} % url / ref
 
 \usepackage[pdftex]{graphicx} % includegraphics in the title page
 
-%\usepackage[top=2cm, bottom=2cm, left=3.5cm, right=3.5cm]{geometry} % margins
-\usepackage{fullpage}
+\usepackage{setspace} % interlignes
+\onehalfspacing
+
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry} % margins
+%\usepackage{fullpage}
 
 %title page
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -99,9 +106,8 @@ Ce stage m’a permis d’appréhender le milieu professionnel. Il m’a fait d�
 Ce rapport constitue un retour d’expérience décrivant le fonctionnement de l’entreprise et les différentes missions que j’ai réalisées au cours de mon stage. J’expliquerai également en quoi il m’a éclairé sur le métier d’ingénieur au sein d’une petite structure et comment il a alimenté mes réflexions autour de mon projet professionnel.
 
 \begin{figure}
-\begin{center}
+\centering
 \includegraphics[scale=0.15]{figures/photos/photo_building.jpg}
-\end{center}
 \caption{Bureau à la frontière Chine - Hong-Kong}
 \label{fig:photo_building}
 \end{figure}
@@ -113,9 +119,8 @@ Mon stage s’est déroulé dans le pôle recherche et développement de Neohm, 
 Le sujet initial du stage dont David m’avait parlé par téléphone en juillet était le projet « Looping », il s’agissait d’un chauffe biberon sur batterie utilisant le phénomène d’induction. Un élément chauffant en métal est placé dans un biberon rempli, le tout est placé sur ou dans le système de chauffe (selon le prototype).
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.75]{figures/screenshots/3D_drawing_looping.png}
-\end{center}
 \caption{Dessins 3D de prototypes de Looping}
 \label{fig:3D_looping}
 \end{figure}
@@ -131,9 +136,8 @@ Au début du stage, David m’annonce que je commencerai à travailler sur la ge
 Dans un premier temps, il me demande de m’intéresser sur l’USB type C. Il veut équiper le produit d’un tel connecteur. Cette nouvelle norme permet d’unifier toutes les connecteurs USB en un seul.
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.75]{figures/screenshots/different_usb_types.png}
-\end{center}
 \caption{Différents types de connecteurs USB}
 \label{fig:usb_type}
 \end{figure}
@@ -143,20 +147,19 @@ L'USB C permet également un échange de donnée et de d'énergie dans les 2 sen
 Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fournir jusqu’à 20V / 5A. Cependant, pour fournir une telle puissance, la source doit négocier la tension et le courant avec le débiteur de courant (figure~\ref{fig:usb_pd_negociation}).
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.35]{figures/screenshots/usb_pd_nego.png}
-\end{center}
 \caption{Exemple d’une négociation USB PD (simplifiée) \cite{usb_pd_nego}}
 \label{fig:usb_pd_negociation}
 \end{figure}
 % TODO: def of EMCA
+
 Cette négociation nécessite un contrôleur spécifique. Les recherches que j’ai effectuées m’ont mené à des contrôleurs assez onéreux, environ 5\$/unité. De plus un adaptateur secteur / USB-C supportant 80W coûtent relativement cher car il s'agit d'une technologie nouvelle (notamment utiliser dans les derniers ordinateurs portables et téléphones)
 Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’il avait conçu (figure~\ref{fig:looping_pcb}) pour la gestion de l’alimentation du projet Looping car le pack batterie d'\emph{EasyFeed} allait être identique et les besoins d'alimentation semblables.
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=1]{figures/photos/looping_pcb.jpg}
-\end{center}
 \caption{PCB du projet Looping}
 \label{fig:looping_pcb}
 \end{figure}
@@ -164,9 +167,8 @@ Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’i
 Le circuit (figure~\ref{fig:looping_charger}) était conçu autour d'un contrôleur Texas Instrument BQ40Z60 gérant les phases de charges et de décharges du pack batterie et d'un microprocesseur Silabs 8 bits EFM8LB1 (pas présent sur le schéma) pour communiquer avec le contrôleur et de piloter globalement l'appareil (on/off, affichage du niveau de la batterie, boucle de contrôle de la température, ...).
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.6]{figures/screenshots/battery_charger.png}
-\end{center}
 \caption{Schéma électrique de la gestion de batterie de Looping}
 \label{fig:looping_charger}
 \end{figure}
@@ -184,17 +186,15 @@ SMBus utilise donc 2 lignes pour communiquer :
 Pour visualiser le protocole SMBus, j’avais à disposition un oscilloscope pour observer un représentation des signaux électriques traversant les 2 lignes (figure~\ref{fig:SMBus_oscilloscope}) ainsi qu’un analyseur logique (figure~\ref{fig:SMBus_logic_analyser}).
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.6]{figures/screenshots/SMBus_oscilloscope.png}
-\end{center}
 \caption{Byte SMBus visualisé avec un oscilloscope}
 \label{fig:SMBus_oscilloscope}
 \end{figure}
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.9]{figures/screenshots/SMBus_logic_analyser.png}
-\end{center}
 \caption{3 bytes SMBus visualisés avec un analyseur logique}
 \label{fig:SMBus_logic_analyser}
 \end{figure}
@@ -204,9 +204,8 @@ Le principal problème que j’ai rencontré est que le BQ40Z60 ne semblait pas 
 J’ai donc essayer de contrôler ces transistors manuellement avec des commandes expliqué dans le manuel du composant (figure~\ref{fig:BQ40Z60_manual_excerpt}).
 
 \begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=0.85]{figures/screenshots/BQ40Z60_manual_excerpt.png}
-\end{center}
+\centering
+\includegraphics[scale=0.82]{figures/screenshots/BQ40Z60_manual_excerpt.png}
 \caption{Extrait du \emph{BQ40Z60 Technical Reference Manual}\cite{BQ40Z60_tech_manual}} 
 \label{fig:BQ40Z60_manual_excerpt}
 \end{figure}
@@ -215,9 +214,8 @@ Le contrôleur ne semblait pas apprécier ces commandes car après avoir reçu c
 J’ai fait part de mes difficultés à contrôler le composant à David, il a décidé de commander un débogueur spécifique pour les contrôleur batterie de Texas instrument, le EV2300. Cette appareil fonctionne avec le logiciel BQStudio (figure~\ref{fig:BQ40Z60_registers}) qui propose une interface permettant de visualiser tous les registres du BQ40Z60 et le configurer plus aisément. Ce projet a été mis en pause en attendant de recevoir ce débogueur.
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.4]{figures/screenshots/BQ40Z60_registers.png}
-\end{center}
 \caption{Registres du BQ40Z60 dans le logiciel BQ studio}
 \label{fig:BQ40Z60_registers}
 \end{figure}
@@ -227,9 +225,8 @@ En parallèle de ce projet, Guillaume, le directeur marketing de la start-up, m�
 Le site internet avait conçu à partir d’un template du framework Bootstrap. Il était donc à 90\% adapter pour mobile mais il fallait corriger quelques défauts. J’ai donc modifier dans le feuille de style la taille de certains éléments en utilisant une technologie \emph{responsive} qui s’adapte à la taille de l’écran, modifier la position de conteneurs d’absolue à relatif et ajuster certaines marges qui faisait apparaître une barre de défilement horizontale sous mobile. J’ai également modifier le code JavaScript d’une fonction qu’avait rajouté David, qui permet d’afficher périodiques des mots sur une image de fond pour que cela fonctionne également sur smartphone. Après ces modifications, le site était parfaitement lisible depuis tout appareil (figure~\ref{fig:website}).
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.25]{figures/screenshots/website.png}
-\end{center}
 \caption{Avant/après du site vu d’un smartphone}
 \label{fig:website}
 \end{figure}
@@ -240,9 +237,8 @@ David m’a également chargé de mettre en place un gestionnaire centralisé de
 A la demande de l’équipe, je me suis occupé de trouver un moyen pour contourner le pare-feu chinois qui nous empêche l’accès à de nombreux sites utiles dans notre travail : Google, Gmail, WhatsApp, YouTube, etc. 2 solutions s’offraient à moi : mettre en place un VPN sur un router wi-fi ou utiliser le réseau 4G hongkongais que l’on capte dans les locaux (proche de la frontière avec Hong-Kong) pour fournir l’accès internet. Je suis allé à Hong-Kong afin de me renseigner et d’acheter un router wi-fi compatible. Sur les conseils d’un vendeur, j’ai choisi un router à la fois compatible avec les VPN et avec une clé USB 4G (figure~\ref{fig:wifi_router}).
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.12]{figures/photos/wifi_router.jpg}
-\end{center}
 \caption{Router wi-fi compatible VPN avec une clé USB LTE}
 \label{fig:wifi_router}
 \end{figure}
@@ -253,17 +249,15 @@ David m’a présenté un autre projet en cours sur lequel j'allai travailler : 
 Dans les 2 version, un potentiomètre permet de faire varier lumineuse. Les panneaux de LEDs sont composés de 2 types de LEDs (3700K et 4200K) afin de disposer de 3 modes d'éclaraige différents. Un bouton permet de changer la température de la couleur émise : 3700K, 5700K et 4200K (les 2 types de LED sont allumés à mi-puissance). 
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.45]{figures/screenshots/captioned_worklamp.png}
-\end{center}
 \caption{Dessin 3D et photo de la worklamp}
 \label{fig:captioned_worklamp}
 \end{figure}
 
 \begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=0.45]{figures/photos/worklamp_PCBs.jpg}
-\end{center}
+\centering
+\includegraphics[scale=0.43]{figures/photos/worklamp_PCBs.jpg}
 \caption{PCBs des versions AC et DC de la worklamp}
 \label{fig:worklamp_PCBs}
 \end{figure}
@@ -274,9 +268,8 @@ Ma mission a porté sur la version DC, j’ai été en charge de la programmatio
 David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schema}) qu’il avait conçu qui correspond au PCB du modèle DC pour que je me l’approprie pour ensuite implémenter un software dans le microprocesseur.
 
 \begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=0.55]{figures/screenshots/version_A3_worklamp.png}
-\end{center}
+\centering
+\includegraphics[scale=0.51]{figures/screenshots/version_A3_worklamp.png}
 \caption{Schéma électrique de la Worklamp}
 \label{fig:worklamp_schema}
 \end{figure}
@@ -297,9 +290,8 @@ Les tâches que doit effectuer le processeur sont :
 Il a ensuite fallu de définir la configuration des pins du microprocesseur en accord avec le schéma grâce la datasheet du EFM8BB1 (figure~\ref{fig:pins_definition}). Il s’agit de définir des fonctions et noms variables aux différents pins (input, output, PWM, ADC, UART, SMB, …).
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.4]{figures/screenshots/pins_definition_EFM8BB.png}
-\end{center}
 \caption{Définition de pins sur le processeur EFM8BB1x-QSOP24\cite{EFM8BB1_datasheet}}
 \label{fig:pins_definition}
 \end{figure}
@@ -307,9 +299,8 @@ Il a ensuite fallu de définir la configuration des pins du microprocesseur en a
 Cette étape est cruciale pour la suite du développement et demande quelques notions d’électronique. Par exemple il faut définir si le pin est défini en \emph{open drain}, c’est-à-dire que l’état haut correspond à une forte impédance et l’état bas à une faible impédance, ou en \emph{push-pull}, si l’on veut que l’état haut soit le \SI{3.3}{\volt} du CPU, et état bas du CPU (figure~\ref{fig:opendrain_pushpull}). 
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.55]{figures/screenshots/opendrain_pushpull.png}
-\end{center}
 \caption{Illustration sortie \emph{Open drain} et \emph{Push-pull}} 
 \label{fig:opendrain_pushpull}
 \end{figure}
@@ -324,9 +315,8 @@ Bien que cet algorithme est implémenter dans les contrôleurs gérant la charge
 
 
 \begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=0.7]{figures/screenshots/Li-ion_charge_algortihm.png}
-\end{center}
+\centering
+\includegraphics[scale=0.65]{figures/screenshots/Li-ion_charge_algortihm.png}
 \caption{Algorithme de charge d’une batterie lithium-ion \cite{BQ2000_datasheet}} 
 \label{fig:li-ion_charge}
 \end{figure}
@@ -335,9 +325,8 @@ Bien que cet algorithme est implémenter dans les contrôleurs gérant la charge
 J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit gérer (figure~\ref{fig:flow_chart}). Cette étape m'a permis d'avancer dans le développement logiciel en gardant un certain recul avec les consignes auxquelles je m'étais fixé.
 
 \begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=0.8]{figures/screenshots/flow_chart.png}
-\end{center}
+\centering
+\includegraphics[scale=0.7]{figures/screenshots/flow_chart.png}
 \caption{Quelques algorigrammes du software de la worklamp} 
 \label{fig:flow_chart}
 \end{figure}
@@ -354,9 +343,8 @@ La mesure de la puissance électrique envoyée au panneau de LEDs multipliée pa
 La plupart des tests ont été réaliser dans les bureaux de Neohm. Des lunettes spécifiques étaient à notre disposition pour protéger nos yeux. En effet, la lumière émise, même à faible intensité, était aveuglante (figure~\ref{fig:lamp_with_glasses}).
 
 \begin{figure}[!h]
-\begin{center}
-\includegraphics[scale=0.09]{figures/photos/tests_worklamp/lamp_with_glasses.jpg}
-\end{center}
+\centering
+\includegraphics[scale=0.08]{figures/photos/tests_worklamp/lamp_with_glasses.jpg}
 \caption{Panneau de LEDs en mode \SI{5700}{\kelvin} et \SI{4200}{\kelvin} à travers les lunettes de sécurité}
 \label{fig:lamp_with_glasses}
 \end{figure}
@@ -377,6 +365,7 @@ Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à
 
 A travers ce stage, j'ai approfondi mes connaissances dans de nombreux domaines : réseau, développement informatique, électronique embarquée, protocoles d'essais etc. Neohm étant une start-up avec peu d'employé, j'ai dû m'adapter au jour le jour aux besoins de l'entreprise et j'ai ainsi eu l'occasion de travailler sur divers projets. D'un point de vue culturel, ce stage m'a permis de découvrir un nouveau pays et une nouvelle culture. Travailler avec une équipe composée à la fois de Français et de Chinois a été une expérience très enrichissante. J'ai pu observer une manière différente d'aborder des problématiques et de trouver des solutions.
 J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dans cette région de Chine, il a su me guider tout au long de mon stage et m'aider à travailler avec des collègues chinois
+abc{\centering def}ghi
 
 \appendix
 
@@ -384,9 +373,8 @@ J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dan
 \label{cha:labo_pictures}
 
 \begin{figure}[!h]
-\begin{center}
+\centering
 \includegraphics[scale=0.1]{figures/photos/tests_worklamp/sphere/sphere_allumee.jpg}
-\end{center}
 \caption{Sphère avec la lampe allumée} 
 \label{fig:lamp_on}
 \end{figure}
