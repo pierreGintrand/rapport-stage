@@ -14,6 +14,6 @@
 \contentsline {subsection}{\numberline {3.4.5}Tests}{17}{subsection.3.4.5}
 \contentsline {chapter}{\numberline {4}Analyse des r\IeC {\'e}sultats obtenus}{21}{chapter.4}
 \contentsline {chapter}{\numberline {5}Apports}{22}{chapter.5}
-\contentsline {chapter}{\numberline {A}Essai dans le laboratoire de lampe \IeC {\`a} LEDs}{23}{appendix.A}
-\contentsline {chapter}{Table des figures}{24}{appendix*.3}
-\contentsline {chapter}{Bibliographie}{25}{appendix*.4}
+\contentsline {chapter}{\numberline {A}Essais dans le laboratoire de lampe \IeC {\`a} LEDs}{23}{appendix.A}
+\contentsline {chapter}{Table des figures}{26}{appendix*.3}
+\contentsline {chapter}{Bibliographie}{27}{appendix*.4}

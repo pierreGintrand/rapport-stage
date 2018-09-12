@@ -16,7 +16,6 @@
 \onehalfspacing
 
 \usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry} % margins
-%\usepackage{fullpage}
 
 %title page
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
@@ -29,12 +28,12 @@
 			]{siunitx} % units
 
 
-\usepackage[nottoc, notlot]{tocbibind} % Table des des figures et biblio dans le sommaire
+\usepackage[nottoc, notlot]{tocbibind} % Table  des figures et biblio dans le sommaire
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO:
-% - in figures, use centering istead of center
+% - 
 % - 
 % - 
 % - 
@@ -62,16 +61,16 @@
 
 \HRule \\[2cm]
 
-\includegraphics[scale=0.3]{figures/logos/neohm_logo.png}\\[3cm]
+\includegraphics[scale=0.3]{figures/logos/neohm_logo.png}\\[2.5cm]
 
 % Author and supervisor
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.35\textwidth}
   \begin{flushleft} \large
     \@author\\
     Promo 2019\\
   \end{flushleft}
 \end{minipage}
-\begin{minipage}{0.4\textwidth}
+\begin{minipage}{0.6\textwidth}
   \begin{flushright} \large
     \emph{Tuteur :} David \bsc{Collardeau}\\
     \emph{Enseignant référant :} Guillaume \textsc{Piolle}
@@ -353,7 +352,7 @@ Pour mesurer plus précisément la puissance lumineuse émise (la lentille semi-
 
 Ces tests étaient particulièrent pertinents pour la température de la lumière créé. En effet, dans le mode intermédiaire (\SI{5700}{\kelvin}). J'avais programmé le processeur pour envoyer 50\% de la puissance électrique dans les LEDs à \SI{6700}{\kelvin} et 50\% dans les LED à \SI{2700}{\kelvin}. Cependant, avec cette configuration, la température était à \SI{5200}{\kelvin} au lieu de \SI{5700}{\kelvin}. J'ai donc ajuster le rapport cyclique des transistors alimentant les LEDs pour obtenir un résultat proche de \SI{5700}{\kelvin}. Des photos de ces tests en laboratoire sont visibles en annexe~\ref{cha:labo_pictures}).
 
-Un opérateur du laboratoire gérait le logiciel en chinois. Après les tests, nous avons dû essayer de traduire les rapports générés en anglais pour tenir informer les clients de l'avancement du développement du produit.  
+Un opérateur du laboratoire gérait le logiciel en chinois (figure~\ref{fig:PC_screen}). Après les tests, nous avons dû essayer de traduire les rapports générés en anglais pour tenir informer les clients de l'avancement du développement du produit.  
 
 
 \chapter{Analyse des résultats obtenus}
@@ -364,19 +363,41 @@ Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à
 \chapter{Apports}
 
 A travers ce stage, j'ai approfondi mes connaissances dans de nombreux domaines : réseau, développement informatique, électronique embarquée, protocoles d'essais etc. Neohm étant une start-up avec peu d'employé, j'ai dû m'adapter au jour le jour aux besoins de l'entreprise et j'ai ainsi eu l'occasion de travailler sur divers projets. D'un point de vue culturel, ce stage m'a permis de découvrir un nouveau pays et une nouvelle culture. Travailler avec une équipe composée à la fois de Français et de Chinois a été une expérience très enrichissante. J'ai pu observer une manière différente d'aborder des problématiques et de trouver des solutions.
-J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dans cette région de Chine, il a su me guider tout au long de mon stage et m'aider à travailler avec des collègues chinois
-abc{\centering def}ghi
+
+J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dans cette région de Chine, il a su me guider tout au long de mon stage et m'aider à travailler avec des collègues chinois. Jean et Guillaume m'ont également fait partager leur attrait pour le marché chinois. Toute l'équipe  de Neohm m'a très chaleureusement accueilli et m'a intégré rapidement.
+Ce stage a été ma 1e expérience de longue durée en entreprise. Après mon installation et mon acclimatation qui ont duré environ 3 semaines, j'ai su me servir de mes connaissances et surtout 
 
 \appendix
 
-\chapter{Essai dans le laboratoire de lampe à LEDs}
+\chapter{Essais dans le laboratoire de lampe à LEDs}
 \label{cha:labo_pictures}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.1]{figures/photos/tests_worklamp/sphere/sphere_allumee.jpg}
+\includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/sphere_allumee.jpg}
 \caption{Sphère avec la lampe allumée} 
 \label{fig:lamp_on}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/spehre_vide.jpg}
+\caption{Sphère intégrante vide}
+\label{fig:empty_sphere}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/mesure_1.jpg}
+\caption{Générateur de tension et multimètre permettant de contrôler la lampe}
+\label{fig:multimeters}
+\end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/ecran_PC.jpg}
+\caption{Ecran du PC avec les résultats} 
+\label{fig:PC_screen}
 \end{figure}
 
 \listoffigures
