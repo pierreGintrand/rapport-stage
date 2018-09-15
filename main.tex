@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc} % encoding
 \usepackage[T1]{fontenc}
 %\usepackage{graphicx} % figures
-\usepackage{enumitem}
+%\usepackage{enumitem}
 
 %\def\frenchchaptername{Partie} % 'partie' à la place de 'chapitre'
 % change chapter syle
@@ -20,8 +20,10 @@
 
 \usepackage[notmath]{sansmathfonts} % pas d'empattement dans les peites majuscules
 
-\usepackage{sectsty}
-\allsectionsfont{\sffamily}
+\usepackage{float} % use H in figure
+
+%\usepackage{sectsty}
+%\allsectionsfont{\sffamily} % sans serif for section
 
 \usepackage{hyperref} % url / ref
 
@@ -135,7 +137,7 @@ Ce rapport constitue un retour d’expérience décrivant le fonctionnement de l
 Mon stage s’est déroulé dans le pôle recherche et développement de Neohm, sous la direction de David \bsc{Collardeau}. Au début, nous étions 4 à travailler dans ces bureaux : David, Sy et Green et moi. Jean venez dans les bureaux environs une fois toutes les 2 semaines pour faire un point sur l'avancement et préparer au mieux l'industrialisation du produit. Plus tard, 2 nouveaux collaborateurs se sont ajoutés à l’équipe.
 Le sujet initial du stage dont David m’avait parlé par téléphone en juillet était le projet « Looping », il s’agissait d’un chauffe biberon sur batterie utilisant le phénomène d’induction. Un élément chauffant en métal est placé dans un biberon rempli, le tout est placé sur ou dans le système de chauffe (selon le prototype).
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.75]{figures/screenshots/3D_drawing_looping.png}
 \caption{Dessins 3D de prototypes de Looping}
@@ -152,7 +154,7 @@ Mon travail sera de programmé le microprocesseur présent dans le produit qui c
 Au début du stage, David m’annonce que je commencerai à travailler sur la gestion des batteries dans \emph{EasyFeed}.
 Dans un premier temps, il me demande de m’intéresser sur l’USB type C. Il veut équiper le produit d’un tel connecteur. Cette nouvelle norme permet d’unifier toutes les connecteurs USB en un seul.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.75]{figures/screenshots/different_usb_types.png}
 \caption{Différents types de connecteurs USB}
@@ -163,7 +165,7 @@ De plus, l’USB C est compatible avec la spécificité Power Delivery qui perme
 L'USB C permet également un échange de donnée et de d'énergie dans les 2 sens du câble alors qu'auparavant, les données ne pouvait qu'aller du connecteur type B au connecteur type A et l'énergie du connecteur type B au connecteur type B (i.e. il n'était ni possible de changer un pc avec un portable et ni de lire des données d'un pc avec un portable).
 Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fournir jusqu’à 20V / 5A. Cependant, pour fournir une telle puissance, la source doit négocier la tension et le courant avec le débiteur de courant (figure~\ref{fig:usb_pd_negociation}).
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.35]{figures/screenshots/usb_pd_nego.png}
 \caption{Exemple d’une négociation USB PD (simplifiée) \cite{usb_pd_nego}}
@@ -174,7 +176,7 @@ Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fou
 Cette négociation nécessite un contrôleur spécifique. Les recherches que j’ai effectuées m’ont mené à des contrôleurs assez onéreux, environ 5\$/unité. De plus un adaptateur secteur / USB-C supportant \SI{80}{\watt} coûtent relativement cher car il s'agit d'une technologie nouvelle (notamment utiliser dans les derniers ordinateurs portables et téléphones)
 Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’il avait conçu (figure~\ref{fig:looping_pcb}) pour la gestion de l’alimentation du projet Looping car le pack batterie d'\emph{EasyFeed} allait être identique et les besoins d'alimentation semblables.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=1]{figures/photos/looping_pcb.jpg}
 \caption{PCB du projet Looping}
@@ -183,7 +185,7 @@ Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’i
 
 Le circuit (figure~\ref{fig:looping_charger}) était conçu autour d'un contrôleur Texas Instrument BQ40Z60 gérant les phases de charges et de décharges du pack batterie et d'un microprocesseur Silabs 8 bits EFM8LB1 (pas présent sur le schéma) pour communiquer avec le contrôleur et de piloter globalement l'appareil (on/off, affichage du niveau de la batterie, boucle de contrôle de la température, ...).
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{figures/screenshots/battery_charger.png}
 \caption{Schéma électrique de la gestion de batterie de Looping}
@@ -195,21 +197,21 @@ Mon travail fut donc de programmer le microprocesseur pour communiquer avec le c
 qui permet aux 2 puces de communiquer via les fils SMBD et SMBC.
 Le composant BQ40Z60 gère à la fois la charge de la batterie, la décharge, l’équilibre des cellules, les protections en température et en courant, l’estimation du niveau de batterie. SMBus permet de configurer la puce et surveiller son état pendant son fonctionnement.
 SMBus utilise donc 2 lignes pour communiquer :
-\begin{itemize}[label=\textbullet] % TODO: bullets instead of hyphen
+\begin{itemize} % TODO: bullets instead of hyphen
 \item SMBD est une ligne de données bidirectionnelle,
 \item SMBC est une ligne d'horloge de synchronisation bidirectionnelle,
 \end{itemize}
 
 Pour visualiser le protocole SMBus, j’avais à disposition un oscilloscope pour observer un représentation des signaux électriques traversant les 2 lignes (figure~\ref{fig:SMBus_oscilloscope}) ainsi qu’un analyseur logique (figure~\ref{fig:SMBus_logic_analyser}).
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{figures/screenshots/SMBus_oscilloscope.png}
 \caption{Byte SMBus visualisé avec un oscilloscope}
 \label{fig:SMBus_oscilloscope}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.9]{figures/screenshots/SMBus_logic_analyser.png}
 \caption{3 bytes SMBus visualisés avec un analyseur logique}
@@ -220,7 +222,7 @@ L’analyseur logique permet d’être plus rapide car il convertit les données
 Le principal problème que j’ai rencontré est que le BQ40Z60 ne semblait pas piloter les 2 transistors FET qui gèrent la charge et la décharge de la batterie (les 2 transistors en série sur le schéma électrique).
 J’ai donc essayer de contrôler ces transistors manuellement avec des commandes expliqué dans le manuel du composant (figure~\ref{fig:BQ40Z60_manual_excerpt}).
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.82]{figures/screenshots/BQ40Z60_manual_excerpt.png}
 \caption{Extrait du \emph{BQ40Z60 Technical Reference Manual}\cite{BQ40Z60_tech_manual}} 
@@ -230,7 +232,7 @@ J’ai donc essayer de contrôler ces transistors manuellement avec des commande
 Le contrôleur ne semblait pas apprécier ces commandes car après avoir reçu celles-ci, il ne fonctionnait pas, il renvoyait un NACK au lieu d’un ACK puis plus aucune fonction ne répondait (comme la lecture du numéro de série du composant pas exemple).
 J’ai fait part de mes difficultés à contrôler le composant à David, il a décidé de commander un débogueur spécifique pour les contrôleur batterie de Texas instrument, le EV2300. Cette appareil fonctionne avec le logiciel BQStudio (figure~\ref{fig:BQ40Z60_registers}) qui propose une interface permettant de visualiser tous les registres du BQ40Z60 et le configurer plus aisément. Ce projet a été mis en pause en attendant de recevoir ce débogueur.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{figures/screenshots/BQ40Z60_registers.png}
 \caption{Registres du BQ40Z60 dans le logiciel BQ studio}
@@ -241,7 +243,7 @@ J’ai fait part de mes difficultés à contrôler le composant à David, il a d
 En parallèle de ce projet, Guillaume, le directeur marketing de la start-up, m’a demandé d’adapter le site internet \url{neohm.net} fraîchement créé par David pour qu’il soit correctement visible sur mobile.
 Le site internet avait conçu à partir d’un template du framework Bootstrap. Il était donc à 90\% adapter pour mobile mais il fallait corriger quelques défauts. J’ai donc modifier dans le feuille de style la taille de certains éléments en utilisant une technologie \emph{responsive} qui s’adapte à la taille de l’écran, modifier la position de conteneurs d’absolue à relatif et ajuster certaines marges qui faisait apparaître une barre de défilement horizontale sous mobile. J’ai également modifier le code JavaScript d’une fonction qu’avait rajouté David, qui permet d’afficher périodiques des mots sur une image de fond pour que cela fonctionne également sur smartphone. Après ces modifications, le site était parfaitement lisible depuis tout appareil (figure~\ref{fig:website}).
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{figures/screenshots/website.png}
 \caption{Avant/après du site vu d’un smartphone}
@@ -253,7 +255,7 @@ David a décidé de mettre en place un serveur au bureau afin de centraliser les
 David m’a également chargé de mettre en place un gestionnaire centralisé de gestion version. J’ai donc installé Apache Subversion sur le serveur. Travailler avec un tel gestionnaire permet d’être plus efficace en équipe et assure une traçabilité des modifications effectuées sur les projets.
 A la demande de l’équipe, je me suis occupé de trouver un moyen pour contourner le pare-feu chinois qui nous empêche l’accès à de nombreux sites utiles dans notre travail : Google, Gmail, WhatsApp, YouTube, etc. 2 solutions s’offraient à moi : mettre en place un VPN sur un router wi-fi ou utiliser le réseau 4G hongkongais que l’on capte dans les locaux (proche de la frontière avec Hong-Kong) pour fournir l’accès internet. Je suis allé à Hong-Kong afin de me renseigner et d’acheter un router wi-fi compatible. Sur les conseils d’un vendeur, j’ai choisi un router à la fois compatible avec les VPN et avec une clé USB 4G (figure~\ref{fig:wifi_router}).
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.12]{figures/photos/wifi_router.jpg}
 \caption{Router wi-fi compatible VPN avec une clé USB LTE}
@@ -265,14 +267,14 @@ A la demande de l’équipe, je me suis occupé de trouver un moyen pour contour
 David m’a présenté un autre projet en cours sur lequel j'allai travailler : une lampe à LED portable pour peintre. Cette lampe existe sous 2 versions : une version \emph{AC} \SI{80}{\watt} alimentée par le secteur et une version \emph{DC} \SI{50}{\watt} alimentée par batterie. Pour simplifier l'industrialisation du produit, le boîtier est identique pour les 2 versions mais tous les ports ne sont utilisés dans chaque version (figure~\ref{fig:captioned_worklamp}). Le PCB et le panneau de LEDs sont quand à eux spécifiques à chaque version du produit (figure~\ref{fig:worklamp_PCBs}). Il y a plus de LEDs dans la versions \SI{80}{\celsius} et les PCBs n'ont pas le même rôle (redressement et lissage de la tension pour la version AC, gestion de la batterie pour la version DC).
 Dans les 2 version, un potentiomètre permet de faire varier lumineuse. Les panneaux de LEDs sont composés de 2 types de LEDs (\SI{3700}{\kelvin} et \SI{5700}{\kelvin}) afin de disposer de 3 modes d’éclairage différents. Un bouton permet de changer la température de la couleur émise : \SI{3700}{\kelvin}, \SI{5700}{\kelvin} et \SI{4200}{\kelvin} (les 2 types de LEDs sont allumés à mi-puissance). 
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{figures/screenshots/captioned_worklamp.png}
 \caption{Dessin 3D et photo de la worklamp}
 \label{fig:captioned_worklamp}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.43]{figures/photos/worklamp_PCBs.jpg}
 \caption{PCBs des versions AC et DC de la worklamp}
@@ -284,7 +286,7 @@ Ma mission a porté sur la version DC, j’ai été en charge de la programmatio
 \subsection{Schéma électrique}
 David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schema}) qu’il avait conçu qui correspond au PCB du modèle DC pour que je me l’approprie pour ensuite implémenter un software dans le microprocesseur.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.51]{figures/screenshots/version_A3_worklamp.png}
 \caption{Schéma électrique de la Worklamp}
@@ -293,7 +295,7 @@ David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schem
 
 La première étape fut d’écrire une spécification pour définir les tâches à remplir par le processeur pour ensuite aboutir à un ensemble d’algorithme accomplissant ces missions.
 Les tâches que doit effectuer le processeur sont :
-\begin{itemize}[label=\textbullet] % TODO: bullets instead of hyphen
+\begin{itemize} % TODO: bullets instead of hyphen
 \item Se mettre en veille (mode basse consommation) sur commande du bouton ON/OFF,
 \item Moduler l’intensité lumineuse en fonction de l’état du potentiomètre,
 \item Changer la couleur sur un appui sur le bouton COLOR,
@@ -306,7 +308,7 @@ Les tâches que doit effectuer le processeur sont :
 
 Il a ensuite fallu de définir la configuration des pins du microprocesseur en accord avec le schéma grâce la datasheet du EFM8BB1 (figure~\ref{fig:pins_definition}). Il s’agit de définir des fonctions et noms variables aux différents pins (input, output, PWM, ADC, UART, SMB, …).
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{figures/screenshots/pins_definition_EFM8BB.png}
 \caption{Définition de pins sur le processeur EFM8BB1x-QSOP24\cite{EFM8BB1_datasheet}}
@@ -315,7 +317,7 @@ Il a ensuite fallu de définir la configuration des pins du microprocesseur en a
 
 Cette étape est cruciale pour la suite du développement et demande quelques notions d’électronique. Par exemple il faut définir si le pin est défini en \emph{open drain}, c’est-à-dire que l’état haut correspond à une forte impédance et l’état bas à une faible impédance, ou en \emph{push-pull}, si l’on veut que l’état haut soit le \SI{3.3}{\volt} du CPU, et état bas du CPU (figure~\ref{fig:opendrain_pushpull}). 
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.55]{figures/screenshots/opendrain_pushpull.png}
 \caption{Illustration sortie \emph{Open drain} et \emph{Push-pull}} 
@@ -331,7 +333,7 @@ Bien que cet algorithme est implémenter dans les contrôleurs gérant la charge
 
 
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.65]{figures/screenshots/Li-ion_charge_algortihm.png}
 \caption{Algorithme de charge d’une batterie lithium-ion \cite{BQ2000_datasheet}} 
@@ -343,7 +345,7 @@ J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit g
 
 J'ai dû faire face aux contraintes de l'embarqué en concevant mon code. Il fallait notamment paramétrer le processeur pour donner les rôles de chaque broche (ADC, PWM, ...). La documentation du processeur expliquait comment utiliser des registres pour paramétrer les registres. 
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.7]{figures/screenshots/flow_chart.png}
 \caption{Quelques algorigrammes du software de la worklamp} 
@@ -352,7 +354,7 @@ J'ai dû faire face aux contraintes de l'embarqué en concevant mon code. Il fal
 
 \subsection{Tests}
 A chaque étape du développement du la worklamp, le prototype a dû  être tester pour pouvoir évaluer la pertinance des solutions adoptées. Plusieurs mesures ont été effectuées sur un certain intervalle de temps pour vérifier si la lampe validait les critères imposés par le client dans le cahier des charges.
-\begin{itemize}[label=\textbullet] % TODO: bullets instead of hyphen
+\begin{itemize} % TODO: bullets instead of hyphen
 \item La température à l'extérieur du produit (au point le plus chaud, au niveau du radiateur passif) devait être inférieur à \SI{50}{\celsius} pour que l'utilisateur ne se brûle pas en utilisant la lampe (norme de sécurité européenne),
 \item La température à l'intérieur du produit au niveau du PCB et du panneau de LEDs devait rester inférieure à certaines valeurs données dans les datasheets des composants pour assurer le bon fonctionnement de ces derniers (généralement \SIrange{70}{80}{\celsius}),
 \item La tension et le courant au niveau du pack batterie et du panneau de LED étaient mesurés afin d'estimer le rendement du PCB (90\% minimum),
@@ -361,7 +363,7 @@ La mesure de la puissance électrique envoyée au panneau de LEDs multipliée pa
 
 La plupart des tests ont été réaliser dans les bureaux de Neohm. Des lunettes spécifiques étaient à notre disposition pour protéger nos yeux. En effet, la lumière émise, même à faible intensité, était aveuglante (figure~\ref{fig:lamp_with_glasses}).
 
-\begin{figure}[!h]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.08]{figures/photos/tests_worklamp/lamp_with_glasses.jpg}
 \caption{Panneau de LEDs en mode \SI{5700}{\kelvin} et \SI{4200}{\kelvin} à travers les lunettes de sécurité}
@@ -383,7 +385,7 @@ Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à
 
 Quand j'ai quitter l'équipe, le projet était extrêmement avancé. Le principal problème qui persistait était la dissipation de la chaleur émise par le panneau de LEDs et par le PCB. En effet, à pleine puissance, le radiateur à l'arrière de la lampe ne devait pas dépasser \SI{50}{\celsius} et les composants ne devaient pas dépasser leur température limite d'utilisation, généralement \SIrange{70}{80}{\celsius}. Nous avions à notre disposition une caméra thermique ainsi qu'une sonde de température (figure~\ref{fig:temp_test}) pour déterminer d'où provenait la chaleur et pour valider les choix techniques choisis (pâte thermique, type de radiateur, utilisation de caloduc, etc). Malgré les solutions mis en place, le cahier des charges n'était pas rempli sur ce point.
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.08]{figures/photos/thermal_camera.jpg}
 \caption{Caméra thermique et sonde de température}
@@ -408,28 +410,28 @@ Mes
 \chapter{Essais dans le laboratoire de lampe à LEDs}
 \label{cha:labo_pictures}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/sphere_allumee.jpg}
 \caption{Sphère avec la lampe allumée} 
 \label{fig:lamp_on}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/spehre_vide.jpg}
 \caption{Sphère intégrante vide}
 \label{fig:empty_sphere}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/mesure_1.jpg}
 \caption{Générateur de tension et multimètre permettant de contrôler la lampe}
 \label{fig:multimeters}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.08]{figures/photos/tests_worklamp/sphere/ecran_PC.jpg}
 \caption{Ecran du PC avec les résultats} 
