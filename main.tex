@@ -3,10 +3,21 @@
 
 \usepackage{ae,lmodern} % vectorial fonts
 \usepackage[french]{babel} % babel
-\def\frenchchaptername{Partie} % 'partie' à la place de 'chapitre'
 \usepackage[utf8]{inputenc} % encoding
 \usepackage[T1]{fontenc}
 %\usepackage{graphicx} % figures
+
+%\def\frenchchaptername{Partie} % 'partie' à la place de 'chapitre'
+% change chapter syle
+\usepackage{titlesec, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\titlespacing*{\chapter} {0pt}{10pt}{40pt}
+
+\usepackage[font=sf]{caption} % pas d'empattement dans les figures
+
+\usepackage[notmath]{sansmathfonts} % enable sf for small caps
 
 \usepackage{hyperref} % url / ref
 
@@ -22,14 +33,16 @@
 
 % units
 \usepackage[load-configurations = abbreviations,
-			locale = FR, detect-all, % french syntax, ','' instead of '.'
-			range-phrase=--, % range syntax
-			range-units=single, % range syntax
-			]{siunitx} % units
+      			locale = FR, detect-all, % french syntax, ','' instead of '.'
+      			range-phrase=--, % range syntax
+      			range-units=single, % range syntax
+      			]{siunitx} % units
 
 
 \usepackage[nottoc, notlot]{tocbibind} % Table  des figures et biblio dans le sommaire
 
+\usepackage{caption}
+\captionsetup{justification=centering} % centrer les titres des figures
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TODO:
@@ -44,8 +57,9 @@
 \author{Pierre \bsc{Gintrand}}
 
 \begin{document}
+\sffamily % police sans empattement
 
-\addcontentsline{toc}{chapter}{Remerciements} % ajouter Remerciement au Sommaire
+%\addcontentsline{toc}{chapter}{Remerciements} % ajouter Remerciement au Sommaire
 
 \makeatletter % to use @
 \begin{titlepage}
@@ -97,7 +111,7 @@ Je tiens à remercier David \bsc{Collardeau}, Jean \bsc{Weber} et Guillaume \bsc
 Je remercie également tous les collaborateurs qui m’ont entouré : Sy et Green pour leur bonne humeur quotidienne et l’ambiance de travail agréable qu’ils ont instaurée au sein de leur équipe, ainsi que pour leur professionnalisme qu’ils m’ont fait partager.
 
 \chapter{Introduction}
-Pour mon 1er stage long à réaliser entre ma 2e et 3e année d’école d’ingénieur, mon objectif était de travailler dans un domaine technique à l’étranger. Je tenais particulièrement à occuper un poste dans lequel je pourrai appliquer les connaissances acquises en sein de mes 2 premières années du cursus Supélec. En effet, l’apprentissage en école d’ingénieur est extrêmement théorique et effectuer un tel stage est un complément indispensable à la formation. Effectuer une expérience me permet de sortir de ma zone de confort, de découvrir une nouvelle culture et d’évoluer au sein d’un environnement multiculturel. 
+Pour mon 1er stage long à réaliser entre ma 2\ieme{} et 3\ieme{} année d’école d’ingénieur, mon objectif était de travailler dans un domaine technique à l’étranger. Je tenais particulièrement à occuper un poste dans lequel je pourrai appliquer les connaissances acquises en sein de mes 2 premières années du cursus Supélec. En effet, l’apprentissage en école d’ingénieur est extrêmement théorique et effectuer un tel stage est un complément indispensable à la formation. Effectuer une expérience me permet de sortir de ma zone de confort, de découvrir une nouvelle culture et d’évoluer au sein d’un environnement multiculturel. 
 J’ai répondu à l’offre de stage que Neohm à déposer sur l’Environnement Numérique de Travail de Supélec : un stage de 5 mois et demi à Shenzhen en Chine en tant qu’ingénieur software embarqué. J’avais acquis les prérequis pour postuler grâce à mon TIPE réaliser en classes préparatoires : connaître le langage C et d’avoir une expérience en électronique embarquée.
 Shenzhen est la référence mondiale dans l’électronique embarquée : la plupart des grandes marques chinoises d’électronique ont leur siège social situé à Shenzhen (Huawei, DJI, Oppo) et quasiment tous les produits électroniques dans le monde sont fabriqués dans la région de Guangdong. Ce stage m’a donc permis d’être plongé dans ce domaine.
 Neohm est une start-up fondée par 3 français en 2016. Les associées sont Jean \bsc{Weber}, directeur de l’industrialisation, Guillaume \bsc{Baradel}, directeur marketing, et David \bsc{Collardeau}, directeur de la recherche et développement. 
@@ -334,7 +348,7 @@ J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit g
 A chaque étape du développement du la Worklamp, le prototype a dû  être tester pour pouvoir évaluer la pertinance des solutions adoptées. Plusieurs mesures ont été effectuées sur un certain intervalle de temps pour vérifier si la lampe validait les critères imposés par le client dans le cahier des charges.
 \begin{itemize} % TODO: bullets instead of hyphen
 \item La température à l'extérieur du produit (au point le plus chaud, au niveau du radiateur passif) devait être inférieur à \SI{50}{\celsius} pour que l'utilisateur ne se brûle pas en utilisant la lampe (norme de sécurité européenne),
-\item La température à l'intérieur du produit au niveau du PCB et du panneau de LEDs devait rester inférieure à certaines valeures données dans les datasheets des composants pour assurer le bon fonctionnement de ces derniers (généralement \SIrange{70}{80}{\celsius}),
+\item La température à l'intérieur du produit au niveau du PCB et du panneau de LEDs devait rester inférieure à certaines valeurs données dans les datasheets des composants pour assurer le bon fonctionnement de ces derniers (généralement \SIrange{70}{80}{\celsius}),
 \item La tension et le courant au niveau du pack batterie et du panneau de LED étaient mesurés afin d'estimer le rendement du PCB (90\% minimum),
 \end{itemize}
 La mesure de la puissance électrique envoyée au panneau de LEDs multipliée par le rendement des LEDs données par le constructeur permet d'obtenir une bonne estimation de la puissance lumineuse émise. Le rendement global du produit ainsi que le temps d'utilisation du produit (5h minimum) pouvait donc être calculé.
@@ -348,24 +362,30 @@ La plupart des tests ont été réaliser dans les bureaux de Neohm. Des lunettes
 \label{fig:lamp_with_glasses}
 \end{figure}
 
-Pour mesurer plus précisément la puissance lumineuse émise (la lentille semi-transparente était ignoré dans le modèle ci-dessus) et pour obtenir la tempéture (en Kelvin) émise, mon collègue Green et moi-même avons été dans un laboratoire spécialisé dans les lampes à LEDs équipé d'une \emph{sphère intégrante}. Cette appareil est un spere blanche de 1m de diamètre dans laquelle on place la lampe à tester. Les capteurs sont reliés à une grande armoire électrique elle-même connectée à un ordinateur.
+Pour mesurer plus précisément la puissance lumineuse émise (la lentille semi-transparente était ignoré dans le modèle ci-dessus) et pour obtenir la température (en Kelvin) émise, mon collègue Green et moi-même avons été dans un laboratoire spécialisé dans les lampes à LEDs équipé d'une \emph{sphère intégrante}. Cette appareil est un sphère blanche de 1m de diamètre dans laquelle on place la lampe à tester. Les capteurs sont reliés à une grande armoire électrique elle-même connectée à un ordinateur.
 
-Ces tests étaient particulièrent pertinents pour la température de la lumière créé. En effet, dans le mode intermédiaire (\SI{5700}{\kelvin}). J'avais programmé le processeur pour envoyer 50\% de la puissance électrique dans les LEDs à \SI{6700}{\kelvin} et 50\% dans les LED à \SI{2700}{\kelvin}. Cependant, avec cette configuration, la température était à \SI{5200}{\kelvin} au lieu de \SI{5700}{\kelvin}. J'ai donc ajuster le rapport cyclique des transistors alimentant les LEDs pour obtenir un résultat proche de \SI{5700}{\kelvin}. Des photos de ces tests en laboratoire sont visibles en annexe~\ref{cha:labo_pictures}).
+Ces tests étaient particulièrement pertinents pour la température de la lumière créé. En effet, dans le mode intermédiaire (\SI{5700}{\kelvin}). J'avais programmé le processeur pour envoyer 50\% de la puissance électrique dans les LEDs à \SI{6700}{\kelvin} et 50\% dans les LED à \SI{2700}{\kelvin}. Cependant, avec cette configuration, la température était à \SI{5200}{\kelvin} au lieu de \SI{5700}{\kelvin}. J'ai donc ajusté le rapport cyclique des transistors alimentant les LEDs pour obtenir un résultat proche de \SI{5700}{\kelvin}. Entre 2 tests, je modifiais quelques constantes dans mon code, j'ouvrais la lampe et je flashais le processeur à l'aide d'un connecteur 4 broches relié au débogueur connecté à mon PC. Des photos de ces tests en laboratoire sont visibles en annexe~\ref{cha:labo_pictures}).
+
+La puissance lumineuse émise était également mesurée. Les tests étaient à la fois effectué avec et sans la lentille semi-transparente. Nous nous sommes rapidement rendus compte que le type de lentille influé beaucoup sur la puissance lumineuse et donc sur le rendement global de la lampe. Pour avoir des résultats optimaux, il fallait trouvé une lentille qui diffusé correctement la lumière sans trop l'absorber.
 
 Un opérateur du laboratoire gérait le logiciel en chinois (figure~\ref{fig:PC_screen}). Après les tests, nous avons dû essayer de traduire les rapports générés en anglais pour tenir informer les clients de l'avancement du développement du produit.  
 
 
 \chapter{Analyse des résultats obtenus}
 
-Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à cause de problème de visa chinois. Le projet pour lequel j'ai été embauché, \emph{Looping}, a été finalement mis de côté car le projet de la Worklamp était plus urgent.
+Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à cause de problème de visa chinois. Le projet pour lequel j'ai été recruté, \emph{Looping}, a été finalement mis de côté car le projet de la Worklamp était plus urgent. J'ai donc participé au développement de ce 2\ieme{} projet, plus particulière sur la version batterie de la lampe. Avec David, nous avons conçu puis optimiser un circuit répondant aux besoins du produit. La phase la plus importante a été de choisir les composants les plus adaptés au projet et de comprendre leur fonctionnement en lisant les datasheets.
 
+Quand j'ai quitter l'équipe, le projet était extrêmement avancé. Le principal problème qui persistait était la dissipation de la chaleur émise par le panneau de LEDs et par le PCB. 
 
 \chapter{Apports}
 
 A travers ce stage, j'ai approfondi mes connaissances dans de nombreux domaines : réseau, développement informatique, électronique embarquée, protocoles d'essais etc. Neohm étant une start-up avec peu d'employé, j'ai dû m'adapter au jour le jour aux besoins de l'entreprise et j'ai ainsi eu l'occasion de travailler sur divers projets. D'un point de vue culturel, ce stage m'a permis de découvrir un nouveau pays et une nouvelle culture. Travailler avec une équipe composée à la fois de Français et de Chinois a été une expérience très enrichissante. J'ai pu observer une manière différente d'aborder des problématiques et de trouver des solutions.
 
-J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dans cette région de Chine, il a su me guider tout au long de mon stage et m'aider à travailler avec des collègues chinois. Jean et Guillaume m'ont également fait partager leur attrait pour le marché chinois. Toute l'équipe  de Neohm m'a très chaleureusement accueilli et m'a intégré rapidement.
-Ce stage a été ma 1e expérience de longue durée en entreprise. Après mon installation et mon acclimatation qui ont duré environ 3 semaines, j'ai su me servir de mes connaissances et surtout 
+J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dans cette région de Chine, il a su me guider tout au long de mon stage et m'aider à travailler avec des collègues chinois. Jean et Guillaume m'ont également fait partager leur attrait pour le marché chinois. Toute l'équipe de Neohm m'a très chaleureusement accueilli et m'a intégré rapidement.
+Ce stage a été ma 1\ieme{} expérience de longue durée en entreprise. Après mon installation et mon acclimatation qui ont duré environ 3 semaines, j'ai su me servir de mes connaissances et surtout 
+
+Ma mission étant de programmer les microprocesseurs présents sur les circuits, j'ai
+% elecambarqué: 
 
 \appendix
 
