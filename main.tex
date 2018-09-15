@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc} % encoding
 \usepackage[T1]{fontenc}
 %\usepackage{graphicx} % figures
+\usepackage{enumitem}
 
 %\def\frenchchaptername{Partie} % 'partie' à la place de 'chapitre'
 % change chapter syle
@@ -17,7 +18,10 @@
 
 \usepackage[font=sf]{caption} % pas d'empattement dans les figures
 
-\usepackage[notmath]{sansmathfonts} % enable sf for small caps
+\usepackage[notmath]{sansmathfonts} % pas d'empattement dans les peites majuscules
+
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
 
 \usepackage{hyperref} % url / ref
 
@@ -80,7 +84,7 @@
 % Author and supervisor
 \begin{minipage}{0.35\textwidth}
   \begin{flushleft} \large
-    \@author\\
+    \textbf{\@author}\\
     Promo 2019\\
   \end{flushleft}
 \end{minipage}
@@ -94,7 +98,7 @@
 \vfill
 
 % Bottom of the page
-{\large Août 2017 — Décembre 2017}
+{\large Septembre 2017 — Décembre 2017}
 
 \end{center}
 \end{titlepage}
@@ -155,7 +159,7 @@ Dans un premier temps, il me demande de m’intéresser sur l’USB type C. Il v
 \label{fig:usb_type}
 \end{figure}
 
-De plus, l’USB C est compatible avec la spécificité Power Delivery qui permet de fournir jusqu’à 100W de puissance électrique. Inclure l’USB C au produit apporterait un confort à l’utilisateur qui pourra par exemple utiliser le chargeur du MacBook d’Apple est un connecteur USB-C et qui fournit 60W.
+De plus, l’USB C est compatible avec la spécificité Power Delivery qui permet de fournir jusqu’à 100W de puissance électrique. Inclure l’USB C au produit apporterait un confort à l’utilisateur qui pourra par exemple utiliser le chargeur du MacBook d’Apple est un connecteur USB-C et qui fournit \SI{60}{\watt}.
 L'USB C permet également un échange de donnée et de d'énergie dans les 2 sens du câble alors qu'auparavant, les données ne pouvait qu'aller du connecteur type B au connecteur type A et l'énergie du connecteur type B au connecteur type B (i.e. il n'était ni possible de changer un pc avec un portable et ni de lire des données d'un pc avec un portable).
 Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fournir jusqu’à 20V / 5A. Cependant, pour fournir une telle puissance, la source doit négocier la tension et le courant avec le débiteur de courant (figure~\ref{fig:usb_pd_negociation}).
 
@@ -167,7 +171,7 @@ Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fou
 \end{figure}
 % TODO: def of EMCA
 
-Cette négociation nécessite un contrôleur spécifique. Les recherches que j’ai effectuées m’ont mené à des contrôleurs assez onéreux, environ 5\$/unité. De plus un adaptateur secteur / USB-C supportant 80W coûtent relativement cher car il s'agit d'une technologie nouvelle (notamment utiliser dans les derniers ordinateurs portables et téléphones)
+Cette négociation nécessite un contrôleur spécifique. Les recherches que j’ai effectuées m’ont mené à des contrôleurs assez onéreux, environ 5\$/unité. De plus un adaptateur secteur / USB-C supportant \SI{80}{\watt} coûtent relativement cher car il s'agit d'une technologie nouvelle (notamment utiliser dans les derniers ordinateurs portables et téléphones)
 Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’il avait conçu (figure~\ref{fig:looping_pcb}) pour la gestion de l’alimentation du projet Looping car le pack batterie d'\emph{EasyFeed} allait être identique et les besoins d'alimentation semblables.
 
 \begin{figure}[!h]
@@ -191,7 +195,7 @@ Mon travail fut donc de programmer le microprocesseur pour communiquer avec le c
 qui permet aux 2 puces de communiquer via les fils SMBD et SMBC.
 Le composant BQ40Z60 gère à la fois la charge de la batterie, la décharge, l’équilibre des cellules, les protections en température et en courant, l’estimation du niveau de batterie. SMBus permet de configurer la puce et surveiller son état pendant son fonctionnement.
 SMBus utilise donc 2 lignes pour communiquer :
-\begin{itemize} % TODO: bullets instead of hyphen
+\begin{itemize}[label=\textbullet] % TODO: bullets instead of hyphen
 \item SMBD est une ligne de données bidirectionnelle,
 \item SMBC est une ligne d'horloge de synchronisation bidirectionnelle,
 \end{itemize}
@@ -258,8 +262,8 @@ A la demande de l’équipe, je me suis occupé de trouver un moyen pour contour
 
 \section{Worklamp}
 \subsection{Présentation}
-David m’a présenté un autre projet en cours sur lequel j'allai travailler : une lampe à LED portable pour peintre. Cette lampe existe sous 2 versions : une version \emph{AC} 80W alimentée par le secteur et une version \emph{DC} 50W alimentée par batterie. Pour simplifier l'industrialisation du produit, le boîtier est identique pour les 2 versions mais tous les ports ne sont utilisés dans chaque version (figure~\ref{fig:captioned_worklamp}). Le PCB et le panneau de LEDs sont quand à eux spécifiques à chaque version du produit (figure~\ref{fig:worklamp_PCBs}). Il y a plus de LEDs dans la versions 80W et les PCBs n'ont pas le même rôle (redressement et lissage de la tension pour la version AC, gestion de la batterie pour la version DC).
-Dans les 2 version, un potentiomètre permet de faire varier lumineuse. Les panneaux de LEDs sont composés de 2 types de LEDs (3700K et 4200K) afin de disposer de 3 modes d'éclaraige différents. Un bouton permet de changer la température de la couleur émise : 3700K, 5700K et 4200K (les 2 types de LED sont allumés à mi-puissance). 
+David m’a présenté un autre projet en cours sur lequel j'allai travailler : une lampe à LED portable pour peintre. Cette lampe existe sous 2 versions : une version \emph{AC} \SI{80}{\watt} alimentée par le secteur et une version \emph{DC} \SI{50}{\watt} alimentée par batterie. Pour simplifier l'industrialisation du produit, le boîtier est identique pour les 2 versions mais tous les ports ne sont utilisés dans chaque version (figure~\ref{fig:captioned_worklamp}). Le PCB et le panneau de LEDs sont quand à eux spécifiques à chaque version du produit (figure~\ref{fig:worklamp_PCBs}). Il y a plus de LEDs dans la versions \SI{80}{\celsius} et les PCBs n'ont pas le même rôle (redressement et lissage de la tension pour la version AC, gestion de la batterie pour la version DC).
+Dans les 2 version, un potentiomètre permet de faire varier lumineuse. Les panneaux de LEDs sont composés de 2 types de LEDs (\SI{3700}{\kelvin} et \SI{5700}{\kelvin}) afin de disposer de 3 modes d’éclairage différents. Un bouton permet de changer la température de la couleur émise : \SI{3700}{\kelvin}, \SI{5700}{\kelvin} et \SI{4200}{\kelvin} (les 2 types de LEDs sont allumés à mi-puissance). 
 
 \begin{figure}[!h]
 \centering
@@ -289,7 +293,7 @@ David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schem
 
 La première étape fut d’écrire une spécification pour définir les tâches à remplir par le processeur pour ensuite aboutir à un ensemble d’algorithme accomplissant ces missions.
 Les tâches que doit effectuer le processeur sont :
-\begin{itemize} % TODO: bullets instead of hyphen
+\begin{itemize}[label=\textbullet] % TODO: bullets instead of hyphen
 \item Se mettre en veille (mode basse consommation) sur commande du bouton ON/OFF,
 \item Moduler l’intensité lumineuse en fonction de l’état du potentiomètre,
 \item Changer la couleur sur un appui sur le bouton COLOR,
@@ -337,6 +341,8 @@ Bien que cet algorithme est implémenter dans les contrôleurs gérant la charge
 \subsection{Software}
 J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit gérer (figure~\ref{fig:flow_chart}). Cette étape m'a permis d'avancer dans le développement logiciel en gardant un certain recul avec les consignes auxquelles je m'étais fixé.
 
+J'ai dû faire face aux contraintes de l'embarqué en concevant mon code. Il fallait notamment paramétrer le processeur pour donner les rôles de chaque broche (ADC, PWM, ...). La documentation du processeur expliquait comment utiliser des registres pour paramétrer les registres. 
+
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.7]{figures/screenshots/flow_chart.png}
@@ -345,8 +351,8 @@ J'ai conçu des algorigrammes pour chaque fonctionnalité que le Software doit g
 \end{figure}
 
 \subsection{Tests}
-A chaque étape du développement du la Worklamp, le prototype a dû  être tester pour pouvoir évaluer la pertinance des solutions adoptées. Plusieurs mesures ont été effectuées sur un certain intervalle de temps pour vérifier si la lampe validait les critères imposés par le client dans le cahier des charges.
-\begin{itemize} % TODO: bullets instead of hyphen
+A chaque étape du développement du la worklamp, le prototype a dû  être tester pour pouvoir évaluer la pertinance des solutions adoptées. Plusieurs mesures ont été effectuées sur un certain intervalle de temps pour vérifier si la lampe validait les critères imposés par le client dans le cahier des charges.
+\begin{itemize}[label=\textbullet] % TODO: bullets instead of hyphen
 \item La température à l'extérieur du produit (au point le plus chaud, au niveau du radiateur passif) devait être inférieur à \SI{50}{\celsius} pour que l'utilisateur ne se brûle pas en utilisant la lampe (norme de sécurité européenne),
 \item La température à l'intérieur du produit au niveau du PCB et du panneau de LEDs devait rester inférieure à certaines valeurs données dans les datasheets des composants pour assurer le bon fonctionnement de ces derniers (généralement \SIrange{70}{80}{\celsius}),
 \item La tension et le courant au niveau du pack batterie et du panneau de LED étaient mesurés afin d'estimer le rendement du PCB (90\% minimum),
@@ -373,19 +379,29 @@ Un opérateur du laboratoire gérait le logiciel en chinois (figure~\ref{fig:PC_
 
 \chapter{Analyse des résultats obtenus}
 
-Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à cause de problème de visa chinois. Le projet pour lequel j'ai été recruté, \emph{Looping}, a été finalement mis de côté car le projet de la Worklamp était plus urgent. J'ai donc participé au développement de ce 2\ieme{} projet, plus particulière sur la version batterie de la lampe. Avec David, nous avons conçu puis optimiser un circuit répondant aux besoins du produit. La phase la plus importante a été de choisir les composants les plus adaptés au projet et de comprendre leur fonctionnement en lisant les datasheets.
+Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à cause de problème de visa chinois. Le projet pour lequel j'ai été recruté, \emph{Looping}, a été finalement mis de côté car le projet de la Worklamp était plus urgent. J'ai donc participé au développement de ce 2\ieme{} projet, plus particulière sur la version batterie de la lampe. Avec David, nous avons conçu puis optimiser un circuit répondant aux besoins du produit. La phase la plus importante a été de choisir les composants les plus adaptés au projet et de comprendre leur fonctionnement e n lisant les datasheets.
 
-Quand j'ai quitter l'équipe, le projet était extrêmement avancé. Le principal problème qui persistait était la dissipation de la chaleur émise par le panneau de LEDs et par le PCB. 
+Quand j'ai quitter l'équipe, le projet était extrêmement avancé. Le principal problème qui persistait était la dissipation de la chaleur émise par le panneau de LEDs et par le PCB. En effet, à pleine puissance, le radiateur à l'arrière de la lampe ne devait pas dépasser \SI{50}{\celsius} et les composants ne devaient pas dépasser leur température limite d'utilisation, généralement \SIrange{70}{80}{\celsius}. Nous avions à notre disposition une caméra thermique ainsi qu'une sonde de température (figure~\ref{fig:temp_test}) pour déterminer d'où provenait la chaleur et pour valider les choix techniques choisis (pâte thermique, type de radiateur, utilisation de caloduc, etc). Malgré les solutions mis en place, le cahier des charges n'était pas rempli sur ce point.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.08]{figures/photos/thermal_camera.jpg}
+\caption{Caméra thermique et sonde de température}
+\label{fig:temp_test}
+\end{figure}
+
+
 
 \chapter{Apports}
 
 A travers ce stage, j'ai approfondi mes connaissances dans de nombreux domaines : réseau, développement informatique, électronique embarquée, protocoles d'essais etc. Neohm étant une start-up avec peu d'employé, j'ai dû m'adapter au jour le jour aux besoins de l'entreprise et j'ai ainsi eu l'occasion de travailler sur divers projets. D'un point de vue culturel, ce stage m'a permis de découvrir un nouveau pays et une nouvelle culture. Travailler avec une équipe composée à la fois de Français et de Chinois a été une expérience très enrichissante. J'ai pu observer une manière différente d'aborder des problématiques et de trouver des solutions.
 
 J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dans cette région de Chine, il a su me guider tout au long de mon stage et m'aider à travailler avec des collègues chinois. Jean et Guillaume m'ont également fait partager leur attrait pour le marché chinois. Toute l'équipe de Neohm m'a très chaleureusement accueilli et m'a intégré rapidement.
-Ce stage a été ma 1\ieme{} expérience de longue durée en entreprise. Après mon installation et mon acclimatation qui ont duré environ 3 semaines, j'ai su me servir de mes connaissances et surtout 
+Ce stage a été ma 1\ieme{} expérience longue en entreprise. Après mon installation et mon acclimatation qui ont duré environ 3 semaines, j'ai su me servir de mes connaissances et surtout de mon pragmatisme pour répondre aux problématiques des mes missions.
 
-Ma mission étant de programmer les microprocesseurs présents sur les circuits, j'ai
-% elecambarqué: 
+Ma rôle étant de programmer les microprocesseurs présents sur les circuits, j'ai renforcé mes connaissances du langage C et j'ai appris à construire un code robuste. J'ai dû appliqué des méthodes spécifiques à l'embarqué (utilisation d'interruptions par exemple) et adapter le code au hardware présent dans le circuit pour piloter certains contrôleurs et limiter la consommation électrique des composants.
+
+Mes
 
 \appendix
 

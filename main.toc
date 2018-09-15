@@ -3,16 +3,16 @@
 \contentsline {chapter}{\numberline {2}Objectifs et contexte}{5}{chapter.2}
 \contentsline {chapter}{\numberline {3}D\IeC {\'e}marches et travaux r\IeC {\'e}alis\IeC {\'e}s}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}Looping / EasyFeed}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Site web}{10}{section.3.2}
+\contentsline {section}{\numberline {3.2}Site web}{11}{section.3.2}
 \contentsline {section}{\numberline {3.3}Serveur}{11}{section.3.3}
 \contentsline {section}{\numberline {3.4}Worklamp}{13}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Pr\IeC {\'e}sentation}{13}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Sch\IeC {\'e}ma \IeC {\'e}lectrique}{14}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Sch\IeC {\'e}ma \IeC {\'e}lectrique}{15}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Charge}{16}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Software}{17}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Tests}{17}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}Tests}{18}{subsection.3.4.5}
 \contentsline {chapter}{\numberline {4}Analyse des r\IeC {\'e}sultats obtenus}{20}{chapter.4}
-\contentsline {chapter}{\numberline {5}Apports}{21}{chapter.5}
-\contentsline {chapter}{\numberline {A}Essais dans le laboratoire de lampe \IeC {\`a} LEDs}{22}{appendix.A}
-\contentsline {chapter}{Table des figures}{25}{appendix*.27}
-\contentsline {chapter}{Bibliographie}{26}{appendix*.28}
+\contentsline {chapter}{\numberline {5}Apports}{22}{chapter.5}
+\contentsline {chapter}{\numberline {A}Essais dans le laboratoire de lampe \IeC {\`a} LEDs}{23}{appendix.A}
+\contentsline {chapter}{Table des figures}{26}{appendix*.28}
+\contentsline {chapter}{Bibliographie}{27}{appendix*.29}
