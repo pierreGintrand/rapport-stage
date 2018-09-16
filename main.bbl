@@ -1,10 +1,20 @@
 \begin{thebibliography}{1}
 
+\bibitem{article_shenzhen}
+Shenzhen, l'usine électronique du monde, apr 2014.
+\newblock
+  \url{https://www.lci.fr/high-tech/shenzhen-lusine-electronique-du-monde-1548324.html}.
+
 \bibitem{EFM8BB1_datasheet}
 Silicon Labs.
 \newblock {\em EFM8 Busy Bee Family EFM8BB1 Data Sheet}, mar 2017.
 \newblock
   \url{https://www.silabs.com/documents/public/data-sheets/efm8bb1-datasheet.pdf}.
+
+\bibitem{smbus_spec}
+System Management Interface Forum.
+\newblock {\em System Management Bus (SMBus) Specification}, dec 2014.
+\newblock \url{http://www.smbus.org/specs/}.
 
 \bibitem{BQ2000_datasheet}
 Texas Instruments.

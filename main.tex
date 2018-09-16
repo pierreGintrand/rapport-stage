@@ -116,17 +116,16 @@
 
 \chapter*{Remerciements}
 
-Je tiens à remercier David \bsc{Collardeau}, Jean \bsc{Weber} et Guillaume \bsc{Baradel} pour m’avoir accueilli dans leur service et accompagné avec bienveillance tout au long de mon stage.
+Je tiens à remercier David \bsc{Collardeau}, Jean \bsc{Weber} et Guillaume \bsc{Baradel} pour m’avoir accueilli dans leur entreprise et pour la confiance qu'ils m'ont accordé tout au long du stage.
 
-Je remercie également tous les collaborateurs qui m’ont entouré : Sy et Green pour leur bonne humeur quotidienne et l’ambiance de travail agréable qu’ils ont instaurée au sein de leur équipe, ainsi que pour leur professionnalisme qu’ils m’ont fait partager.
+Je remercie également tous les collaborateurs qui m’ont entouré : Sy et Green pour leur bonne humeur quotidienne et l’ambiance de travail agréable qu’ils ont instaurée au sein de l'équipe, ainsi que pour leur professionnalisme qu’ils m’ont fait partager.
 
 \chapter{Introduction}
-Pour mon 1er stage long à réaliser entre ma 2\ieme{} et 3\ieme{} année d’école d’ingénieur, mon objectif était de travailler dans un domaine technique à l’étranger. Je tenais particulièrement à occuper un poste dans lequel je pourrai appliquer les connaissances acquises en sein de mes 2 premières années du cursus Supélec. En effet, l’apprentissage en école d’ingénieur est extrêmement théorique et effectuer un tel stage est un complément indispensable à la formation. Effectuer une expérience me permet de sortir de ma zone de confort, de découvrir une nouvelle culture et d’évoluer au sein d’un environnement multiculturel. 
-J’ai répondu à l’offre de stage que Neohm à déposer sur l’Environnement Numérique de Travail de Supélec : un stage de 5 mois et demi à Shenzhen en Chine en tant qu’ingénieur software embarqué. J’avais acquis les prérequis pour postuler grâce à mon TIPE réaliser en classes préparatoires : connaître le langage C et d’avoir une expérience en électronique embarquée.
-Shenzhen est la référence mondiale dans l’électronique embarquée : la plupart des grandes marques chinoises d’électronique ont leur siège social situé à Shenzhen (Huawei, DJI, Oppo) et quasiment tous les produits électroniques dans le monde sont fabriqués dans la région de Guangdong. Ce stage m’a donc permis d’être plongé dans ce domaine.
-Neohm est une start-up fondée par 3 français en 2016. Les associées sont Jean \bsc{Weber}, directeur de l’industrialisation, Guillaume \bsc{Baradel}, directeur marketing, et David \bsc{Collardeau}, directeur de la recherche et développement. 
-Ce stage m’a permis d’appréhender le milieu professionnel. Il m’a fait découvrir comment se met en place le travail en équipe et l’importance que représente la hiérarchie dans une grande entreprise.
-Ce rapport constitue un retour d’expérience décrivant le fonctionnement de l’entreprise et les différentes missions que j’ai réalisées au cours de mon stage. J’expliquerai également en quoi il m’a éclairé sur le métier d’ingénieur au sein d’une petite structure et comment il a alimenté mes réflexions autour de mon projet professionnel.
+Pour mon 1\ier{} stage long à réaliser entre ma 2\ieme{} et 3\ieme{} année d’école d’ingénieur, mon objectif était de travailler dans un domaine technique à l’étranger. Je tenais particulièrement à occuper un poste dans lequel je pourrais appliquer les connaissances acquises en sein de mes 2 premières années du cursus Supélec. En effet, l’apprentissage en école d’ingénieur étant extrêmement théorique, effectuer un tel stage est un complément indispensable à la formation. Réaliser cette expérience à l'étranger m'a permis de sortir de ma zone de confort, de découvrir une nouvelle culture et d’évoluer au sein d’un environnement multiculturel.
+
+J’ai répondu à l’offre de stage que Neohm à déposer sur l’Environnement Numérique de Travail de Supélec : un stage de 5 mois et demi à Shenzhen en Chine en tant qu’ingénieur software embarqué. J’avais acquis les prérequis pour postuler grâce à mon TIPE réalisé en classes préparatoires : connaître le langage C et d’avoir une expérience en électronique embarquée. Shenzhen est la référence mondiale dans l’électronique embarquée : la plupart des grandes marques chinoises d’électronique ont leur siège social situé à Shenzhen (Huawei, DJI, Oppo) et quasiment tous les produits électroniques dans le monde sont fabriqués dans la région de Guangdong, "l'usine électronique du monde"~\cite{article_shenzhen}. Ce stage m’a donc permis d’être plongé dans ce domaine. Neohm est une start-up fondée par 3 français en 2016. Les associées sont Jean \bsc{Weber}, directeur de l’industrialisation, Guillaume \bsc{Baradel}, directeur marketing, et David \bsc{Collardeau}, directeur de la recherche et développement.
+
+Ce stage m’a permis d’appréhender le milieu professionnel. Il m’a fait découvrir comment se met en place le travail d'équipe en entreprise et le fonctionnement d'une jeune start-up. Ce rapport constitue un retour d’expérience décrivant le fonctionnement de l’entreprise et les différentes missions que j’ai réalisées au cours de mon stage. Il expliquerai également en quoi cette expérience m’a éclairé sur le métier d’ingénieur au sein d’une petite structure et comment il a alimenté mes réflexions autour de mon projet professionnel.
 
 \begin{figure}
 \centering
@@ -139,7 +138,7 @@ Ce rapport constitue un retour d’expérience décrivant le fonctionnement de l
 
 \chapter{Objectifs et contexte}
 Mon stage s’est déroulé dans le pôle recherche et développement de Neohm, sous la direction de David \bsc{Collardeau}. Au début, nous étions 4 à travailler dans ces bureaux : David, Sy et Green et moi. Jean venez dans les bureaux environs une fois toutes les 2 semaines pour faire un point sur l'avancement et préparer au mieux l'industrialisation du produit. Plus tard, 2 nouveaux collaborateurs se sont ajoutés à l’équipe.
-Le sujet initial du stage dont David m’avait parlé par téléphone en juillet était le projet « Looping », il s’agissait d’un chauffe biberon sur batterie utilisant le phénomène d’induction. Un élément chauffant en métal est placé dans un biberon rempli, le tout est placé sur ou dans le système de chauffe (selon le prototype).
+Le sujet initial du stage dont David m’avait parlé par téléphone en juillet était le projet \emph{Looping}, il s’agissait d’un chauffe biberon sur batterie utilisant le phénomène d’induction. Un élément chauffant en métal est placé dans un biberon rempli, le tout est placé sur ou dans le système de chauffe (selon le prototype).
 
 \begin{figure}[H]
 \centering
@@ -148,15 +147,14 @@ Le sujet initial du stage dont David m’avait parlé par téléphone en juillet
 \label{fig:3D_looping}
 \end{figure}
 
-Guillaume, le directeur marketing basé en France est à l’origine du projet. Il a travaillé plusieurs années dans l’industrie du bébé avant de fonder Neohm, et selon lui il y aurait un fort potentiel pour une tel produit.
+Guillaume, le directeur marketing basé en France, est à l’origine du projet. Il a travaillé plusieurs années dans l’industrie du bébé avant de fonder Neohm avec Jean et David. Selon lui il y aurait un fort potentiel pour un tel produit.
 Cependant, après plusieurs semaines de travail sur ce projet durant l’été 2017, David s’est aperçu que la chauffe à induction comporte de nombreux défis techniques comme la modulation du courant envoyé dans les bobines ou l’isolation du système pour son champ électromagnétique n’interfère pas avec d’autres appareils électroniques. Le rendement de l’induction n’est pas non plus particulièrement bon, l’intérêt de cette technologie est la vitesse de chauffe car seul l’élément chauffant reçoit directement l’énergie.
-L’équipe a donc décidé de mettre Looping et la chauffe par induction de côté pour se concentrer sur un autre projet : \emph{EasyFeed}. Ce projet est un système portatif qui permet à lui seul de confectionner un biberon. L’utilisateur y insère le lait en poudre et l’eau et le système remplit un biberon chaud avec les doses adaptées. L’eau sera ici chauffée par une simple résistance.
-Mon travail sera de programmé le microprocesseur présent dans le produit qui contrôle les différentes fonctionnalité (affichage, contrôle de moteurs, charge des batteries, protections en température du produit…).
+L’équipe a donc décidé de mettre \emph{Looping} et la chauffe par induction de côté pour se concentrer sur un autre projet~: \emph{EasyFeed}. Ce projet est un système portatif qui permet à lui seul de confectionner un biberon. L’utilisateur y insère le lait en poudre et l’eau et le système remplit un biberon chaud avec les doses adaptées. L’eau est ici chauffée par une simple résistance.
+Mon travail est de programmer le microprocesseur présent dans le produit qui contrôle les différentes fonctionnalités (affichage, contrôle de moteurs, charge des batteries, protections en température du produit…).
 
 \chapter{Démarches et travaux réalisés}
 \section{Looping / EasyFeed}
-Au début du stage, David m’annonce que je commencerai à travailler sur la gestion des batteries dans \emph{EasyFeed}.
-Dans un premier temps, il me demande de m’intéresser sur l’USB type C. Il veut équiper le produit d’un tel connecteur. Cette nouvelle norme permet d’unifier toutes les connecteurs USB en un seul.
+Au début du stage, David m’a annoncé que j'allais commencer à travailler sur la gestion des batteries dans \emph{EasyFeed}. Dans un premier temps, il m'a demandé de m’intéresser sur l’USB type C car il souhaite équiper le produit d’un tel connecteur. Cette nouvelle norme permet d’unifier toutes les connecteurs USB en un seul.
 
 \begin{figure}[H]
 \centering
@@ -165,8 +163,8 @@ Dans un premier temps, il me demande de m’intéresser sur l’USB type C. Il v
 \label{fig:usb_type}
 \end{figure}
 
-De plus, l’USB C est compatible avec la spécificité Power Delivery qui permet de fournir jusqu’à 100W de puissance électrique. Inclure l’USB C au produit apporterait un confort à l’utilisateur qui pourra par exemple utiliser le chargeur du MacBook d’Apple est un connecteur USB-C et qui fournit \SI{60}{\watt}.
-L'USB C permet également un échange de donnée et de d'énergie dans les 2 sens du câble alors qu'auparavant, les données ne pouvait qu'aller du connecteur type B au connecteur type A et l'énergie du connecteur type B au connecteur type B (i.e. il n'était ni possible de changer un pc avec un portable et ni de lire des données d'un pc avec un portable).
+De plus, l’USB C est compatible avec la spécificité Power Delivery qui permet de fournir jusqu’à \SI{100}{\watt} de puissance électrique. Inclure l’USB C au produit apporterait un confort à l’utilisateur qui pourra par exemple utiliser le chargeur du MacBook d’Apple est un connecteur USB-C et qui fournit \SI{60}{\watt}.
+L'USB C permet également un échange de donnée et de d'énergie dans les 2 sens du câble alors qu'auparavant, les données ne pouvaient qu'aller du connecteur type B au connecteur type A et l'énergie du connecteur type B au connecteur type B (i.e. il n'était ni possible de changer un pc avec un portable et ni de lire des données d'un pc avec un portable).
 Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fournir jusqu’à 20V / 5A. Cependant, pour fournir une telle puissance, la source doit négocier la tension et le courant avec le débiteur de courant (figure~\ref{fig:usb_pd_negociation}).
 
 \begin{figure}[H]
@@ -178,7 +176,7 @@ Je me suis donc renseigné sur la norme USB Power Delivery qui peut en effet fou
 % TODO: def of EMCA
 
 Cette négociation nécessite un contrôleur spécifique. Les recherches que j’ai effectuées m’ont mené à des contrôleurs assez onéreux, environ 5\$/unité. De plus un adaptateur secteur / USB-C supportant \SI{80}{\watt} coûtent relativement cher car il s'agit d'une technologie nouvelle (notamment utiliser dans les derniers ordinateurs portables et téléphones)
-Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’il avait conçu (figure~\ref{fig:looping_pcb}) pour la gestion de l’alimentation du projet Looping car le pack batterie d'\emph{EasyFeed} allait être identique et les besoins d'alimentation semblables.
+Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’il avait conçu (figure~\ref{fig:looping_pcb}) pour la gestion de l’alimentation du projet \emph{Looping} car le pack batterie d'\emph{EasyFeed} allait être identique et les besoins d'alimentation semblables.
 
 \begin{figure}[H]
 \centering
@@ -187,7 +185,7 @@ Après avoir présenté mes recherches à David, il m'a présenté le PCB qu’i
 \label{fig:looping_pcb}
 \end{figure}
 
-Le circuit (figure~\ref{fig:looping_charger}) était conçu autour d'un contrôleur Texas Instrument BQ40Z60 gérant les phases de charges et de décharges du pack batterie et d'un microprocesseur Silabs 8 bits EFM8LB1 (pas présent sur le schéma) pour communiquer avec le contrôleur et de piloter globalement l'appareil (on/off, affichage du niveau de la batterie, boucle de contrôle de la température, ...).
+Le circuit (figure~\ref{fig:looping_charger}) est conçu autour d'un contrôleur Texas Instrument BQ40Z60 gérant les phases de charges et de décharges du pack batterie et d'un microprocesseur Silabs 8 bits EFM8LB1 (pas présent sur le schéma) pour communiquer avec le contrôleur et de piloter globalement l'appareil (on/off, affichage du niveau de la batterie, boucle de contrôle de la température, ...).
 
 \begin{figure}[h]
 \centering
@@ -196,9 +194,7 @@ Le circuit (figure~\ref{fig:looping_charger}) était conçu autour d'un contrôl
 \label{fig:looping_charger}
 \end{figure}
 
-Mon travail fut donc de programmer le microprocesseur pour communiquer avec le contrôleur de batterie. J’ai dans un premier temps consulté attentivement les documentations et les manuels de ces 2 composants afin de comprendre leur fonctionnement. J’ai dû également m’intéresser au SMBus 
-% TODO: ref to SMBus documentation
-qui permet aux 2 puces de communiquer via les fils SMBD et SMBC.
+Mon travail a été donc de programmer le microprocesseur pour communiquer avec le contrôleur de batterie. J’ai dans un premier temps consulté attentivement les documentations et les manuels de ces 2 composants afin de comprendre leur fonctionnement. J’ai dû également m’intéresser au SMBus~\cite{smbus_spec} qui permet aux 2 puces de communiquer via les fils SMBD et SMBC.
 Le composant BQ40Z60 gère à la fois la charge de la batterie, la décharge, l’équilibre des cellules, les protections en température et en courant, l’estimation du niveau de batterie. SMBus permet de configurer la puce et surveiller son état pendant son fonctionnement.
 SMBus utilise donc 2 lignes pour communiquer :
 \begin{itemize} % TODO: bullets instead of hyphen
@@ -233,8 +229,8 @@ J’ai donc essayer de contrôler ces transistors manuellement avec des commande
 \label{fig:BQ40Z60_manual_excerpt}
 \end{figure}
 
-Le contrôleur ne semblait pas apprécier ces commandes car après avoir reçu celles-ci, il ne fonctionnait pas, il renvoyait un NACK au lieu d’un ACK puis plus aucune fonction ne répondait (comme la lecture du numéro de série du composant pas exemple).
-J’ai fait part de mes difficultés à contrôler le composant à David, il a décidé de commander un débogueur spécifique pour les contrôleur batterie de Texas instrument, le EV2300. Cette appareil fonctionne avec le logiciel BQStudio (figure~\ref{fig:BQ40Z60_registers}) qui propose une interface permettant de visualiser tous les registres du BQ40Z60 et le configurer plus aisément. Ce projet a été mis en pause en attendant de recevoir ce débogueur.
+Le contrôleur ne semblait pas comprendre ces commandes car après avoir reçu celles-ci, il ne fonctionnait plus et il renvoyait un NACK au lieu d’un ACK puis plus aucune fonction ne répondait (comme la lecture du numéro de série du composant pas exemple).
+J’ai fait part de mes difficultés à contrôler le composant à David, il a décidé de commander un débogueur spécifique pour les contrôleur batterie de Texas instrument, le boîtier EV2300. Cette appareil fonctionne avec le logiciel BQStudio (figure~\ref{fig:BQ40Z60_registers}) qui propose une interface permettant de visualiser tous les registres du BQ40Z60 et le configurer plus aisément. Ce projet a été mis en pause en attendant de recevoir ce débogueur.
 
 \begin{figure}[H]
 \centering
@@ -245,7 +241,7 @@ J’ai fait part de mes difficultés à contrôler le composant à David, il a d
 
 \section{Site web}
 En parallèle de ce projet, Guillaume, le directeur marketing de la start-up, m’a demandé d’adapter le site internet \url{neohm.net} fraîchement créé par David pour qu’il soit correctement visible sur mobile.
-Le site internet avait conçu à partir d’un template du framework Bootstrap. Il était donc à 90\% adapter pour mobile mais il fallait corriger quelques défauts. J’ai donc modifier dans le feuille de style la taille de certains éléments en utilisant une technologie \emph{responsive} qui s’adapte à la taille de l’écran, modifier la position de conteneurs d’absolue à relatif et ajuster certaines marges qui faisait apparaître une barre de défilement horizontale sous mobile. J’ai également modifier le code JavaScript d’une fonction qu’avait rajouté David, qui permet d’afficher périodiques des mots sur une image de fond pour que cela fonctionne également sur smartphone. Après ces modifications, le site était parfaitement lisible depuis tout appareil (figure~\ref{fig:website}).
+Le site internet avait conçu à partir d’un template du framework Bootstrap. Il était donc à 90\% adapter pour mobile mais il fallait corriger quelques défauts. J'ai donc modifié dans le feuille de style la taille de certains éléments en utilisant une technologie \emph{responsive} qui s’adapte à la taille de l’écran, changé la position de conteneurs d’absolue à relatif et ajusté certaines marges qui faisait apparaître une barre de défilement horizontale sous mobile. J’ai également modifié le code JavaScript d’une fonction qu’avait rajouté David, qui permet d’afficher périodiquement des mots sur une image de fond pour que cela fonctionne également sur smartphone. Après ces modifications, le site était parfaitement lisible depuis tout appareil (figure~\ref{fig:website}).
 
 \begin{figure}[H]
 \centering
@@ -255,9 +251,9 @@ Le site internet avait conçu à partir d’un template du framework Bootstrap. 
 \end{figure}
 
 \section{Serveur}
-David a décidé de mettre en place un serveur au bureau afin de centraliser les projets, les ressources, l’impression. Sy, l’ingénieur chinois, s’est chargé de monter le serveur, d’y installer Linux Ubuntu et de mettre en place le logiciel Samba pour partager des dossiers et l’imprimante en réseau local. Ma mission fût de créer un accès distant au serveur via le protocole FTP. J’ai installé le paquet VsFTPd afin de créer un serveur sécurisé. Le problème est que l’adresse IP de la connexion internet attribuer par notre fournisseur d’accès n’est pas fixe, et demander un IP fixe coûte cher en Chine. Pour parer ce problème, David m’a demandé d’installer le logiciel TeamViewer qui permet de prendre le contrôle d’un PC à distance via une connexion internet. Ainsi, pour se connecter au serveur FTP à distance, il faut dans un premier temps utiliser TeamViewer afin de déterminer l’adresse IP actuel du serveur, puis utiliser un client FTP pour se connecter aux serveurs.
+David a décidé de mettre en place un serveur au bureau afin de centraliser les projets, les ressources, l’impression. Sy, l’ingénieur chinois, s’est chargé de monter le serveur, d’y installer Ubuntu et de mettre en place le logiciel Samba pour partager des dossiers et l’imprimante en réseau local. Ma mission a été de créer un accès distant au serveur via le protocole FTP. J’ai installé le paquet VsFTPd afin de créer un serveur sécurisé. Le problème est que l’adresse IP de la connexion internet attribuer par notre fournisseur d’accès n’est pas fixe, et demander un IP fixe coûte cher en Chine. Pour parer ce problème, David m’a demandé d’installer le logiciel TeamViewer qui permet de prendre le contrôle d’un PC à distance via une connexion internet. Ainsi, pour se connecter au serveur FTP à distance, il faut dans un premier temps utiliser TeamViewer afin de déterminer l’adresse IP actuel du serveur, puis utiliser un client FTP pour se connecter aux serveurs.
 David m’a également chargé de mettre en place un gestionnaire centralisé de gestion version. J’ai donc installé Apache Subversion sur le serveur. Travailler avec un tel gestionnaire permet d’être plus efficace en équipe et assure une traçabilité des modifications effectuées sur les projets.
-A la demande de l’équipe, je me suis occupé de trouver un moyen pour contourner le pare-feu chinois qui nous empêche l’accès à de nombreux sites utiles dans notre travail : Google, Gmail, WhatsApp, YouTube, etc. 2 solutions s’offraient à moi : mettre en place un VPN sur un router wi-fi ou utiliser le réseau 4G hongkongais que l’on capte dans les locaux (proche de la frontière avec Hong-Kong) pour fournir l’accès internet. Je suis allé à Hong-Kong afin de me renseigner et d’acheter un router wi-fi compatible. Sur les conseils d’un vendeur, j’ai choisi un router à la fois compatible avec les VPN et avec une clé USB 4G (figure~\ref{fig:wifi_router}).
+A la demande de l’équipe, je me suis occupé de trouver un moyen pour contourner le pare-feu chinois qui nous empêche l’accès à de nombreux sites utiles dans notre travail : Google, Gmail, WhatsApp, YouTube, etc. 2 solutions s’offraient à moi~: mettre en place un VPN sur un router wi-fi ou utiliser le réseau 4G hongkongais que l’on capte dans les locaux (proche de la frontière avec Hong-Kong) pour fournir l’accès internet. Je suis allé à Hong-Kong afin de me renseigner et d’acheter un router wi-fi compatible. Sur les conseils d’un vendeur, j’ai choisi un router à la fois compatible avec les VPN et avec une clé USB 4G (figure~\ref{fig:wifi_router}).
 
 \begin{figure}[H]
 \centering
@@ -268,8 +264,8 @@ A la demande de l’équipe, je me suis occupé de trouver un moyen pour contour
 
 \section{Worklamp}
 \subsection{Présentation}
-David m’a présenté un autre projet en cours sur lequel j'allai travailler : une lampe à LED portable pour peintre. Cette lampe existe sous 2 versions : une version \emph{AC} \SI{80}{\watt} alimentée par le secteur et une version \emph{DC} \SI{50}{\watt} alimentée par batterie. Pour simplifier l'industrialisation du produit, le boîtier est identique pour les 2 versions mais tous les ports ne sont utilisés dans chaque version (figure~\ref{fig:captioned_worklamp}). Le PCB et le panneau de LEDs sont quand à eux spécifiques à chaque version du produit (figure~\ref{fig:worklamp_PCBs}). Il y a plus de LEDs dans la versions \SI{80}{\celsius} et les PCBs n'ont pas le même rôle (redressement et lissage de la tension pour la version AC, gestion de la batterie pour la version DC).
-Dans les 2 version, un potentiomètre permet de faire varier lumineuse. Les panneaux de LEDs sont composés de 2 types de LEDs (\SI{3700}{\kelvin} et \SI{5700}{\kelvin}) afin de disposer de 3 modes d’éclairage différents. Un bouton permet de changer la température de la couleur émise : \SI{3700}{\kelvin}, \SI{5700}{\kelvin} et \SI{4200}{\kelvin} (les 2 types de LEDs sont allumés à mi-puissance). 
+David m’a présenté un autre projet en cours sur lequel j'allai travailler~: une lampe à LED portable pour peintre. Cette lampe existe sous 2 versions : une version \emph{AC} \SI{80}{\watt} alimentée par le secteur et une version \emph{DC} \SI{50}{\watt} alimentée par batterie. Pour simplifier l'industrialisation du produit, le boîtier est identique pour les 2 versions mais tous les ports ne sont utilisés dans chaque version (figure~\ref{fig:captioned_worklamp}). Le PCB et le panneau de LEDs sont quand à eux spécifiques à chaque version du produit (figure~\ref{fig:worklamp_PCBs}). Il y a plus de LEDs dans la versions \SI{80}{\celsius} et les PCBs n'ont pas le même rôle (redressement et lissage de la tension pour la version AC, gestion de la batterie pour la version DC).
+Dans les 2 version, un potentiomètre permet de faire varier l'intensité lumineuse. Les panneaux de LEDs sont composés de 2 types de LEDs (\SI{3700}{\kelvin} et \SI{5700}{\kelvin}) afin de disposer de 3 modes d’éclairage différents. Un bouton permet de changer la température de la couleur émise~: \SI{3700}{\kelvin}, \SI{5700}{\kelvin} et \SI{4200}{\kelvin} (les 2 types de LEDs sont allumés à mi-puissance). 
 
 \begin{figure}[H]
 \centering
@@ -298,7 +294,7 @@ David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schem
 \end{figure}
 
 La première étape fut d’écrire une spécification pour définir les tâches à remplir par le processeur pour ensuite aboutir à un ensemble d’algorithme accomplissant ces missions.
-Les tâches que doit effectuer le processeur sont :
+Les tâches que doit effectuer le processeur sont~:
 \begin{itemize} % TODO: bullets instead of hyphen
 \item Se mettre en veille (mode basse consommation) sur commande du bouton ON/OFF,
 \item Moduler l’intensité lumineuse en fonction de l’état du potentiomètre,
@@ -357,7 +353,7 @@ J'ai dû faire face aux contraintes de l'embarqué en concevant mon code. Il fal
 \end{figure}
 
 \subsection{Tests}
-A chaque étape du développement du la worklamp, le prototype a dû  être tester pour pouvoir évaluer la pertinance des solutions adoptées. Plusieurs mesures ont été effectuées sur un certain intervalle de temps pour vérifier si la lampe validait les critères imposés par le client dans le cahier des charges.
+A chaque étape du développement du la worklamp, le prototype a dû  être tester pour pouvoir évaluer la pertinence des solutions adoptées. Plusieurs mesures ont été effectuées sur un certain intervalle de temps pour vérifier si la lampe validait les critères imposés par le client dans le cahier des charges.
 \begin{itemize} % TODO: bullets instead of hyphen
 \item La température à l'extérieur du produit (au point le plus chaud, au niveau du radiateur passif) devait être inférieur à \SI{50}{\celsius} pour que l'utilisateur ne se brûle pas en utilisant la lampe (norme de sécurité européenne),
 \item La température à l'intérieur du produit au niveau du PCB et du panneau de LEDs devait rester inférieure à certaines valeurs données dans les datasheets des composants pour assurer le bon fonctionnement de ces derniers (généralement \SIrange{70}{80}{\celsius}),
@@ -400,14 +396,14 @@ Quand j'ai quitté l'équipe, le projet était extrêmement avancé. Le principa
 
 \chapter{Apports}
 
-A travers ce stage, j'ai approfondi mes connaissances dans de nombreux domaines : réseau, développement informatique, électronique embarquée, protocoles d'essais etc. Neohm étant une start-up avec peu d'employé, j'ai dû m'adapter au jour le jour aux besoins de l'entreprise et j'ai ainsi eu l'occasion de travailler sur divers projets. D'un point de vue culturel, ce stage m'a permis de découvrir un nouveau pays et une nouvelle culture. Travailler avec une équipe composée à la fois de Français et de Chinois a été une expérience très enrichissante. J'ai pu observer une manière différente d'aborder des problématiques et de trouver des solutions.
+A travers ce stage, j'ai approfondi mes connaissances dans de nombreux domaines~: réseau, développement informatique, électronique embarquée, protocoles d'essais etc. Neohm étant une start-up avec peu d'employé, j'ai dû m'adapter au jour le jour aux besoins de l'entreprise et j'ai ainsi eu l'occasion de travailler sur divers projets. D'un point de vue culturel, ce stage m'a permis de découvrir un nouveau pays et une nouvelle culture. Travailler avec une équipe composée à la fois de Français et de Chinois a été une expérience très enrichissante. J'ai pu observer une manière différente d'aborder des problématiques et de trouver des solutions.
 
 J'ai eu la chance d'avoir David comme tuteur. Avec son expérience de 20 ans dans cette région de Chine, il a su me guider tout au long de mon stage et m'aider à travailler avec des collègues chinois. Jean et Guillaume m'ont également fait partager leur attrait pour le marché chinois. Toute l'équipe de Neohm m'a très chaleureusement accueilli et m'a intégré rapidement.
 Ce stage a été ma 1\ieme{} expérience longue en entreprise. Après mon installation et mon acclimatation qui ont duré environ 3 semaines, j'ai su me servir de mes connaissances et surtout de mon pragmatisme pour répondre aux problématiques des mes missions.
 
-Ma rôle étant de programmer les microprocesseurs présents sur les circuits, j'ai renforcé mes connaissances du langage C et j'ai appris à construire un code robuste. J'ai dû appliqué des méthodes spécifiques à l'embarqué (utilisation d'interruptions par exemple) et adapter le code au hardware présent dans le circuit pour piloter certains contrôleurs et limiter la consommation électrique des composants.
+Ma rôle étant de programmer les microprocesseurs présents sur les circuits, j'ai renforcé mes connaissances du langage C et j'ai appris à construire un code robuste. J'ai dû appliqué des méthodes spécifiques à l'embarqué (utilisation d'interruptions par exemple) et adapter le code au hardware présent dans le circuit pour piloter certains contrôleurs et limiter la consommation électrique des composants. 
 
-Mes
+
 
 \appendix
 
