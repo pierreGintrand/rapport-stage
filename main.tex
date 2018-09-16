@@ -1,19 +1,20 @@
-\documentclass[a4paper, 12pt]{report}
+\documentclass[a4paper, 12pt, sffamily]{report}
 
 
 \usepackage{ae,lmodern} % vectorial fonts
 \usepackage[french]{babel} % babel
 \usepackage[utf8]{inputenc} % encoding
 \usepackage[T1]{fontenc}
-%\usepackage{graphicx} % figures
 %\usepackage{enumitem}
 
 %\def\frenchchaptername{Partie} % 'partie' à la place de 'chapitre'
-% change chapter syle
+% change parts style
 \usepackage{titlesec, color}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{}
+\titleformat{\section}[hang]{\Large\bfseries}{\thesection}{20pt}{}
+\titleformat{\subsection}[hang]{\large\bfseries}{\thesubsection}{15pt}{}
 \titlespacing*{\chapter} {0pt}{10pt}{40pt}
 
 \usepackage[font=sf]{caption} % pas d'empattement dans les figures
@@ -23,6 +24,9 @@
 \usepackage{float} % use H in figure
 
 %\usepackage{sectsty}
+%\sectionfont{\sffamily}
+%\subsectionfont{\sffamily}
+%\subsubsectionfont{\sffamily}
 %\allsectionsfont{\sffamily} % sans serif for section
 
 \usepackage{hyperref} % url / ref
@@ -286,7 +290,7 @@ Ma mission a porté sur la version DC, j’ai été en charge de la programmatio
 \subsection{Schéma électrique}
 David m’a donc transmis le schéma électrique (figure~\ref{fig:worklamp_schema}) qu’il avait conçu qui correspond au PCB du modèle DC pour que je me l’approprie pour ensuite implémenter un software dans le microprocesseur.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.51]{figures/screenshots/version_A3_worklamp.png}
 \caption{Schéma électrique de la Worklamp}
@@ -383,7 +387,7 @@ Un opérateur du laboratoire gérait le logiciel en chinois (figure~\ref{fig:PC_
 
 Le stage s'est malheureusement terminé au bout de 4 mois (au lieu de 6 mois) à cause de problème de visa chinois. Le projet pour lequel j'ai été recruté, \emph{Looping}, a été finalement mis de côté car le projet de la Worklamp était plus urgent. J'ai donc participé au développement de ce 2\ieme{} projet, plus particulière sur la version batterie de la lampe. Avec David, nous avons conçu puis optimiser un circuit répondant aux besoins du produit. La phase la plus importante a été de choisir les composants les plus adaptés au projet et de comprendre leur fonctionnement e n lisant les datasheets.
 
-Quand j'ai quitter l'équipe, le projet était extrêmement avancé. Le principal problème qui persistait était la dissipation de la chaleur émise par le panneau de LEDs et par le PCB. En effet, à pleine puissance, le radiateur à l'arrière de la lampe ne devait pas dépasser \SI{50}{\celsius} et les composants ne devaient pas dépasser leur température limite d'utilisation, généralement \SIrange{70}{80}{\celsius}. Nous avions à notre disposition une caméra thermique ainsi qu'une sonde de température (figure~\ref{fig:temp_test}) pour déterminer d'où provenait la chaleur et pour valider les choix techniques choisis (pâte thermique, type de radiateur, utilisation de caloduc, etc). Malgré les solutions mis en place, le cahier des charges n'était pas rempli sur ce point.
+Quand j'ai quitté l'équipe, le projet était extrêmement avancé. Le principal problème qui persistait était la dissipation de la chaleur émise par le panneau de LEDs et par le PCB. En effet, à pleine puissance, le radiateur à l'arrière de la lampe ne devait pas dépasser \SI{50}{\celsius} et les composants ne devaient pas dépasser leur température limite d'utilisation, généralement \SIrange{70}{80}{\celsius}. Nous avions à notre disposition une caméra thermique ainsi qu'une sonde de température (figure~\ref{fig:temp_test}) pour déterminer d'où provenait la chaleur et pour valider les choix techniques choisis (pâte thermique, type de radiateur, utilisation de caloduc, etc). Malgré les solutions mis en place, le cahier des charges n'était pas encore satisfait sur ce point.
 
 \begin{figure}[H]
 \centering
