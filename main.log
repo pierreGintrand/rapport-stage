@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.4)  16 SEP 2018 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.4)  24 SEP 2018 19:10
 entering extended mode
 **./main.tex
 (main.tex
@@ -763,10 +763,7 @@ LaTeX Info: Redefining \ref on input line 69.
 LaTeX Info: Redefining \pageref on input line 69.
 LaTeX Info: Redefining \nameref on input line 69.
 
-(main.out) (main.out
-! I can't write on file `main.pdf'.
-Please type another file name for output: main.pdf
-)
+(main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -968,198 +965,202 @@ File: figures/photos/photo_building.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/photos/photo_building.jpg  used on input line 
 132.
 (pdftex.def)             Requested size: 177.9572pt x 237.27626pt.
+<figures/screenshots/screen_maps.png, id=119, 691.08188pt x 563.10374pt>
+File: figures/screenshots/screen_maps.png Graphic file (type png)
+<use figures/screenshots/screen_maps.png>
+Package pdftex.def Info: figures/screenshots/screen_maps.png  used on input lin
+e 139.
+(pdftex.def)             Requested size: 276.42784pt x 225.2375pt.
 [3
 
-] [4 <./figures/photos/photo_building.jpg>]
+] [4 <./figures/photos/photo_building.jpg> <./figures/screenshots/screen_maps.p
+ng>]
 Chapitre 2.
-<figures/screenshots/3D_drawing_looping.png, id=130, 448.67625pt x 239.39438pt>
+<figures/screenshots/3D_drawing_looping.png, id=133, 448.67625pt x 239.39438pt>
 
 File: figures/screenshots/3D_drawing_looping.png Graphic file (type png)
 <use figures/screenshots/3D_drawing_looping.png>
 Package pdftex.def Info: figures/screenshots/3D_drawing_looping.png  used on in
-put line 145.
+put line 150.
 (pdftex.def)             Requested size: 336.50636pt x 179.54533pt.
 [5
 
  <./figures/screenshots/3D_drawing_looping.png>] [6]
 Chapitre 3.
-<figures/screenshots/different_usb_types.png, id=142, 341.02406pt x 197.23688pt
+<figures/screenshots/different_usb_types.png, id=145, 341.02406pt x 197.23688pt
 >
 File: figures/screenshots/different_usb_types.png Graphic file (type png)
 <use figures/screenshots/different_usb_types.png>
 Package pdftex.def Info: figures/screenshots/different_usb_types.png  used on i
-nput line 161.
+nput line 166.
 (pdftex.def)             Requested size: 255.76741pt x 147.92728pt.
-<figures/screenshots/usb_pd_nego.png, id=144, 794.97pt x 518.6878pt>
+<figures/screenshots/usb_pd_nego.png, id=147, 794.97pt x 518.6878pt>
 File: figures/screenshots/usb_pd_nego.png Graphic file (type png)
 <use figures/screenshots/usb_pd_nego.png>
 Package pdftex.def Info: figures/screenshots/usb_pd_nego.png  used on input lin
-e 172.
+e 177.
 (pdftex.def)             Requested size: 278.24367pt x 181.54344pt.
 [7
 
  <./figures/screenshots/different_usb_types.png>]
-<figures/photos/looping_pcb.jpg, id=155, 350.81062pt x 157.33781pt>
+<figures/photos/looping_pcb.jpg, id=158, 350.81062pt x 157.33781pt>
 File: figures/photos/looping_pcb.jpg Graphic file (type jpg)
 <use figures/photos/looping_pcb.jpg>
-Package pdftex.def Info: figures/photos/looping_pcb.jpg  used on input line 183
+Package pdftex.def Info: figures/photos/looping_pcb.jpg  used on input line 188
 .
 (pdftex.def)             Requested size: 350.80975pt x 157.33742pt.
-<figures/screenshots/battery_charger.png, id=157, 687.69421pt x 474.64828pt>
+<figures/screenshots/battery_charger.png, id=160, 687.69421pt x 474.64828pt>
 File: figures/screenshots/battery_charger.png Graphic file (type png)
 <use figures/screenshots/battery_charger.png>
 Package pdftex.def Info: figures/screenshots/battery_charger.png  used on input
- line 192.
+ line 197.
 (pdftex.def)             Requested size: 412.6197pt x 284.79117pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `smbus_spec' on page 8 undefined on input line 197.
-
 [8 <./figures/screenshots/usb_pd_nego.png> <./figures/photos/looping_pcb.jpg>]
-<figures/screenshots/SMBus_oscilloscope.png, id=167, 520.19344pt x 344.78813pt>
+<figures/screenshots/SMBus_oscilloscope.png, id=171, 520.19344pt x 344.78813pt>
 
 File: figures/screenshots/SMBus_oscilloscope.png Graphic file (type png)
 <use figures/screenshots/SMBus_oscilloscope.png>
 Package pdftex.def Info: figures/screenshots/SMBus_oscilloscope.png  used on in
-put line 209.
+put line 214.
 (pdftex.def)             Requested size: 312.11845pt x 206.87447pt.
 
 [9 <./figures/screenshots/battery_charger.png>]
-<figures/screenshots/SMBus_logic_analyser.png, id=175, 426.84468pt x 77.53969pt
+<figures/screenshots/SMBus_logic_analyser.png, id=179, 426.84468pt x 77.53969pt
 >
 File: figures/screenshots/SMBus_logic_analyser.png Graphic file (type png)
 <use figures/screenshots/SMBus_logic_analyser.png>
 Package pdftex.def Info: figures/screenshots/SMBus_logic_analyser.png  used on 
-input line 216.
+input line 221.
 (pdftex.def)             Requested size: 384.15666pt x 69.78505pt.
-<figures/screenshots/BQ40Z60_manual_excerpt.png, id=177, 514.17094pt x 104.6409
+<figures/screenshots/BQ40Z60_manual_excerpt.png, id=181, 514.17094pt x 104.6409
 3pt>
 File: figures/screenshots/BQ40Z60_manual_excerpt.png Graphic file (type png)
 <use figures/screenshots/BQ40Z60_manual_excerpt.png>
 Package pdftex.def Info: figures/screenshots/BQ40Z60_manual_excerpt.png  used o
-n input line 227.
+n input line 232.
 (pdftex.def)             Requested size: 421.62291pt x 85.80609pt.
  [10 <./figures/screenshots/SMBus_oscilloscope.png> <./figures/screenshots/SMBu
 s_logic_analyser.png> <./figures/screenshots/BQ40Z60_manual_excerpt.png>]
-<figures/screenshots/BQ40Z60_registers.png, id=187, 966.61125pt x 683.55376pt>
+<figures/screenshots/BQ40Z60_registers.png, id=191, 966.61125pt x 683.55376pt>
 File: figures/screenshots/BQ40Z60_registers.png Graphic file (type png)
 <use figures/screenshots/BQ40Z60_registers.png>
 Package pdftex.def Info: figures/screenshots/BQ40Z60_registers.png  used on inp
-ut line 237.
+ut line 242.
 (pdftex.def)             Requested size: 386.63765pt x 273.41666pt.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 243.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 248.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<figures/screenshots/website.png, id=190, 1312.905pt x 2101.8525pt>
+<figures/screenshots/website.png, id=194, 1312.905pt x 2101.8525pt>
 File: figures/screenshots/website.png Graphic file (type png)
 <use figures/screenshots/website.png>
-Package pdftex.def Info: figures/screenshots/website.png  used on input line 24
-8.
+Package pdftex.def Info: figures/screenshots/website.png  used on input line 25
+3.
 (pdftex.def)             Requested size: 328.22545pt x 525.46184pt.
  [11 <./figures/screenshots/BQ40Z60_registers.png>] [12 <./figures/screenshots/
 website.png>]
-<figures/photos/wifi_router.jpg, id=206, 2108.87875pt x 1581.91pt>
+<figures/photos/wifi_router.jpg, id=210, 2108.87875pt x 1581.91pt>
 File: figures/photos/wifi_router.jpg Graphic file (type jpg)
 <use figures/photos/wifi_router.jpg>
-Package pdftex.def Info: figures/photos/wifi_router.jpg  used on input line 260
+Package pdftex.def Info: figures/photos/wifi_router.jpg  used on input line 265
 .
 (pdftex.def)             Requested size: 253.05453pt x 189.82101pt.
  [13 <./figures/photos/wifi_router.jpg>]
-<figures/screenshots/captioned_worklamp.png, id=214, 910.15031pt x 411.78844pt>
+<figures/screenshots/captioned_worklamp.png, id=218, 910.15031pt x 411.78844pt>
 
 File: figures/screenshots/captioned_worklamp.png Graphic file (type png)
 <use figures/screenshots/captioned_worklamp.png>
 Package pdftex.def Info: figures/screenshots/captioned_worklamp.png  used on in
-put line 272.
+put line 277.
 (pdftex.def)             Requested size: 409.56386pt x 185.30307pt.
-<figures/photos/worklamp_PCBs.jpg, id=215, 950.80219pt x 398.23781pt>
+<figures/photos/worklamp_PCBs.jpg, id=219, 950.80219pt x 398.23781pt>
 File: figures/photos/worklamp_PCBs.jpg Graphic file (type jpg)
 <use figures/photos/worklamp_PCBs.jpg>
 Package pdftex.def Info: figures/photos/worklamp_PCBs.jpg  used on input line 2
-79.
+84.
 (pdftex.def)             Requested size: 408.83698pt x 171.2389pt.
  [14 <./figures/screenshots/captioned_worklamp.png>]
-<figures/screenshots/version_A3_worklamp.png, id=224, 822.44766pt x 473.89546pt
+<figures/screenshots/version_A3_worklamp.png, id=228, 822.44766pt x 473.89546pt
 >
 File: figures/screenshots/version_A3_worklamp.png Graphic file (type png)
 <use figures/screenshots/version_A3_worklamp.png>
 Package pdftex.def Info: figures/screenshots/version_A3_worklamp.png  used on i
-nput line 291.
+nput line 296.
 (pdftex.def)             Requested size: 419.44276pt x 241.68349pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (10.41866pt too wide) in paragraph at lines 299--300
+Overfull \hbox (10.41866pt too wide) in paragraph at lines 304--305
 []\T1/xcmss/m/n/12 Se mettre en veille (mode basse consom-ma-tion) sur com-mand
 e du bou-ton ON/OFF, 
  []
 
 [15 <./figures/photos/worklamp_PCBs.jpg>]
-<figures/screenshots/pins_definition_EFM8BB.png, id=232, 375.27704pt x 426.4682
+<figures/screenshots/pins_definition_EFM8BB.png, id=236, 375.27704pt x 426.4682
 8pt>
 File: figures/screenshots/pins_definition_EFM8BB.png Graphic file (type png)
 <use figures/screenshots/pins_definition_EFM8BB.png>
 Package pdftex.def Info: figures/screenshots/pins_definition_EFM8BB.png  used o
-n input line 313.
+n input line 318.
 (pdftex.def)             Requested size: 150.10815pt x 170.58429pt.
-<figures/screenshots/opendrain_pushpull.png, id=236, 417.47458pt x 202.97107pt>
+<figures/screenshots/opendrain_pushpull.png, id=240, 417.47458pt x 202.97107pt>
 
 File: figures/screenshots/opendrain_pushpull.png Graphic file (type png)
 <use figures/screenshots/opendrain_pushpull.png>
 Package pdftex.def Info: figures/screenshots/opendrain_pushpull.png  used on in
-put line 322.
+put line 327.
 (pdftex.def)             Requested size: 229.61171pt x 111.63443pt.
  [16 <./figures/screenshots/version_A3_worklamp.png> <./figures/screenshots/pin
 s_definition_EFM8BB.png>]
-<figures/screenshots/Li-ion_charge_algortihm.png, id=244, 621.44672pt x 315.804
+<figures/screenshots/Li-ion_charge_algortihm.png, id=248, 621.44672pt x 315.804
 84pt>
 File: figures/screenshots/Li-ion_charge_algortihm.png Graphic file (type png)
 <use figures/screenshots/Li-ion_charge_algortihm.png>
 Package pdftex.def Info: figures/screenshots/Li-ion_charge_algortihm.png  used 
-on input line 338.
+on input line 343.
 (pdftex.def)             Requested size: 403.93558pt x 205.2707pt.
  [17 <./figures/screenshots/opendrain_pushpull.png>]
-<figures/screenshots/flow_chart.png, id=256, 545.03625pt x 232.99547pt>
+<figures/screenshots/flow_chart.png, id=260, 545.03625pt x 232.99547pt>
 File: figures/screenshots/flow_chart.png Graphic file (type png)
 <use figures/screenshots/flow_chart.png>
 Package pdftex.def Info: figures/screenshots/flow_chart.png  used on input line
- 350.
+ 355.
 (pdftex.def)             Requested size: 381.52278pt x 163.0957pt.
  [18 <./figures/screenshots/Li-ion_charge_algortihm.png> <./figures/screenshots
 /flow_chart.png>]
-<figures/photos/tests_worklamp/lamp_with_glasses.jpg, id=266, 4878.225pt x 3131
+<figures/photos/tests_worklamp/lamp_with_glasses.jpg, id=270, 4878.225pt x 3131
 .7pt>
 File: figures/photos/tests_worklamp/lamp_with_glasses.jpg Graphic file (type jp
 g)
 <use figures/photos/tests_worklamp/lamp_with_glasses.jpg>
 Package pdftex.def Info: figures/photos/tests_worklamp/lamp_with_glasses.jpg  u
-sed on input line 368.
+sed on input line 373.
 (pdftex.def)             Requested size: 390.26598pt x 250.54112pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (14.89934pt too wide) in paragraph at lines 373--374
+Overfull \hbox (14.89934pt too wide) in paragraph at lines 378--379
 []\T1/xcmss/m/n/12 Pour me-su-rer plus pré-ci-sé-ment la puis-sance lu-mi-neuse
  émise (la len-tille semi-transparente
  []
 
 [19] [20 <./figures/photos/tests_worklamp/lamp_with_glasses.jpg>]
 Chapitre 4.
-<figures/photos/thermal_camera.jpg, id=280, 3276.24pt x 2457.18pt>
+<figures/photos/thermal_camera.jpg, id=284, 3276.24pt x 2457.18pt>
 File: figures/photos/thermal_camera.jpg Graphic file (type jpg)
 <use figures/photos/thermal_camera.jpg>
 Package pdftex.def Info: figures/photos/thermal_camera.jpg  used on input line 
-390.
+395.
 (pdftex.def)             Requested size: 262.10455pt x 196.57841pt.
 [21
 
@@ -1169,40 +1170,40 @@ Chapitre 5.
 
 ]
 Annexe A.
-<figures/photos/tests_worklamp/sphere/sphere_allumee.jpg, id=290, 4175.6pt x 31
+<figures/photos/tests_worklamp/sphere/sphere_allumee.jpg, id=294, 4175.6pt x 31
 31.7pt>
 File: figures/photos/tests_worklamp/sphere/sphere_allumee.jpg Graphic file (typ
 e jpg)
 <use figures/photos/tests_worklamp/sphere/sphere_allumee.jpg>
 Package pdftex.def Info: figures/photos/tests_worklamp/sphere/sphere_allumee.jp
-g  used on input line 415.
+g  used on input line 420.
 (pdftex.def)             Requested size: 334.05482pt x 250.54112pt.
-<figures/photos/tests_worklamp/sphere/spehre_vide.jpg, id=291, 4175.6pt x 3131.
+<figures/photos/tests_worklamp/sphere/spehre_vide.jpg, id=295, 4175.6pt x 3131.
 7pt>
 File: figures/photos/tests_worklamp/sphere/spehre_vide.jpg Graphic file (type j
 pg)
 <use figures/photos/tests_worklamp/sphere/spehre_vide.jpg>
 Package pdftex.def Info: figures/photos/tests_worklamp/sphere/spehre_vide.jpg  
-used on input line 422.
+used on input line 427.
 (pdftex.def)             Requested size: 334.05482pt x 250.54112pt.
 [23
 
  <./figures/photos/tests_worklamp/sphere/sphere_allumee.jpg>]
-<figures/photos/tests_worklamp/sphere/mesure_1.jpg, id=297, 3131.7pt x 4175.6pt
+<figures/photos/tests_worklamp/sphere/mesure_1.jpg, id=301, 3131.7pt x 4175.6pt
 >
 File: figures/photos/tests_worklamp/sphere/mesure_1.jpg Graphic file (type jpg)
 
 <use figures/photos/tests_worklamp/sphere/mesure_1.jpg>
 Package pdftex.def Info: figures/photos/tests_worklamp/sphere/mesure_1.jpg  use
-d on input line 429.
+d on input line 434.
 (pdftex.def)             Requested size: 250.54112pt x 334.05482pt.
-<figures/photos/tests_worklamp/sphere/ecran_PC.jpg, id=298, 4175.6pt x 3131.7pt
+<figures/photos/tests_worklamp/sphere/ecran_PC.jpg, id=302, 4175.6pt x 3131.7pt
 >
 File: figures/photos/tests_worklamp/sphere/ecran_PC.jpg Graphic file (type jpg)
 
 <use figures/photos/tests_worklamp/sphere/ecran_PC.jpg>
 Package pdftex.def Info: figures/photos/tests_worklamp/sphere/ecran_PC.jpg  use
-d on input line 436.
+d on input line 441.
 (pdftex.def)             Requested size: 334.05482pt x 250.54112pt.
  [24 <./figures/photos/tests_worklamp/sphere/spehre_vide.jpg> <./figures/photos
 /tests_worklamp/sphere/mesure_1.jpg>] [25 <./figures/photos/tests_worklamp/sphe
@@ -1230,33 +1231,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 446.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
  [27
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 446.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 446.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 446.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 451.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B8EFD5F72E6ED045DBF8C78664BC3566;1044.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 446.
+(rerunfilecheck)             Checksum: 8D5415CC18257D53A1295901B144FA2F;1044.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 451.
  ) 
 Here is how much of TeX's memory you used:
- 20500 strings out of 492973
- 386606 string characters out of 3135930
+ 20505 strings out of 492973
+ 386791 string characters out of 3135930
  439371 words of memory out of 3000000
- 24054 multiletter control sequences out of 15000+200000
- 581414 words of font info for 66 fonts, out of 3000000 for 9000
+ 24058 multiletter control sequences out of 15000+200000
+ 578416 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,63p,1094b,1063s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,7n,63p,1139b,1063s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec
@@ -1274,15 +1268,14 @@ s\pk\ljfour\jknappen\ec\dpi600\ecss1440.pk> <C:\Users\Pierre\AppData\Local\MiKT
 eX\2.9\fonts\pk\ljfour\public\sansmathfonts\dpi600\eczx1440.pk> <C:\Users\Pierr
 e\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\
 Users\Pierre\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx24
-88.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (28 pages, 24605650 bytes).
+88.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (28 pages, 25361895 bytes).
 PDF statistics:
- 793 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 796 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
